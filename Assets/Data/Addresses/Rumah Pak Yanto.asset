@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e46b03d44f18ab428cc0fa17e320a6d, type: 3}
+  m_Name: Rumah Pak Yanto
+  m_EditorClassIdentifier: Assembly-CSharp::SOAddress
+  <addressGenderSprite>k__BackingField: {fileID: 0}
+  <addressPackageTitle>k__BackingField: Makanan Kucing Whiskas
+  <addressPerson>k__BackingField: Yanto Bin Santo
+  <addressDetail>k__BackingField: Jl. Mahabarata
+  <addressDistance>k__BackingField: 92 KM
+  <addressLocation>k__BackingField: 90
+  <addressXpAmount>k__BackingField: 48
+  <addressCashAmount>k__BackingField: 54000
