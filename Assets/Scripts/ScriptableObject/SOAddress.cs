@@ -4,18 +4,18 @@ using UnityEngine;
 public class SOAddress : ScriptableObject
 {
     [Header("Detail Alamat dari Paket")]
-    [field: SerializeField] private Sprite addressGenderSprite;
-    [field: SerializeField] private string addressPackageTitle;
-    [field: SerializeField] private string addressPerson;
+    public Sprite addressGenderSprite;
+    public string addressPackageTitle;
+    public string addressPerson;
 
     [Header("Lokasi Alamat")]
-    [field: SerializeField] private string addressDetail; //alamat, ex: Jl. Bachrudin Saleh 21 dll
-    [field: SerializeField] public string addressDistance { get; private set; } //ex: 102Km, kayak lebih detail dari angka enumnya, cuma buat dimunculin di UInya (visual doang)
-    [field: SerializeField] public AddressLocation addressLocation { get; private set; } //lokasi buat nentuin jaraknya
+    public string addressDetail; //alamat, ex: Jl. Bachrudin Saleh 21 dll
+    public string addressDistance; //ex: 102Km, kayak lebih detail dari angka enumnya, cuma buat dimunculin di UInya (visual doang)
+    public AddressLocation addressLocation; //lokasi buat nentuin jaraknya
 
     [Header("Objek yang Diperoleh/Berubah")]
-    [field: SerializeField] public int addressXpAmount { get; private set; }
-    [field: SerializeField] public int addressCashAmount { get; private set; }
+    public int addressXpAmount;
+    public int addressCashAmount;
 }
 
 public enum AddressLocation //jangan lupa di typecast (int)Location_x kalo mau ngambil nilai angkanya
