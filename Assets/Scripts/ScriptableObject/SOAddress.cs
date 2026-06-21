@@ -14,8 +14,11 @@ public class SOAddress : ScriptableObject
     public AddressLocation addressLocation; //lokasi buat nentuin jaraknya
 
     [Header("Objek yang Diperoleh/Berubah")]
-    public int addressXpAmount;
-    public int addressCashAmount;
+    public int addressGainXpAmount;
+    public int addressGainCashAmount;
+
+    [Header("Event yang Berhubungan/Terjadi di Lokasi")] //klo gak ada inspectornya kosongin aja
+    public SOGameEvents addressFixedEvent;
 }
 
 public enum AddressLocation //jangan lupa di typecast (int)Location_x kalo mau ngambil nilai angkanya

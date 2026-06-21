@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
+public enum PlayerStats
+{
+    Strength,
+    Survival,
+    Charisma,
+    Intelligent,
+    Luck
+}
 
 public class StatsManager : MonoBehaviour
 {
-    public enum PlayerStats
-    {
-        Strength,
-        Survival,
-        Charisma,
-        Intelligent,
-        Luck
-    }
 
     public static StatsManager instance;
     private void Awake()
