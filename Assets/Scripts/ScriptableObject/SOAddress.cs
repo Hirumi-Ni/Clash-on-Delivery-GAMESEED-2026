@@ -4,12 +4,12 @@ using UnityEngine;
 public class SOAddress : ScriptableObject
 {
     [Header("Detail Alamat dari Paket")]
-    [field: SerializeField] public Sprite addressGenderSprite { get; private set; }
-    [field: SerializeField] public string addressPackageTitle { get; private set; }
-    [field: SerializeField] public string addressPerson { get; private set; }
+    [field: SerializeField] private Sprite addressGenderSprite;
+    [field: SerializeField] private string addressPackageTitle;
+    [field: SerializeField] private string addressPerson;
 
     [Header("Lokasi Alamat")]
-    [field: SerializeField] public string addressDetail { get; private set; } //alamat, ex: Jl. Bachrudin Saleh 21 dll
+    [field: SerializeField] private string addressDetail; //alamat, ex: Jl. Bachrudin Saleh 21 dll
     [field: SerializeField] public string addressDistance { get; private set; } //ex: 102Km, kayak lebih detail dari angka enumnya, cuma buat dimunculin di UInya (visual doang)
     [field: SerializeField] public AddressLocation addressLocation { get; private set; } //lokasi buat nentuin jaraknya
 
