@@ -103,13 +103,11 @@ public class PaketManager : MonoBehaviour
         }
     }
 
-    // Ini Bagian Hilmi harusnya.
     // Dipanggil saat player mengambil result dari paket di lokasi tujuan
     public void CourierFinishedDropoff()
     {
-        // Kurir jalan balik, state berubah ke OTW pulang
         currentState = CourierState.OTW;
-        currentActivePackages--; // Kurangi jumlah karena 1 paket sukses terkirim
+        currentActivePackages--;
         Debug.Log("[PaketManager] Paket terkirim. Kurir jalan pulang.");
     }
 
@@ -118,8 +116,6 @@ public class PaketManager : MonoBehaviour
     {
         currentState = CourierState.OnHub;
         Debug.Log("[PaketManager] Kurir kembali ke Hub! State -> " + currentState);
-
-        // check antrian spawn paket setelah sampai di hub
         CheckAndSpawnPackages();
     }
 
@@ -129,7 +125,6 @@ public class PaketManager : MonoBehaviour
         currentActivePackages--; // Paket hangus, jumlah di map berkurang
         Debug.Log("[PaketManager] Satu paket hangus!");
 
-        // Kalau kurir kebetulan sedang santai di Hub, langsung isi kekosongan paketnya
         if (currentState == CourierState.OnHub)
         {
             CheckAndSpawnPackages();
