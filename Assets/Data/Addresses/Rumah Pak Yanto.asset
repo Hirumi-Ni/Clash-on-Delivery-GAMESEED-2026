@@ -18,6 +18,7 @@ MonoBehaviour:
   addressDetail: Jl. Soekarno Hatta
   addressDistance: 500 KM
   addressLocation: 70
+  addressLocationTransform: {fileID: 7585686852027557657, guid: 3a5e28c59d06cec4189ec9862b2c6fd0, type: 3}
   addressGainXpAmount: 80
   addressGainCashAmount: 19000000
   addressLifespanAmount: 10

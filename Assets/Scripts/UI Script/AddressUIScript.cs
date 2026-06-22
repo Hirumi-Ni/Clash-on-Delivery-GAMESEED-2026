@@ -39,7 +39,7 @@ public class AddressUIScript : MonoBehaviour
 
     public void BeginExpedition()
     {
-        //OnMulaiEkspedisi?.Invoke((int)addressLocation);
+        EventHandler.WhenTombolBerangkatDipencet((int)addressLocation); // Kirim lokasi tujuan ke delivery controller untuk mulai hitung waktu perjalanan
         CloseUI();
     }
 }
