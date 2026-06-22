@@ -24,6 +24,8 @@ public class PackageSpawner : MonoBehaviour
         paketBaru.transform.SetParent(dataPaket.addressLocationTransform);
 
         // Suntikkan data SOAddress ke dalam Paket tersebut
+        /*
+        
         PaketController controller = paketBaru.GetComponent<PaketController>();
         if (controller != null)
         {
@@ -33,6 +35,8 @@ public class PackageSpawner : MonoBehaviour
         {
             Debug.LogError("[PaketSpawner] Prefab tidak memiliki script PaketController!");
         }
+
+        */
 
         Debug.Log($"[PaketSpawner] Sukses mencetak paket untuk: {dataPaket.addressPerson}");
     }

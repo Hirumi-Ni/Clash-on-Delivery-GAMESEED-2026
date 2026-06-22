@@ -6,22 +6,20 @@ using UnityEngine.UI;
 public class AddressUIScript : MonoBehaviour
 {
     [Header("Address UI Component References")]
-    [SerializeField] Image addressGenderSprite; 
-    [SerializeField] TMP_Text addressPackageTitle; 
-    [SerializeField] TMP_Text addressPerson; 
-    [SerializeField] TMP_Text addressDetail; 
-    [SerializeField] TMP_Text addressDistance; 
+    [SerializeField] Image addressGenderSprite;
+    [SerializeField] TMP_Text addressPackageTitle;
+    [SerializeField] TMP_Text addressPerson;
+    [SerializeField] TMP_Text addressDetail;
+    [SerializeField] TMP_Text addressDistance;
     [SerializeField] TMP_Text addressGainXpAmount;
     [SerializeField] TMP_Text addressGainCashAmount;
 
     [Header("Address UI Template Prefab")]
     [SerializeField] GameObject addressModalPrefab;
 
-    public SOAddress addressData;
     private AddressLocation addressLocation;
 
-    [ContextMenu("Tes Tampilan")]
-    public void SetupAddress(/*SOAddress addressData*/)
+    public void SetupAddress(SOAddress addressData)
     {
         //this.addressData = addressData;
         addressGenderSprite.sprite = addressData.addressGenderSprite;
@@ -33,7 +31,7 @@ public class AddressUIScript : MonoBehaviour
         addressGainCashAmount.text = addressData.addressGainCashAmount.ToString("C", new CultureInfo("id-ID"));
         this.addressLocation = addressData.addressLocation;
     }
-  
+
     public void CloseUI()
     {
         addressModalPrefab.SetActive(false);
