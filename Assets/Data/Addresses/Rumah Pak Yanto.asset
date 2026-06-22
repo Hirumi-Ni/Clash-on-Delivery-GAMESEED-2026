@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e46b03d44f18ab428cc0fa17e320a6d, type: 3}
   m_Name: Rumah Pak Yanto
   m_EditorClassIdentifier: Assembly-CSharp::SOAddress
-  <addressGenderSprite>k__BackingField: {fileID: 0}
-  <addressPackageTitle>k__BackingField: Makanan Kucing Whiskas
-  <addressPerson>k__BackingField: Yanto Bin Santo
-  <addressDetail>k__BackingField: Jl. Mahabarata
-  <addressDistance>k__BackingField: 92 KM
-  <addressLocation>k__BackingField: 90
-  <addressXpAmount>k__BackingField: 48
-  <addressCashAmount>k__BackingField: 54000
+  addressGenderSprite: {fileID: -4288344199647211769, guid: 2fd80142737aba248893708c7b6cdd40, type: 3}
+  addressPackageTitle: Minyak Sawit Asli
+  addressPerson: Bahlil Lahadalia
+  addressDetail: Jl. Soekarno Hatta
+  addressDistance: 500 KM
+  addressLocation: 70
+  addressGainXpAmount: 80
+  addressGainCashAmount: 19000000
+  addressLifespanAmount: 10
+  addressFixedEvent: {fileID: 0}

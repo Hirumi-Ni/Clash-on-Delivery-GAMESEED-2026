@@ -16,6 +16,7 @@ public class SOAddress : ScriptableObject
     [Header("Objek yang Diperoleh/Berubah")]
     public int addressGainXpAmount;
     public int addressGainCashAmount;
+    public int addressLifespanAmount = 10; //nilai integer buat nentuin masa hidup paketnya, kalo angkanya dah habis paketnya hangus
 
     [Header("Event yang Berhubungan/Terjadi di Lokasi")] //klo gak ada inspectornya kosongin aja
     public SOGameEvents addressFixedEvent;
