@@ -12,6 +12,7 @@ public class SOAddress : ScriptableObject
     public string addressDetail; //alamat, ex: Jl. Bachrudin Saleh 21 dll
     public string addressDistance; //ex: 102Km, kayak lebih detail dari angka enumnya, cuma buat dimunculin di UInya (visual doang)
     public AddressLocation addressLocation; //lokasi buat nentuin jaraknya
+    public Transform addressLocationTransform; //buat nentuin posisi paketnya di map, nanti tinggal disamain sama titik spawnnya di PackageSpawner
 
     [Header("Objek yang Diperoleh/Berubah")]
     public int addressGainXpAmount;
@@ -26,7 +27,7 @@ public enum AddressLocation //jangan lupa di typecast (int)Location_x kalo mau n
 {
     //bagian kiri map
     Location_1 = 100, //angka bagian kanan itu jarak dari hub buat nentuin waktu yang dipakai, berarti waktu awal timernya 100 bisa diubah lagi klo kelamaan
-    Location_2 = 90, 
+    Location_2 = 90,
     Location_3 = 80,
     Location_4 = 70,
 
