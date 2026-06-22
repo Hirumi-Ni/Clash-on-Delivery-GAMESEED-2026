@@ -1623,7 +1623,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 148019887933938399}
         m_TargetAssemblyTypeName: AddressUIScript, Assembly-CSharp
-        m_MethodName: CloseUI
+        m_MethodName: BeginExpedition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1965,7 +1965,6 @@ MonoBehaviour:
   addressGainXpAmount: {fileID: 8363095765406909478}
   addressGainCashAmount: {fileID: 5944477079676580030}
   addressModalPrefab: {fileID: 5543085988281745202}
-  addressData: {fileID: 0}
 --- !u!1 &6388377967086380809
 GameObject:
   m_ObjectHideFlags: 0

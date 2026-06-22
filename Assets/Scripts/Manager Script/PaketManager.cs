@@ -35,6 +35,12 @@ public class PaketManager : MonoBehaviour
         Instance = this;
     }
 
+    private void OnEnable()
+    {
+        EventHandler.OnArrivedAtLocation += CourierArrivedAtLocation;
+        EventHandler.OnArrivedAtHub += CourierArrivedAtHub;
+    }
+
     private void Start()
     {
         InitializeShift();
