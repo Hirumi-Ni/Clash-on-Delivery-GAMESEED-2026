@@ -15,23 +15,18 @@ public class DeliveryController : MonoBehaviour
     private float currentTravelTimer = 0f;
     private bool isTraveling = false;
     private bool isReturningToHub = false;
-    private PaketManager paketManager;
-
-    private void Awake()
-    {
-        paketManager = PaketManager.Instance;
-    }
+    private AddressUIScript targetAddressScript; // Referensi ke AddressUIScript yang memicu perjalanan
 
     private void OnEnable()
     {
-        EventHandler.OnTombolBerangkatDipencet += StartTravelToLocation;
-        EventHandler.OnDeliveryFinished += StartReturnToHub;
+        EventHandler.OnStartToDeliverPackage += StartTravelToLocation;
+        EventHandler.OnStartReturnToHub += StartReturnToHub;
     }
 
     private void OnDisable()
     {
-        EventHandler.OnTombolBerangkatDipencet -= StartTravelToLocation;
-        EventHandler.OnDeliveryFinished -= StartReturnToHub;
+        EventHandler.OnStartToDeliverPackage -= StartTravelToLocation;
+        EventHandler.OnStartReturnToHub -= StartReturnToHub;
     }
 
     private void Update()
@@ -64,13 +59,13 @@ public class DeliveryController : MonoBehaviour
     public void StartReturnToHub(int travelDistance)
     {
         StartTravel(travelDistance, true);
-        PaketManager.Instance.CourierFinishedDropoff(); // Update state kurir menjadi OnLocation
     }
 
-    public void StartTravelToLocation(int travelDistance)
+    public void StartTravelToLocation(int travelDistance, AddressUIScript targetAddress)
     {
         StartTravel(travelDistance, false);
-        PaketManager.Instance.CourierDepartToLocation();
+        PackageManager.Instance.CourierDepartToLocation();
+        targetAddressScript = targetAddress;
     }
 
     private void HandleArrival()
@@ -96,6 +91,6 @@ public class DeliveryController : MonoBehaviour
 
         Debug.Log("[DeliveryController] Drop-off selesai! Bersiap pulang...");
 
-        EventHandler.WhenDropoffFinished(); // Update UI untuk paket agar bisa diambil player
+        targetAddressScript.ChangeUIOnDropOfFinished(); // Update UI untuk paket agar bisa diambil player
     }
 }
