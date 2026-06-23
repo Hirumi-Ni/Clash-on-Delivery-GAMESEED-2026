@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6980dbc9d60024e8efcb2fb501c190, type: 3}
+  m_Name: Ketemu Bahlil
+  m_EditorClassIdentifier: Assembly-CSharp::SOGameEvents
+  eventImage: {fileID: -4288344199647211769, guid: 2fd80142737aba248893708c7b6cdd40, type: 3}
+  eventTitle: Ketemu Bahlil
+  eventDescription: Mas-mas boleh dong minta mbg sama nyanyiin lagunya plisssssssss
+  eventTextOption:
+  - Minta Foto dengan Sopan
+  - Nyanyi Lagu MBG
+  - Ajak Tawuran
+  eventStatsNeeded: 0200000003000000
+  eventTextCashOption: Bayar Bahlil
+  eventNominalCashOption: 30000
+  eventSuccessSprite: {fileID: -4288344199647211769, guid: 2fd80142737aba248893708c7b6cdd40, type: 3}
+  eventSuccessDescription: Selain dapet mbg kamu dapet duit jajan juga dari bahlil
+    yeyyy
+  eventGainXpAmount: 48
+  eventGainCashAmount: 10000
+  eventSuccessMood: 0
+  eventFailedSprite: {fileID: -4288344199647211769, guid: 2fd80142737aba248893708c7b6cdd40, type: 3}
+  eventFailedDescription: Yah kamu gagal minta mbg ke mas bahlilnya
+  eventFailedMood: 0
