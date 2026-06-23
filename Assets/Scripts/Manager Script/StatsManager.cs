@@ -48,10 +48,9 @@ public class StatsManager : MonoBehaviour
     {
         return playerStatsDictionary[playerStat];
     }
-
-    public void SetStatsValue(PlayerStats playerStat, int amount) //dia ngeset lo ya jadi langsung nilai itu, tak pake buat tes doang
+    public void SetStat(PlayerStats playerStat, int value)
     {
-        playerStatsDictionary[playerStat] = amount;
+        playerStatsDictionary[playerStat] = value;
     }
 
 }
