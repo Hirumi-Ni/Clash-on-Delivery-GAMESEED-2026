@@ -10,7 +10,7 @@ public class SOGameEvents : ScriptableObject
 
     [Header("Opsi Event")] //maksimal opsinya 4 yang stat
     public string[] eventTextOption = new string[4]; //text dialog eventnya
-    public PlayerStats[] eventStatsNeeded = new PlayerStats[4]; //event yang memengaruhi probabilitas suksesnya 
+    public PlayerStats[] eventStatsNeeded = new PlayerStats[4]; //stat yang memengaruhi probabilitas suksesnya 
     public string eventTextCashOption; //contoh "Terkena Tilang"
     public int eventNominalCashOption; //contoh 20000 berarti bayar Rp20.000
 

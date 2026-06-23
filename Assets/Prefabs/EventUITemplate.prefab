@@ -3698,6 +3698,7 @@ GameObject:
   m_Component:
   - component: {fileID: 603359124151358824}
   - component: {fileID: 9221055097017848963}
+  - component: {fileID: -8090116036244539175}
   m_Layer: 5
   m_Name: EventUITemplate
   m_TagString: Untagged
@@ -3762,6 +3763,18 @@ MonoBehaviour:
   eventFailedDescription: {fileID: 4733822528324844985}
   eventLoseCashAmount: {fileID: 3435819174536688995}
   eventModalPrefab: {fileID: 7247424185411011150}
+--- !u!114 &-8090116036244539175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7247424185411011150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35627d856274e8545819279dbf6ce998, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventController
 --- !u!1 &7305984417306335996
 GameObject:
   m_ObjectHideFlags: 0
