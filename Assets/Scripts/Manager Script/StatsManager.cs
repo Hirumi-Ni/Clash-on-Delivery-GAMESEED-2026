@@ -13,19 +13,24 @@ public class StatsManager : MonoBehaviour
 {
 
     public static StatsManager instance;
+    private void Start()
+{
+    SetupStats();
+}
     private void Awake()
+{
+    if (instance == null)
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-        }
-    }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
 
+        SetupStats();
+    }
+    else if (instance != this)
+    {
+        Destroy(gameObject);
+    }
+}
     private Dictionary<PlayerStats, int> playerStatsDictionary;
 
     public void SetupStats() //pastiin buat selalu dijalankan ketika shift dimulai, pas awal shift set semua stat bernilai 1 
@@ -47,11 +52,11 @@ public class StatsManager : MonoBehaviour
         return playerStatsDictionary[playerStat];
     }
 
-    public void SetStatsValue(PlayerStats playerStat, int amount) //dia ngeset lo ya jadi langsung nilai itu, tak pake buat tes doang
+    public void SetStat(PlayerStats playerStat, int value)
     {
-        playerStatsDictionary[playerStat] = amount;
-    }
-
+        playerStatsDictionary[playerStat] = value;
+    }             
+    
 }
 
 
