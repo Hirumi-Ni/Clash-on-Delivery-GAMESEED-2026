@@ -1279,7 +1279,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170258562}
   m_CullTransparentMesh: 1
---- !u!1 &209221610
+--- !u!1 &2054110274
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1296,7 +1296,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &209221611
+--- !u!114 &2080275215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1313,7 +1313,7 @@ MonoBehaviour:
   realMinutesPerShift: 15
   currentTime: 0
   isRunning: 1
---- !u!4 &209221612
+--- !u!4 &2044311693
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2195,7 +2195,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &373655249
+--- !u!1 &2035461103
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8573,7 +8573,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b9b716d91a6ae9e4c9794b3038846242, type: 2}
   maxActivePackages: 2
   currentState: 0
---- !u!1 &1230910377
+--- !u!1 &2146002492
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8741,7 +8741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DeliveryController
   timeScale: 1
   dropoffDuration: 2
---- !u!1 &1602415844
+--- !u!1 &2127147521
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
