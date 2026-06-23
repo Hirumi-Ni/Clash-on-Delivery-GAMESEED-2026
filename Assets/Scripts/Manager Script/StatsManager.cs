@@ -24,6 +24,8 @@ public class StatsManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        SetupStats();
     }
 
     private Dictionary<PlayerStats, int> playerStatsDictionary;

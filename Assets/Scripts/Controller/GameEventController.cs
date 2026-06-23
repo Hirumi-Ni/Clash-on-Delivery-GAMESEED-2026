@@ -3,26 +3,17 @@ using System.Collections.Generic;
 
 public class GameEventController : MonoBehaviour
 {
-    private Dictionary<PlayerStats, int> statPercentagesDictionary = new(); //jenis enum stat, persentase setelah dihitungnya
-    private List<PlayerStats> playerStats = new();
+    private Dictionary<SOGameEvents.EventOption, int> optionPercentagesDictionary = new(); //jenis enum stat, persentase setelah dihitungnya
 
-    public void GetStatEventOption(SOGameEvents eventData)
+    [ContextMenu("Set Event")]
+    public void SetStatEventOption(SOGameEvents eventData)
     {
-        playerStats.Clear();
-        foreach (PlayerStats stat in eventData.eventStatsNeeded)
+        optionPercentagesDictionary.Clear();
+        foreach (SOGameEvents.EventOption option in eventData.eventOptions)
         {
-            playerStats.Add(stat);
-            Debug.Log(stat);
-        }
-    }
-
-    [ContextMenu("Calculate Stat")]
-    public void CalculateAllPossibility()
-    {
-        statPercentagesDictionary.Clear();
-        foreach (PlayerStats stat in playerStats)
-        {
-            statPercentagesDictionary[stat] = CalculateStatsPercentage(stat);
+            int percentage = CalculateStatsPercentage(option.eventStatsNeeded);
+            optionPercentagesDictionary.Add(option, percentage);
+            Debug.Log(option + " " + percentage);
         }
     }
 
@@ -32,19 +23,7 @@ public class GameEventController : MonoBehaviour
         int luckStatPercentage =  StatsManager.instance.GetStats(PlayerStats.Luck) * 5;
 
         Debug.Log($"Kemungkinan sukses dari stat {playerStat} adalah {otherStatPercentage + luckStatPercentage}%");
-        return otherStatPercentage + luckStatPercentage;
-    }
-
-    [ContextMenu("Check Success or Not")]
-    public void CheckIfSuccessOrNot()
-    {
-        foreach (var item in statPercentagesDictionary)
-        {
-            PlayerStats stat = item.Key;
-            int percentage = item.Value;
-
-            Debug.Log($"Opsi stat {stat} menghasilkan output (true/berhasil, false/gagal) = {CalculateSuccessChance(percentage)}");
-        }
+        return Mathf.Clamp(otherStatPercentage + luckStatPercentage, 0, 100);
     }
 
     public bool CalculateSuccessChance(int percentage)

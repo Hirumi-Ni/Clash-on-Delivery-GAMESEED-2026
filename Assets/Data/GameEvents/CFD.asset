@@ -10,24 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb6980dbc9d60024e8efcb2fb501c190, type: 3}
-  m_Name: Ketemu Bahlil
+  m_Name: CFD
   m_EditorClassIdentifier: Assembly-CSharp::SOGameEvents
   eventImage: {fileID: -4288344199647211769, guid: 2fd80142737aba248893708c7b6cdd40, type: 3}
-  eventTitle: Ketemu Bahlil
-  eventDescription: Mas-mas boleh dong minta mbg sama nyanyiin lagunya plisssssssss
+  eventTitle: Car Free Day
+  eventDescription: Pas mau nganter paket tiba tiba ada cfd jadinya gitu deh
   eventOptions:
-  - eventTextOption: Ajak Tawuran
-    eventStatsNeeded: 0
-  - eventTextOption: Adu Kecerdasan
-    eventStatsNeeded: 3
-  eventTextCashOption: Bayar Bahlil
-  eventNominalCashOption: 30000
+  - eventTextOption: 'Ikut CFD [Charisma]'
+    eventStatsNeeded: 2
+  eventTextCashOption: Beli Takoyaki seporsi
+  eventNominalCashOption: 5000
   eventSuccessSprite: {fileID: -4288344199647211769, guid: 2fd80142737aba248893708c7b6cdd40, type: 3}
-  eventSuccessDescription: Selain dapet mbg kamu dapet duit jajan juga dari bahlil
-    yeyyy
-  eventGainXpAmount: 48
-  eventGainCashAmount: 10000
-  eventSuccessMood: 0
+  eventSuccessDescription: gacor habis cfd
+  eventGainXpAmount: 5
+  eventGainCashAmount: 0
+  eventSuccessMood: 3
   eventFailedSprite: {fileID: -4288344199647211769, guid: 2fd80142737aba248893708c7b6cdd40, type: 3}
-  eventFailedDescription: Yah kamu gagal minta mbg ke mas bahlilnya
-  eventFailedMood: 0
+  eventFailedDescription: kecapean
+  eventFailedMood: 5
