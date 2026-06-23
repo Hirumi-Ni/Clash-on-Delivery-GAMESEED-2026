@@ -19,7 +19,7 @@ public class PackageSpawner : MonoBehaviour
     private void SpawnPaket(SOAddress dataPaket)
     {
         // Spawn paket berdasarkan data yang dikirim oleh PaketManager
-        GameObject paketBaru = Instantiate(paketPrefab, Vector3.zero, Quaternion.identity);
+        GameObject paketBaru = Instantiate(paketPrefab, new Vector3(1920/2, 1080/2 , 0), Quaternion.identity);
 
         // Jadikan child dari titik spawn agar Hierarchy Unity tetap rapi
         paketBaru.transform.SetParent(canvasParent.transform, true);
@@ -37,7 +37,7 @@ public class PackageSpawner : MonoBehaviour
         Transform pinPoint = paketBaru.transform.GetChild(0); // Reset posisi child agar tetap di tengah parent
         if (pinPoint != null)
         {
-            pinPoint.localPosition = dataPaket.addressLocationTransform.position; // Set posisi child sesuai data dari SOAddress
+            pinPoint.localPosition = dataPaket.addressLocationTransform; // Set posisi child sesuai data dari SOAddress
         }
         else
         {

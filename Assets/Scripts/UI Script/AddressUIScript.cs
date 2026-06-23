@@ -17,11 +17,10 @@ public class AddressUIScript : MonoBehaviour
     [Header("Address UI Template Prefab")]
     [SerializeField] GameObject addressModalPrefab;
 
-    private AddressLocation addressLocation;
+    private int addressTimerDuration;
 
     public void SetupAddress(SOAddress addressData)
     {
-        //this.addressData = addressData;
         addressGenderSprite.sprite = addressData.addressGenderSprite;
         addressPackageTitle.text = addressData.addressPackageTitle;
         addressPerson.text = addressData.addressPerson;
@@ -29,7 +28,7 @@ public class AddressUIScript : MonoBehaviour
         addressDistance.text = addressData.addressDistance;
         addressGainXpAmount.text = addressData.addressGainXpAmount.ToString("'+'# 'Exp'");
         addressGainCashAmount.text = addressData.addressGainCashAmount.ToString("C", new CultureInfo("id-ID"));
-        this.addressLocation = addressData.addressLocation;
+        addressTimerDuration = addressData.addressDeliveryTimer;
     }
 
     public void CloseUI()
@@ -39,7 +38,7 @@ public class AddressUIScript : MonoBehaviour
 
     public void BeginExpedition()
     {
-        EventHandler.WhenTombolBerangkatDipencet((int)addressLocation); // Kirim lokasi tujuan ke delivery controller untuk mulai hitung waktu perjalanan
+        EventHandler.WhenTombolBerangkatDipencet(addressTimerDuration);
         CloseUI();
     }
 }

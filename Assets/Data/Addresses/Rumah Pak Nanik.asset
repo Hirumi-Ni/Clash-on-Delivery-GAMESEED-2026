@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e46b03d44f18ab428cc0fa17e320a6d, type: 3}
-  m_Name: Rumah Pak Yanto
+  m_Name: Rumah Pak Nanik
   m_EditorClassIdentifier: Assembly-CSharp::SOAddress
   addressGenderSprite: {fileID: -4288344199647211769, guid: 2fd80142737aba248893708c7b6cdd40, type: 3}
-  addressPackageTitle: Minyak Sawit Asli
-  addressPerson: Bahlil Lahadalia
-  addressDetail: Jl. Soekarno Hatta
-  addressDistance: 500 KM
-  addressLocation: 10
-  addressLocationTransform: {x: 378, y: -321, z: 0}
-  addressDeliveryTimer: 90
-  addressGainXpAmount: 80
-  addressGainCashAmount: 19000000
+  addressPackageTitle: Whiskas Premium Khas Bojonegoro
+  addressPerson: Nanik Rachmaudin
+  addressDetail: Jl. Martabak Manis
+  addressDistance: 200 KM
+  addressLocation: 3
+  addressLocationTransform: {x: -645, y: 320, z: 0}
+  addressDeliveryTimer: 70
+  addressGainXpAmount: 300
+  addressGainCashAmount: 67420000
   addressLifespanAmount: 10
   addressFixedEvent: {fileID: 0}
