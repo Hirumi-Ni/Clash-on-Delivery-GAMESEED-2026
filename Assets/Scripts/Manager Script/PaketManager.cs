@@ -9,9 +9,9 @@ public enum CourierState
     OnLocation
 }
 
-public class PackageManager : MonoBehaviour
+public class PaketManager : MonoBehaviour
 {
-    public static PackageManager Instance { get; private set; }
+    public static PaketManager Instance { get; private set; }
 
     [Header("Data Shift Harian")]
     [Tooltip("Daftar paket yang akan diantar hari ini. Isi dari Inspector.")]
@@ -39,16 +39,6 @@ public class PackageManager : MonoBehaviour
     {
         EventHandler.OnArrivedAtLocation += CourierArrivedAtLocation;
         EventHandler.OnArrivedAtHub += CourierArrivedAtHub;
-        EventHandler.OnPaketHangus += PackageExpired;
-        EventHandler.OnPaketSuccess += CourierFinishedDropoff;
-    }
-
-    private void OnDisable()
-    {
-        EventHandler.OnArrivedAtLocation -= CourierArrivedAtLocation;
-        EventHandler.OnArrivedAtHub -= CourierArrivedAtHub;
-        EventHandler.OnPaketHangus -= PackageExpired;
-        EventHandler.OnPaketSuccess -= CourierFinishedDropoff;
     }
 
     private void Start()
@@ -138,7 +128,7 @@ public class PackageManager : MonoBehaviour
     // Dipanggil oleh PaketController kalau Timer Lifespan-nya habis
     public void PackageExpired()
     {
-        currentActivePackages--;
+        currentActivePackages--; // Paket hangus, jumlah di map berkurang
         Debug.Log("[PaketManager] Satu paket hangus!");
 
         if (currentState == CourierState.OnHub)
