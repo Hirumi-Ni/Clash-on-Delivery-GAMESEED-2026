@@ -10,24 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb6980dbc9d60024e8efcb2fb501c190, type: 3}
-  m_Name: Ketemu Bahlil
+  m_Name: Paket Dicuri Alien Ijo
   m_EditorClassIdentifier: Assembly-CSharp::SOGameEvents
   eventImage: {fileID: -4288344199647211769, guid: 2fd80142737aba248893708c7b6cdd40, type: 3}
-  eventTitle: Ketemu Bahlil
-  eventDescription: Mas-mas boleh dong minta mbg sama nyanyiin lagunya plisssssssss
+  eventTitle: Paket Dicuri Alien Ijo
+  eventDescription: Tiba-tiba ada UFO turun di tengah jalan di depan randy dan ambil
+    paketnya
   eventOptions:
-  - eventTextOption: Ajak Tawuran
+  - eventTextOption: 'Kejar UFO [Strength]'
     eventStatsNeeded: 0
-  - eventTextOption: Adu Kecerdasan
+  - eventTextOption: 'Adu Kecerdasan [Intelligent]'
     eventStatsNeeded: 3
-  eventTextCashOption: Bayar Bahlil
-  eventNominalCashOption: 30000
+  - eventTextOption: 'Ajak Date Apalah [Charisma]'
+    eventStatsNeeded: 2
+  eventTextCashOption: Traktir Alien
+  eventNominalCashOption: 67000
   eventSuccessSprite: {fileID: -4288344199647211769, guid: 2fd80142737aba248893708c7b6cdd40, type: 3}
-  eventSuccessDescription: Selain dapet mbg kamu dapet duit jajan juga dari bahlil
-    yeyyy
-  eventGainXpAmount: 48
-  eventGainCashAmount: 10000
-  eventSuccessMood: 0
+  eventSuccessDescription: Kamu berhasil merebut paketnya dari si Alien
+  eventGainXpAmount: 142
+  eventGainCashAmount: 22000
+  eventSuccessMood: 4
   eventFailedSprite: {fileID: -4288344199647211769, guid: 2fd80142737aba248893708c7b6cdd40, type: 3}
-  eventFailedDescription: Yah kamu gagal minta mbg ke mas bahlilnya
+  eventFailedDescription: Yah paket kamu dicuri selamanya, kamu kembali ke hub buat
+    ambil paket lagi
   eventFailedMood: 0

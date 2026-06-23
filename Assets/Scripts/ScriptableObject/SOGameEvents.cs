@@ -9,8 +9,7 @@ public class SOGameEvents : ScriptableObject
     public string eventDescription;
 
     [Header("Opsi Event")] //maksimal opsinya 4 yang stat
-    public string[] eventTextOption = new string[4]; //text dialog eventnya
-    public PlayerStats[] eventStatsNeeded = new PlayerStats[4]; //stat yang memengaruhi probabilitas suksesnya 
+    public EventOption[] eventOptions = new EventOption[4]; //text dialog eventnya + enum stat yang ngaruh
     public string eventTextCashOption; //contoh "Terkena Tilang"
     public int eventNominalCashOption; //contoh 20000 berarti bayar Rp20.000
 
@@ -25,7 +24,14 @@ public class SOGameEvents : ScriptableObject
     public Sprite eventFailedSprite;
     public string eventFailedDescription;
     //public int eventLoseCashAmount;
-    public PlayerEmotions eventFailedMood;  
+    public PlayerEmotions eventFailedMood;
+
+    [System.Serializable]
+    public class EventOption
+    {
+        public string eventTextOption;
+        public PlayerStats eventStatsNeeded;
+    }
 }
 
 public enum PlayerEmotions
