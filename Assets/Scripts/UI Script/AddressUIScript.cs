@@ -16,6 +16,8 @@ public class AddressUIScript : MonoBehaviour
 
     [Header("Address UI Template Prefab")]
     [SerializeField] GameObject addressModalPrefab;
+    [SerializeField] GameObject pinAddressPrefab;
+    [SerializeField] GameObject completeDeliveryPrefab;
 
     private int addressTimerDuration;
 
@@ -38,7 +40,37 @@ public class AddressUIScript : MonoBehaviour
 
     public void BeginExpedition()
     {
-        EventHandler.WhenTombolBerangkatDipencet(addressTimerDuration);
+        EventHandler.WhenStartToDeliverPackage(addressTimerDuration, this);
+        PackageController paketController = GetComponentInChildren<PackageController>();
+        if (paketController != null)
+        {
+            paketController.PackageIsOnTheWay();
+        }
+        else
+        {
+            Debug.LogError("[AddressUIScript] Tidak dapat menemukan PackageController pada prefab paket!");
+        }
         CloseUI();
+    }
+
+    public void ChangeUIOnDropOfFinished()
+    {
+        pinAddressPrefab.SetActive(false);
+        addressModalPrefab.SetActive(false);
+        completeDeliveryPrefab.SetActive(true);
+    }
+
+    public void KonfirmasiPengiriman()
+    {
+        // Logika saat paket diklik oleh player: 
+        // Mentrigger event untuk menambahkan exp dan duid
+        // EventHandler.TriggerReward(dataAlamat.addressGainXpAmount, dataAlamat.addressGainCashAmount);
+
+        // Memberitahu gameManager dan scoreManager kalau paket sudah diambil
+        EventHandler.WhenPaketSuccess();
+
+        // Memberitahu DeliveryController kalau paket sudah diambil, sehingga bisa mulai perjalanan pulang ke hub
+        EventHandler.WhenStartToReturnHub(5); // Cth.
+        Destroy(gameObject);
     }
 }

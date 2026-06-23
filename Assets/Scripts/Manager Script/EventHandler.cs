@@ -4,8 +4,8 @@ using System;
 public static class EventHandler
 {
     /// --- DEKLARASI EVENT (Broadcaster) ---
-    public static event Action<int> OnTombolBerangkatDipencet; // Ini dipakai untuk memberi tahu delivery controller bahwa tombol berangkat sudah dipencet, sehingga bisa mulai hitung waktu perjalanan
-    public static event Action<int> OnDeliveryFinished; // Ini dipakai untuk memberi tahu delivery controller bahwa paket sudah diselesaikan, sehingga bisa mulai hitung waktu perjalanan kembali ke hub
+    public static event Action<int, AddressUIScript> OnStartToDeliverPackage; // Ini dipakai untuk memberi tahu delivery controller bahwa tombol berangkat sudah dipencet, sehingga bisa mulai hitung waktu perjalanan
+    public static event Action<int> OnStartReturnToHub; // Ini dipakai untuk memberi tahu delivery controller bahwa paket sudah diambil, sehingga bisa mulai perjalanan pulang ke hub
     public static event Action<SOAddress> OnRequestSpawn;
     public static event Action<int> OnShiftStarted;
 
@@ -13,14 +13,17 @@ public static class EventHandler
     public static event Action OnDropoffFinished; // Ini Dipakai untuk update UI selesai dikirim 
     public static event Action OnArrivedAtHub; // Ini dipakai ketika sampai dihub -> update state, reset untuk paket selanjutnya
 
+    public static event Action OnPaketHangus;
+    public static event Action OnPaketSuccess;
+
     /// --- METHOD PEMICU EVENT (Broadcaster) ---
-    public static void WhenTombolBerangkatDipencet(int durasiPerjalanan)
+    public static void WhenStartToDeliverPackage(int durasiPerjalanan, AddressUIScript targetAddress)
     {
-        OnTombolBerangkatDipencet?.Invoke(durasiPerjalanan);
+        OnStartToDeliverPackage?.Invoke(durasiPerjalanan, targetAddress);
     }
-    public static void WhenDeliveryFinished(int gainXp)
+    public static void WhenStartToReturnHub(int durasiPerjalanan)
     {
-        OnDeliveryFinished?.Invoke(gainXp);
+        OnStartReturnToHub?.Invoke(durasiPerjalanan);
     }
 
     public static void WhenRequestSpawn(SOAddress address)
@@ -46,5 +49,15 @@ public static class EventHandler
     public static void WhenArrivedAtHub()
     {
         OnArrivedAtHub?.Invoke();
+    }
+
+    public static void WhenPaketHangus()
+    {
+        OnPaketHangus?.Invoke();
+    }
+
+    public static void WhenPaketSuccess()
+    {
+        OnPaketSuccess?.Invoke();
     }
 }

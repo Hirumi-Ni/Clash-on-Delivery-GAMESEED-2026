@@ -19,46 +19,34 @@ public class PackageSpawner : MonoBehaviour
     private void SpawnPaket(SOAddress dataPaket)
     {
         // Spawn paket berdasarkan data yang dikirim oleh PaketManager
-        GameObject paketBaru = Instantiate(paketPrefab, new Vector3(1920/2, 1080/2 , 0), Quaternion.identity);
+        GameObject paketBaru = Instantiate(paketPrefab, new Vector3(1920 / 2, 1080 / 2, 0), Quaternion.identity);
 
         // Jadikan child dari titik spawn agar Hierarchy Unity tetap rapi
         paketBaru.transform.SetParent(canvasParent.transform, true);
 
         AddressUIScript uiScript = paketBaru.GetComponent<AddressUIScript>();
-        if (uiScript != null)
+        PackageController paketController = paketBaru.GetComponent<PackageController>();
+        if (uiScript != null && paketController != null)
         {
             uiScript.SetupAddress(dataPaket);
+            paketController.SetupData(dataPaket);
         }
         else
         {
             Debug.LogError("[PaketSpawner] Prefab tidak memiliki script AddressUIScript!");
         }
 
-        Transform pinPoint = paketBaru.transform.GetChild(0); // Reset posisi child agar tetap di tengah parent
-        if (pinPoint != null)
+        Transform pinPoint = paketBaru.transform.GetChild(0);
+        Transform completeButton = paketBaru.transform.GetChild(1);
+        if (pinPoint != null && completeButton != null)
         {
             pinPoint.localPosition = dataPaket.addressLocationTransform; // Set posisi child sesuai data dari SOAddress
+            completeButton.localPosition = dataPaket.addressLocationTransform; // Set posisi child sesuai data dari SOAddress
         }
         else
         {
             Debug.LogError("[PaketSpawner] Prefab tidak memiliki child untuk pin point!");
         }
-
-        // Suntikkan data SOAddress ke dalam Paket tersebut
-        /*
-        
-        
-        PaketController controller = paketBaru.GetComponent<PaketController>();
-        if (controller != null)
-        {
-            controller.SetupData(dataPaket);
-        }
-        else
-        {
-            Debug.LogError("[PaketSpawner] Prefab tidak memiliki script PaketController!");
-        }
-
-        */
 
         Debug.Log($"[PaketSpawner] Sukses mencetak paket untuk: {dataPaket.addressPerson}");
     }
