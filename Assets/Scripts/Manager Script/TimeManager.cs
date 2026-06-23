@@ -30,9 +30,9 @@ public class TimeManager : MonoBehaviour
     [Header("Pengaturan Kecepatan Waktu")]
     [SerializeField] private float realMinutesPerShift = 15f;
 
-    [Header("Status (read-only, untuk debug di Inspector)")]
+    [Header("Status (untuk debug di Inspector)")]
     [SerializeField] private float currentTime;
-    [SerializeField] private bool isRunning = true;
+    [SerializeField] private bool isRunning = false;
 
     // Disiapkan untuk fitur pause/resume nanti.
     // Untuk sekarang cukup toggle isRunning lewat fungsi yang akan ditambahkan kemudian.
@@ -72,6 +72,16 @@ public class TimeManager : MonoBehaviour
 
         RecalculateTimeScale();
         currentTime = startHour;
+    }
+
+    public void StartTimer()
+    {
+        isRunning = true;
+    }
+
+    public void StopTimer()
+    {
+        isRunning = false;
     }
 
     private void Start()
@@ -129,14 +139,13 @@ public class TimeManager : MonoBehaviour
         float totalGameHours = endHour - startHour;
         float totalRealSeconds = realMinutesPerShift * 60f;
 
-        TimeScale = totalGameHours / totalRealSeconds;   // <- diganti, gak pakai totalGameSeconds lagi
+        TimeScale = totalGameHours / totalRealSeconds;   
     }
 
     public void ResetShift()
     {
         currentTime = startHour;
         IsShiftEnded = false;
-        isRunning = true;
         lastHour = Hour;
         lastMinute = Minute;
     }
