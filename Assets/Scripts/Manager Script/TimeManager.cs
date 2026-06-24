@@ -41,8 +41,6 @@ public class TimeManager : MonoBehaviour
     private int lastHour = -1;
     private int lastMinute = -1;
 
-    public event Action OnShiftEnded;
-
     public event Action<int> OnHourChanged;
 
     public event Action<int> OnMinuteChanged;
@@ -131,7 +129,7 @@ public class TimeManager : MonoBehaviour
         OnHourChanged?.Invoke(Hour);
         OnMinuteChanged?.Invoke(Minute);
 
-        OnShiftEnded?.Invoke();
+        EventHandler.WhenShiftEnded();
     }
 
     public void RecalculateTimeScale()

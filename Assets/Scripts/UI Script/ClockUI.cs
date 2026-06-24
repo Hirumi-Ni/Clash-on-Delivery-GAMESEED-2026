@@ -12,9 +12,11 @@ public class ClockUI : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log($"Timemanager instance = {TimeManager.Instance}");
+
         // Subscribe ke event
         TimeManager.Instance.OnMinuteChanged += UpdateClockDisplay;
-        TimeManager.Instance.OnShiftEnded += HandleShiftEnded;
+        EventHandler.OnShiftEnded += HandleShiftEnded;
 
         // Langsung tampilkan waktu sekarang saat UI aktif.
         UpdateClockDisplay(TimeManager.Instance.Minute);
@@ -26,7 +28,7 @@ public class ClockUI : MonoBehaviour
         if (TimeManager.Instance != null)
         {
             TimeManager.Instance.OnMinuteChanged -= UpdateClockDisplay;
-            TimeManager.Instance.OnShiftEnded -= HandleShiftEnded;
+            EventHandler.OnShiftEnded -= HandleShiftEnded;
         }
     }
 

@@ -51,6 +51,7 @@ public class AddressUIScript : MonoBehaviour
             Debug.LogError("[AddressUIScript] Tidak dapat menemukan PackageController pada prefab paket!");
         }
         CloseUI();
+        Time.timeScale = 1f; //ngeresume gamenya pas modalnya dah tutup
     }
 
     public void ChangeUIOnDropOfFinished()
@@ -70,7 +71,7 @@ public class AddressUIScript : MonoBehaviour
         EventHandler.WhenPaketSuccess();
 
         // Memberitahu DeliveryController kalau paket sudah diambil, sehingga bisa mulai perjalanan pulang ke hub
-        EventHandler.WhenStartToReturnHub(5); // Cth.
+        EventHandler.WhenStartToReturnHub(addressTimerDuration); // Cth.
         Destroy(gameObject);
     }
 }

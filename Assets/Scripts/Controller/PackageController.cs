@@ -62,7 +62,7 @@ public class PackageController : MonoBehaviour
 
     public void PackageIsOnTheWay()
     {
-        Debug.Log($"[PaketController] Paket milik {dataAlamat.addressPerson} sedang diantar. Estimasi waktu perjalanan: {dataAlamat.addressDeliveryTimer} detik.");
+        Debug.Log($"[PaketController] Paket milik {dataAlamat.addressPerson} sedang diantar. Estimasi waktu perjalanan: {dataAlamat.addressDeliveryTimer/10} detik.");
         isTimerRunning = false;
     }
 }

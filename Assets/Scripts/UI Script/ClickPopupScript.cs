@@ -14,6 +14,7 @@ public class ClickPopupScript : MonoBehaviour, IPointerClickHandler
         }
 
         objectYangMuncul.SetActive(true);
+        Time.timeScale = 0f; //ngepause pas modalnya muncul ntar diatur atur lagi aja klo misal gak perlu
         Debug.Log($"[ClickPopup] Tampilan {objectYangMuncul} muncul");
     }
 }

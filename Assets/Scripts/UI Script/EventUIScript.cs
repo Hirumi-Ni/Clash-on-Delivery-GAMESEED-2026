@@ -115,6 +115,7 @@ public class EventUIScript : MonoBehaviour
 
     public void ContinueEvent()//ditempel di button continue
     {
-        Destroy(gameObject);
+        Time.timeScale = 1f;
+        Destroy(gameObject, .1f);
     }
 }
