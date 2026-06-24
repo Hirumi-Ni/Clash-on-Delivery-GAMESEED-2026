@@ -14,7 +14,7 @@ public class StatsAllocationUI : MonoBehaviour
 
     private Dictionary<PlayerStats, int> tempStats;
 
-    private int availablePoints = 5;
+    private int availablePoints;
 
     private const int MIN_STAT = 1;
     private const int MAX_STAT = 10;
@@ -34,6 +34,10 @@ public class StatsAllocationUI : MonoBehaviour
         {
             tempStats[stat] = StatsManager.instance.GetStats(stat);
         }
+
+        // Ambil poin yang belum dialokasikan dari StatsManager, baik itu dari
+        // alokasi awal game maupun dari naik level (lewat LevelManager).
+        availablePoints = StatsManager.instance.PendingPoints;
     }
 
     private void SetupButtons()
@@ -104,6 +108,8 @@ public class StatsAllocationUI : MonoBehaviour
         if (availablePoints > 0)
             return;
 
+        int pointsUsed = StatsManager.instance.PendingPoints;
+
         foreach (PlayerStats stat in tempStats.Keys)
         {
             StatsManager.instance.SetStat(
@@ -111,6 +117,8 @@ public class StatsAllocationUI : MonoBehaviour
                 tempStats[stat]
             );
         }
+
+        StatsManager.instance.ConsumePendingPoints(pointsUsed);
 
         Debug.Log("Stats Confirmed!");
 
