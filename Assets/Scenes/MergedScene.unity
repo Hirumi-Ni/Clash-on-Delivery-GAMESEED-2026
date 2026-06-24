@@ -2022,6 +2022,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388433698}
   m_CullTransparentMesh: 1
+--- !u!1 &424565397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 424565399}
+  - component: {fileID: 424565398}
+  m_Layer: 0
+  m_Name: EconomyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &424565398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424565397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f6582935344674b94293fa1cda2620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EconomyManager
+  currentMoney: 0
+  shiftTarget: 500
+  expReward: 50
+  OnMoneyChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTargetProgressChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTargetReached:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &424565399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424565397}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 360.87122, y: 148.70396, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &442812734
 GameObject:
   m_ObjectHideFlags: 0
@@ -6849,6 +6905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 180f908731914b84884d1357fb4ea060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StatsManager
+  startingPendingPoints: 5
 --- !u!4 &1646015022
 Transform:
   m_ObjectHideFlags: 0
@@ -9251,3 +9308,4 @@ SceneRoots:
   - {fileID: 1646015022}
   - {fileID: 2031258343}
   - {fileID: 254477665}
+  - {fileID: 424565399}
