@@ -3,12 +3,12 @@ using UnityEngine;
 
 public enum PlayerEmotions
 {
-    Sad,
-    Angry,
-    Neutral,
-    Happy,
-    Confident,
-    Dizzy
+    Sad, //charisma -2
+    Angry, //strength +2, intelligent -2, charisma -1
+    Neutral, 
+    Happy, //intelligent +1, survival +1
+    Confident, //luck +1, charisma +1
+    Dizzy //all -1
 }
 
 public class EmotionManager : MonoBehaviour
@@ -19,6 +19,11 @@ public class EmotionManager : MonoBehaviour
     void Awake()
     {
         if (instance == null) instance = this;
+    }
+
+    void Start()
+    {
+        ChangeEmotion(currentEmotion);
     }
 
     public PlayerEmotions getCurrentEmotion()
@@ -39,7 +44,7 @@ public class EmotionManager : MonoBehaviour
             case PlayerEmotions.Happy: HappyEmotion(); break;
             case PlayerEmotions.Confident: ConfidentEmotion(); break;
             case PlayerEmotions.Dizzy: DizzyEmotion(); break;
-            default:  Debug.Log("Error nganu enumnya gk ada"); break;
+            default: Debug.Log("Error nganu enumnya gk ada"); break;
         }
     }
 
@@ -50,32 +55,39 @@ public class EmotionManager : MonoBehaviour
 
     private void SadEmotion()
     {
-        Debug.Log($"Current Emotion: {currentEmotion}, Strength -2 apalah"); //nunggu dari GDnya
-        StatsManager.instance.ChangeStats(PlayerStats.Strength, -2); //strength -2
-        StatsManager.instance.ChangeStats(PlayerStats.Intelligent, -3); //intelligent -3
+        Debug.Log($"Current Emotion: {currentEmotion}, Charisma -2"); 
+        StatsManager.instance.ChangeStats(PlayerStats.Charisma, -2); //Charisma -2
     }
 
     private void AngryEmotion()
     {
-        Debug.Log($"Current Emotion: {currentEmotion}, stat apalah"); //nunggu dari GDnya
-        StatsManager.instance.ChangeStats(PlayerStats.Strength, 0); 
+        Debug.Log($"Current Emotion: {currentEmotion}, Strength +2, Intelligent -2, Charisma -1"); 
+        StatsManager.instance.ChangeStats(PlayerStats.Strength, 2); //Strength +2 
+        StatsManager.instance.ChangeStats(PlayerStats.Intelligent, -2); //Intelligent -2
+        StatsManager.instance.ChangeStats(PlayerStats.Charisma, -1); //Charisma -1
     }
 
     private void HappyEmotion()
     {
-        Debug.Log($"Current Emotion: {currentEmotion}, stat apalah"); //nunggu dari GDnya
-        StatsManager.instance.ChangeStats(PlayerStats.Strength, 0);
+        Debug.Log($"Current Emotion: {currentEmotion}, Intelligent +1, Survival +1"); 
+        StatsManager.instance.ChangeStats(PlayerStats.Intelligent, 1); //Intelligent +1
+        StatsManager.instance.ChangeStats(PlayerStats.Survival, 1); //Survival +1
     }
 
     private void ConfidentEmotion()
     {
-        Debug.Log($"Current Emotion: {currentEmotion}, stat apalah"); //nunggu dari GDnya
-        StatsManager.instance.ChangeStats(PlayerStats.Strength, 0);
+        Debug.Log($"Current Emotion: {currentEmotion}, Luck +1, Charisma +1"); 
+        StatsManager.instance.ChangeStats(PlayerStats.Luck, 1); //Luck +1
+        StatsManager.instance.ChangeStats(PlayerStats.Charisma, 1); //Charisma +1
     }
 
     private void DizzyEmotion()
     {
-        Debug.Log($"Current Emotion: {currentEmotion}, stat apalah"); //nunggu dari GDnya
-        StatsManager.instance.ChangeStats(PlayerStats.Strength, 0);
+        Debug.Log($"Current Emotion: {currentEmotion}, All Stat -1"); //All -1
+        StatsManager.instance.ChangeStats(PlayerStats.Strength, -1); 
+        StatsManager.instance.ChangeStats(PlayerStats.Survival, -1); 
+        StatsManager.instance.ChangeStats(PlayerStats.Charisma, -1); 
+        StatsManager.instance.ChangeStats(PlayerStats.Intelligent, -1); 
+        StatsManager.instance.ChangeStats(PlayerStats.Luck, -1); 
     }
 }
