@@ -3701,7 +3701,7 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 537862300}
+  m_GameObject: {fileID: 1537862300}
   m_CullTransparentMesh: 1
 --- !u!1 &550446603
 GameObject:
@@ -6318,7 +6318,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &537862300
+--- !u!1 &1537862300
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
