@@ -20,7 +20,10 @@ public class PackageSpawner : MonoBehaviour
     {
         // Spawn paket berdasarkan data yang dikirim oleh PaketManager
         GameObject paketBaru = Instantiate(paketPrefab, new Vector3(1920 / 2, 1080 / 2, 0), Quaternion.identity);
-
+        if (dataPaket.addressTrailPrefab != null)
+        {
+            GameObject paketTrail = Instantiate(dataPaket.addressTrailPrefab, Vector3.zero, Quaternion.identity);
+        }
         // Jadikan child dari titik spawn agar Hierarchy Unity tetap rapi
         paketBaru.transform.SetParent(canvasParent.transform, true);
 

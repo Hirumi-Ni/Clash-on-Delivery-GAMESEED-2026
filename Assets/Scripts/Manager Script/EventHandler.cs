@@ -17,7 +17,6 @@ public static class EventHandler
     public static event Action OnPaketSuccess;
 
     public static event Action OnShiftEnded; // pas shiftnya selesai, semua paket udah dianter/waktu habis (17:00)
-
     /// --- METHOD PEMICU EVENT (Broadcaster) ---
     public static void WhenStartToDeliverPackage(int durasiPerjalanan, AddressUIScript targetAddress) => OnStartToDeliverPackage?.Invoke(durasiPerjalanan, targetAddress);
     public static void WhenStartToReturnHub(int durasiPerjalanan) => OnStartReturnToHub?.Invoke(durasiPerjalanan);

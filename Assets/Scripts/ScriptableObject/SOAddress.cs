@@ -30,6 +30,9 @@ public class SOAddress : ScriptableObject
         public int timerDuration;
     }
 
+    [Header("Prefab buat Animasi Garisnya")]
+    public GameObject addressTrailPrefab; //wajib diisi kalo mau ada animasi muncul garisnya
+
     public void SetLocationData() //klo mau ngakses lewat attribut addressLocationTransform 
     {
         (addressLocationTransform, addressDeliveryTimer) = addressLocation switch

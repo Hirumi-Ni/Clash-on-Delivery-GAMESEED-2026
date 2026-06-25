@@ -16,9 +16,9 @@ MonoBehaviour:
   eventTitle: Ketemu Bahlil
   eventDescription: Mas-mas boleh dong minta mbg sama nyanyiin lagunya plisssssssss
   eventOptions:
-  - eventTextOption: Ajak Tawuran
+  - eventTextOption: 'Ajak Tawuran [Strength]'
     eventStatsNeeded: 0
-  - eventTextOption: Adu Kecerdasan
+  - eventTextOption: 'Adu Kecerdasan [Intelligent]'
     eventStatsNeeded: 3
   eventTextCashOption: Bayar Bahlil
   eventNominalCashOption: 30000
