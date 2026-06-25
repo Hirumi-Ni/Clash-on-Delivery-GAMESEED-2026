@@ -24,3 +24,4 @@ MonoBehaviour:
   addressGainCashAmount: 19000
   addressLifespanAmount: 10
   addressFixedEvent: {fileID: 0}
+  addressTrailPrefab: {fileID: 7541654376230037802, guid: 4a2f251d3224d15449a0b59a08c89882, type: 3}

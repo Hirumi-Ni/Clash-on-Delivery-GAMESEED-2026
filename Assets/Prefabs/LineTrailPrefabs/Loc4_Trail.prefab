@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4407742291084731624}
   - component: {fileID: 1246965671321210194}
   m_Layer: 0
-  m_Name: Location4_Trail
+  m_Name: Loc4_Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -26,6 +26,7 @@ public class StatsManager : MonoBehaviour
         }
 
         SetupStats();
+        SetupEmotionsModifier();
     }
 
     private Dictionary<PlayerStats, int> playerStatsDictionary;
@@ -49,6 +50,15 @@ public class StatsManager : MonoBehaviour
             playerStatsDictionary[playerStat] = 1;
         }
         PendingPoints = startingPendingPoints;
+    }
+
+    public void SetupEmotionsModifier()
+    {
+        playerStatsEmotionDictionary = new Dictionary<PlayerStats, int>();
+        foreach (PlayerStats playerStat in System.Enum.GetValues(typeof(PlayerStats)))
+        {
+            playerStatsEmotionDictionary[playerStat] = 0;
+        }
     }
 
     /// <summary>
