@@ -21,6 +21,6 @@ MonoBehaviour:
   addressLocationTransform: {x: 378, y: -321, z: 0}
   addressDeliveryTimer: 90
   addressGainXpAmount: 80
-  addressGainCashAmount: 19000000
+  addressGainCashAmount: 19000
   addressLifespanAmount: 10
   addressFixedEvent: {fileID: 0}

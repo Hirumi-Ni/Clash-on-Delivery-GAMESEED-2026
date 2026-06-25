@@ -10,13 +10,19 @@ public static class EventHandler
     public static event Action<int> OnShiftStarted;
 
     public static event Action OnArrivedAtLocation; // Ini dipakai ketika sampai dilokasi -> update state
-    public static event Action OnDropoffFinished; // Ini Dipakai untuk update UI selesai dikirim 
+    public static event Action OnDropoffFinished; // Ini Dipakai untuk update UI selesai dikirim
+    public static event Action<int, int> OnDeliveryRewardClaimed;
     public static event Action OnArrivedAtHub; // Ini dipakai ketika sampai dihub -> update state, reset untuk paket selanjutnya
 
     public static event Action OnPaketHangus;
     public static event Action OnPaketSuccess;
 
     public static event Action OnShiftEnded; // pas shiftnya selesai, semua paket udah dianter/waktu habis (17:00)
+    public static event Action<int, int, int, float> OnScoreCalculated; // ini dipakai untuk ngasih tahu score manager untuk ngitung skor akhir shift
+
+    public static event Action<int, int> OnMoneyChanged;
+    public static event Action<int, int> OnXPChanged;
+    public static event Action<int> OnLevelUp;
 
     /// --- METHOD PEMICU EVENT (Broadcaster) ---
     public static void WhenStartToDeliverPackage(int durasiPerjalanan, AddressUIScript targetAddress) => OnStartToDeliverPackage?.Invoke(durasiPerjalanan, targetAddress);
@@ -29,4 +35,9 @@ public static class EventHandler
     public static void WhenPaketHangus() => OnPaketHangus?.Invoke();
     public static void WhenPaketSuccess() => OnPaketSuccess?.Invoke();
     public static void WhenShiftEnded() => OnShiftEnded?.Invoke();
+    public static void WhenMoneyChanged(int currentMoney, int shiftTarget) => OnMoneyChanged?.Invoke(currentMoney, shiftTarget);
+    public static void WhenXPChanged(int currentXP, int xpRequiredForNextLevel) => OnXPChanged?.Invoke(currentXP, xpRequiredForNextLevel);
+    public static void WhenLevelUp(int newLevel) => OnLevelUp?.Invoke(newLevel);
+    public static void TriggerReward(int expAmount, int cashAmount) => OnDeliveryRewardClaimed?.Invoke(expAmount, cashAmount);
+    public static void TriggerScoreCalculated(int totalSuccess, int totalAbandon, int totalFailed, float finalRating) => OnScoreCalculated?.Invoke(totalSuccess, totalAbandon, totalFailed, finalRating);
 }

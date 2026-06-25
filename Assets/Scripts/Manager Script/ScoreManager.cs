@@ -9,14 +9,13 @@ public class ScoreManager : MonoBehaviour
     private int paketAbandoned = 0;
     private float finalRating = 0f;
 
-    public static event Action<int, int, int, float> OnScoreCalculated;
-
     private void OnEnable()
     {
         EventHandler.OnShiftStarted += InisialisasiShift;
         EventHandler.OnPaketSuccess += TambahSukses;
         EventHandler.OnPaketHangus += TambahGagal;
         EventHandler.OnShiftEnded += KalkulasiAkhirShift;
+        EventHandler.OnDeliveryRewardClaimed += AddReward;
     }
 
     private void OnDisable()
@@ -25,6 +24,7 @@ public class ScoreManager : MonoBehaviour
         EventHandler.OnPaketSuccess -= TambahSukses;
         EventHandler.OnPaketHangus -= TambahGagal;
         EventHandler.OnShiftEnded -= KalkulasiAkhirShift;
+        EventHandler.OnDeliveryRewardClaimed -= AddReward;
     }
 
     private void InisialisasiShift(int totalPaket)
@@ -71,6 +71,14 @@ public class ScoreManager : MonoBehaviour
         Debug.Log($"[ScoreManager] Rapor Shift -> S: {paketSuccess} | F: {paketFailed} | A: {paketAbandoned} | Rating: {finalRating}");
 
         // 4. Mengirimkan data ke UI Result
-        OnScoreCalculated?.Invoke(paketSuccess, paketFailed, paketAbandoned, finalRating);
+        EventHandler.TriggerScoreCalculated(paketSuccess, paketFailed, paketAbandoned, finalRating);
+    }
+
+    private void AddReward(int expAmount, int cashAmount)
+    {
+        Debug.Log($"[ScoreManager] Reward diterima: EXP = {expAmount}, Cash = {cashAmount}");
+        // Di sini nanti bisa menambahkan logika untuk menambahkan EXP dan Cash ke player
+        LevelManager.Instance.AddXP(expAmount);
+        EconomyManager.Instance.AddMoney(cashAmount);
     }
 }

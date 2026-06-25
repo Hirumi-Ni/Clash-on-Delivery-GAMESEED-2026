@@ -20,9 +20,11 @@ public class AddressUIScript : MonoBehaviour
     [SerializeField] GameObject completeDeliveryPrefab;
 
     private int addressTimerDuration;
+    private SOAddress dataAlamat;
 
     public void SetupAddress(SOAddress addressData)
     {
+        dataAlamat = addressData;
         addressGenderSprite.sprite = addressData.addressGenderSprite;
         addressPackageTitle.text = addressData.addressPackageTitle;
         addressPerson.text = addressData.addressPerson;
@@ -65,7 +67,7 @@ public class AddressUIScript : MonoBehaviour
     {
         // Logika saat paket diklik oleh player: 
         // Mentrigger event untuk menambahkan exp dan duid
-        // EventHandler.TriggerReward(dataAlamat.addressGainXpAmount, dataAlamat.addressGainCashAmount);
+        EventHandler.TriggerReward(dataAlamat.addressGainXpAmount, dataAlamat.addressGainCashAmount);
 
         // Memberitahu gameManager dan scoreManager kalau paket sudah diambil
         EventHandler.WhenPaketSuccess();

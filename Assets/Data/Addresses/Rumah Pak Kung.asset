@@ -22,5 +22,5 @@ MonoBehaviour:
   addressDeliveryTimer: 30
   addressGainXpAmount: 24
   addressGainCashAmount: 3000
-  addressLifespanAmount: 30
+  addressLifespanAmount: 15
   addressFixedEvent: {fileID: 0}
