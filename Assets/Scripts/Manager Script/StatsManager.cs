@@ -30,21 +30,49 @@ public class StatsManager : MonoBehaviour
 
     private Dictionary<PlayerStats, int> playerStatsDictionary;
 
-    public void SetupStats() //pastiin buat selalu dijalankan ketika shift dimulai, pas awal shift set semua stat bernilai 1 
+    /// <summary>
+    /// Poin yang sudah didapat (misal dari naik level) tapi belum dialokasikan
+    /// pemain ke stat manapun. StatsAllocationUI membaca nilai ini saat dibuka,
+    /// bukan menyimpan angka poinnya sendiri.
+    /// </summary>
+    public int PendingPoints { get; private set; }
+
+    [Header("Poin Alokasi Awal")]
+    [Tooltip("Poin yang didapat pemain saat game/shift baru dimulai, sebelum naik level apapun.")]
+    [SerializeField] private int startingPendingPoints = 5;    
+    public void SetupStats()
     {
         playerStatsDictionary = new Dictionary<PlayerStats, int>();
         foreach (PlayerStats playerStat in System.Enum.GetValues(typeof(PlayerStats)))
         {
             playerStatsDictionary[playerStat] = 1;
         }
+        PendingPoints = startingPendingPoints;
     }
 
-    public void ChangeStats(PlayerStats playerStat, int amount) //kalo nilai int amountnya negatif berarti statnya kurang, kalo positif berarti nambah
+    /// <summary>
+    /// Menambah PendingPoints. Dipanggil oleh LevelManager setiap kali pemain naik level.
+    /// </summary>
+    public void AddPendingPoints(int amount)
+    {
+        PendingPoints += amount;
+    }
+
+    /// <summary>
+    /// Mengurangi PendingPoints. Dipanggil oleh StatsAllocationUI setelah pemain
+    /// selesai mengalokasikan poin (di akhir ConfirmStats()).
+    /// </summary>
+    public void ConsumePendingPoints(int amount)
+    {
+        PendingPoints = Mathf.Max(0, PendingPoints - amount);
+    }
+
+    public void ChangeStats(PlayerStats playerStat, int amount) 
     {
         playerStatsDictionary[playerStat] += amount;
     }
 
-    public int GetStats(PlayerStats playerStat) //getter buat dapetin nilai dari enum statnya
+    public int GetStats(PlayerStats playerStat) 
     {
         return playerStatsDictionary[playerStat];
     }
@@ -54,5 +82,3 @@ public class StatsManager : MonoBehaviour
     }
 
 }
-
-
