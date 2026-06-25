@@ -1,0 +1,724 @@
+fileFormatVersion: 2
+guid: 2fd80142737aba248893708c7b6cdd40
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4288344199647211769
+    second: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 835
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70fcb69cbadbc74c0800000000000000
+      internalID: -4288344199647211769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1091
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd82f0a99e26b14191d2f4236c6ef60
+      internalID: -867803470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1027
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f74196cd6d2e554ab5646ddd11b39a5
+      internalID: -352498635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 963
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955014df468c9f1439e5769144216585
+      internalID: -1508408670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 899
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d756699723990f0459030b9bee7806aa
+      internalID: -646814372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 835
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db6e2e597451cc4e86299cf14302042
+      internalID: 1686892394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 771
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63798b69c351a7e49835629a4c9c25a8
+      internalID: 2075542963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 707
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2efd111377a20234b8f9c62cfe6cb72d
+      internalID: -785731115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 643
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 967a4bc7ac9f27f47bc60d114dd108df
+      internalID: 541793152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 579
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9823c8ab03e520645b02dab1728b2cad
+      internalID: 1515511299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 515
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89fed44eec0887042b71838da5ced532
+      internalID: -1162553210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 451
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb16ff8117a84e5429b70ef555847198
+      internalID: 1021879553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 387
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f977254a6400c7547b1cc2b4336fad74
+      internalID: -1287588707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 323
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 802a03e41b0b4b640a92d86f35de965c
+      internalID: -738485966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 259
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fdc1fe02dc47be47bf9de86a7ba8db8
+      internalID: -1882102513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 195
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0048e5fdc5af42e4c85f280c7d01cbf4
+      internalID: 140279415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 131
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59488a7ca90c4e4ea0acc9fb3b15bd6
+      internalID: 303602925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 67
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 689f5f501c724c3469a87a0960dda2c1
+      internalID: 1539892055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 960
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: 480, y: 0}
+        - {x: 0, y: 32}
+        - {x: -480, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 422765338a031e74a9a1b0c9caa43249
+      internalID: 586812530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 52233f9eb711dc846a4b4a4c27709f6c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":960.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":3,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_0: -4288344199647211769
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_1: -867803470
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_10: -1162553210
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_11: 1021879553
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_12: -1287588707
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_13: -738485966
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_14: -1882102513
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_15: 140279415
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_16: 303602925
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_17: 1539892055
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_18: 586812530
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_2: -352498635
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_3: -1508408670
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_4: -646814372
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_5: 1686892394
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_6: 2075542963
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_7: -785731115
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_8: 541793152
+      Kepala_Badan_Koordinasi_Penanaman_Modal_Bahlil_Lahadalia_(cropped)_9: 1515511299
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
