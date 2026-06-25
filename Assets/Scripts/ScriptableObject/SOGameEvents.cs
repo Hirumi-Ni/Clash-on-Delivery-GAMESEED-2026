@@ -33,13 +33,3 @@ public class SOGameEvents : ScriptableObject
         public PlayerStats eventStatsNeeded;
     }
 }
-
-public enum PlayerEmotions
-{
-    Sad,
-    Angry,
-    Neutral,
-    Happy,
-    Confident,
-    Dizzy
-}

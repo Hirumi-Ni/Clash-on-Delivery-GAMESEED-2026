@@ -85,8 +85,16 @@ public class EventUIScript : MonoBehaviour
     {
         bool isSuccess = eventController.CalculateSuccessChance(percentage, eventData);
         Debug.Log(isSuccess);
-        if (isSuccess) EventSuccessUI();
-        else EventFailedUI();
+        if (isSuccess)
+        {
+            EventSuccessUI();
+            EmotionManager.instance.ChangeEmotion(eventData.eventSuccessMood);
+        }
+        else
+        {
+            EventFailedUI();
+            EmotionManager.instance.ChangeEmotion(eventData.eventFailedMood);
+        };
     }
 
     public void EventSuccessUI() //gk tau dah dobel dobel tak biarain aja, soalnya yang dibawah juga dipake buat ngeclose modalnya
@@ -101,7 +109,7 @@ public class EventUIScript : MonoBehaviour
         CloseUI(eventNormalPrefab);
     }
 
-    public void OpenUI(GameObject eventModalUI) //ntar kutambahin event/action biar pas menunya masih buka bakal ngefreeze time gamenya
+    public void OpenUI(GameObject eventModalUI)
     {
         if (eventModalUI == null) return;
         eventModalUI.SetActive(true);

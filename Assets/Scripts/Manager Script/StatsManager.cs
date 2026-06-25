@@ -29,6 +29,7 @@ public class StatsManager : MonoBehaviour
     }
 
     private Dictionary<PlayerStats, int> playerStatsDictionary;
+    private Dictionary<PlayerStats, int> playerStatsEmotionDictionary;
 
     /// <summary>
     /// Poin yang sudah didapat (misal dari naik level) tapi belum dialokasikan
@@ -70,15 +71,30 @@ public class StatsManager : MonoBehaviour
     public void ChangeStats(PlayerStats playerStat, int amount) 
     {
         playerStatsDictionary[playerStat] += amount;
+        playerStatsDictionary[playerStat] = Mathf.Clamp(playerStatsDictionary[playerStat], 0, 10);
     }
 
     public int GetStats(PlayerStats playerStat) 
     {
-        return playerStatsDictionary[playerStat];
+        return playerStatsDictionary[playerStat] + playerStatsEmotionDictionary[playerStat];
     }
+
     public void SetStat(PlayerStats playerStat, int value)
     {
         playerStatsDictionary[playerStat] = value;
     }
 
+    public void SetStatsModifier(PlayerStats playerStat, int amount) 
+    {
+        playerStatsEmotionDictionary[playerStat] += amount;
+        playerStatsEmotionDictionary[playerStat] = Mathf.Clamp(playerStatsEmotionDictionary[playerStat], 0, 10);
+    }
+
+    public void ClearAllEmotionModifiers()
+    {
+        foreach (PlayerStats stat in System.Enum.GetValues(typeof(PlayerStats)))
+        {
+            playerStatsEmotionDictionary[stat] = 0;
+        }
+    }
 }
