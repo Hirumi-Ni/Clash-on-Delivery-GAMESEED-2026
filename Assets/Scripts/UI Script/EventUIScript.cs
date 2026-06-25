@@ -71,7 +71,7 @@ public class EventUIScript : MonoBehaviour
 
                 Button btn = eventGameobjectOption[i].GetComponent<Button>();
                 btn.onClick.RemoveAllListeners();
-                btn.onClick.AddListener(() => CheckOptionSuccess(percentage, eventController));
+                btn.onClick.AddListener(() => CheckOptionSuccess(percentage, eventController, eventData));
             }
             else
             {
@@ -81,9 +81,9 @@ public class EventUIScript : MonoBehaviour
         }
     }
 
-    public void CheckOptionSuccess(int percentage, GameEventController eventController)
+    public void CheckOptionSuccess(int percentage, GameEventController eventController, SOGameEvents eventData)
     {
-        bool isSuccess = eventController.CalculateSuccessChance(percentage);
+        bool isSuccess = eventController.CalculateSuccessChance(percentage, eventData);
         Debug.Log(isSuccess);
         if (isSuccess) EventSuccessUI();
         else EventFailedUI();

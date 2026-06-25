@@ -124,4 +124,15 @@ public class StatsAllocationUI : MonoBehaviour
 
         gameObject.SetActive(false);
     }
+
+    public void OpenStatsAllocationUI()
+    {
+        UpdateUI();
+        gameObject.SetActive(true);
+    }
+
+    public void CloseStatsAllocationUI()
+    {
+        gameObject.SetActive(false);
+    }
 }

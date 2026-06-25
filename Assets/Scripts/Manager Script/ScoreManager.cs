@@ -16,6 +16,7 @@ public class ScoreManager : MonoBehaviour
         EventHandler.OnPaketHangus += TambahGagal;
         EventHandler.OnShiftEnded += KalkulasiAkhirShift;
         EventHandler.OnDeliveryRewardClaimed += AddReward;
+        EventHandler.OnEventSuccess += AddReward;
     }
 
     private void OnDisable()
@@ -25,6 +26,7 @@ public class ScoreManager : MonoBehaviour
         EventHandler.OnPaketHangus -= TambahGagal;
         EventHandler.OnShiftEnded -= KalkulasiAkhirShift;
         EventHandler.OnDeliveryRewardClaimed -= AddReward;
+        EventHandler.OnEventSuccess -= AddReward;
     }
 
     private void InisialisasiShift(int totalPaket)
