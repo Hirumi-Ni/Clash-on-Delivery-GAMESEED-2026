@@ -2178,6 +2178,8 @@ MonoBehaviour:
   addressModalPrefab: {fileID: 5543085988281745202}
   pinAddressPrefab: {fileID: 4307350527191112194}
   completeDeliveryPrefab: {fileID: 2509668827839277229}
+  floatingThxPrefab: {fileID: 1370896985927034901, guid: ec6518782aabf534f8ce57210f3f38ca, type: 3}
+  floatingThxOffset: {x: 0, y: 1.5, z: 0}
 --- !u!114 &7075819371042653227
 MonoBehaviour:
   m_ObjectHideFlags: 0

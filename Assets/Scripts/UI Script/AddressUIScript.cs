@@ -19,10 +19,16 @@ public class AddressUIScript : MonoBehaviour
     [SerializeField] GameObject pinAddressPrefab;
     [SerializeField] GameObject completeDeliveryPrefab;
 
+    [Header("Floating Text Setup")]
+    [SerializeField] GameObject floatingThxPrefab;
+    [SerializeField] Vector3 floatingThxOffset = new Vector3(0f, 1.5f, 0f); // Offset untuk menampilkan teks floating di atas paket
+
     private int addressTimerDuration;
+    private SOAddress dataAlamat;
 
     public void SetupAddress(SOAddress addressData)
     {
+        dataAlamat = addressData;
         addressGenderSprite.sprite = addressData.addressGenderSprite;
         addressPackageTitle.text = addressData.addressPackageTitle;
         addressPerson.text = addressData.addressPerson;
@@ -65,13 +71,38 @@ public class AddressUIScript : MonoBehaviour
     {
         // Logika saat paket diklik oleh player: 
         // Mentrigger event untuk menambahkan exp dan duid
-        // EventHandler.TriggerReward(dataAlamat.addressGainXpAmount, dataAlamat.addressGainCashAmount);
+        EventHandler.TriggerReward(dataAlamat.addressGainXpAmount, dataAlamat.addressGainCashAmount);
 
         // Memberitahu gameManager dan scoreManager kalau paket sudah diambil
         EventHandler.WhenPaketSuccess();
 
         // Memberitahu DeliveryController kalau paket sudah diambil, sehingga bisa mulai perjalanan pulang ke hub
-        EventHandler.WhenStartToReturnHub(addressTimerDuration); // Cth.
+        EventHandler.WhenStartToReturnHub(addressTimerDuration);
+
+        // Menampilkan teks floating "Terima kasih" di atas paket
+        ShowFloatingThx(completeDeliveryPrefab.transform);
+
         Destroy(gameObject);
+    }
+
+    private void ShowFloatingThx(Transform targetPos)
+    {
+        // Cegah error kalau prefab belum dimasukkan atau target tidak ada
+        if (floatingThxPrefab == null || targetPos == null)
+        {
+            Debug.LogWarning("[AddressUIScript] Prefab Floating Thx atau Target belum di-set!");
+            return;
+        }
+
+        // Kalkulasi posisi: Posisi paket + offset (naik sedikit ke atas)
+        Vector3 spawnPosition = targetPos.position + floatingThxOffset;
+
+        // Spawn prefab di posisi yang sudah dihitung
+        // Jika teks ini adalah UI Canvas biasa, pastikan dia di-spawn sebagai child dari Canvas.
+        // Jika teks ini TextMeshPro World Space (cocok untuk game 2D), tidak perlu Canvas.
+        GameObject thxPopup = Instantiate(floatingThxPrefab, spawnPosition, Quaternion.identity);
+        thxPopup.transform.SetParent(gameObject.transform, true); // true agar world position tetap sama
+
+        Debug.Log("[AddressUIScript] Menampilkan teks floating 'Terima kasih' di atas paket.");
     }
 }

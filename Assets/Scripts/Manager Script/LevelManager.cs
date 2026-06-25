@@ -1,20 +1,6 @@
 using System;
 using UnityEngine;
 
-/// <summary>
-/// LevelManager mengatur progres level dan XP pemain.
-/// XP didapat dari aktivitas dalam game (kerja, quest, dll) lewat AddXP().
-/// Saat XP terkumpul cukup, pemain naik level dan mendapat poin stat baru
-/// (lewat StatsManager.AddPendingPoints), yang nantinya dialokasikan lewat
-/// panel StatsAllocationUI yang sama dengan yang dipakai di awal game.
-///
-/// Cara pakai dari script lain (misal saat selesai kerja/quest):
-///   LevelManager.Instance.AddXP(25);
-///
-/// Subscribe event untuk UI:
-///   LevelManager.Instance.OnXPChanged += HandleXPChanged;
-///   LevelManager.Instance.OnLevelUp += HandleLevelUp;
-/// </summary>
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance { get; private set; }
@@ -39,12 +25,6 @@ public class LevelManager : MonoBehaviour
 
     public int XPRequiredForNextLevel => baseXPRequirement + (currentLevel - 1) * xpRequirementIncreasePerLevel;
 
-    /// <summary>Dipicu setiap kali CurrentXP berubah. Parameter: (currentXP, xpRequiredForNextLevel). Cocok untuk update XP bar di UI.</summary>
-    public event Action<int, int> OnXPChanged;
-
-    /// <summary>Dipicu setiap kali naik level (bisa terpicu berkali-kali sekaligus kalau XP yang didapat sangat besar). Parameter: level yang baru.</summary>
-    public event Action<int> OnLevelUp;
-
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -57,7 +37,8 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        OnXPChanged?.Invoke(currentXP, XPRequiredForNextLevel);
+        EventHandler.WhenXPChanged(currentXP, XPRequiredForNextLevel);
+        EventHandler.WhenLevelUp(currentLevel);
     }
 
     public void AddXP(int amount)
@@ -72,7 +53,7 @@ public class LevelManager : MonoBehaviour
             LevelUp();
         }
 
-        OnXPChanged?.Invoke(currentXP, XPRequiredForNextLevel);
+        EventHandler.WhenXPChanged(currentXP, XPRequiredForNextLevel);
     }
 
     private void LevelUp()
@@ -84,6 +65,6 @@ public class LevelManager : MonoBehaviour
             StatsManager.instance.AddPendingPoints(statPointsPerLevel);
         }
 
-        OnLevelUp?.Invoke(currentLevel);
+        EventHandler.WhenLevelUp(currentLevel);
     }
 }
