@@ -7,6 +7,8 @@ public class ClickPopupScript : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (PackageManager.Instance.currentState == CourierState.OTW) return;
+
         if (objectYangMuncul == null)
         {
             Debug.Log("[ClickPopup] Masukkin dulu objek yang mau dimunculin");

@@ -404,7 +404,6 @@ GameObject:
   - component: {fileID: 45407795}
   - component: {fileID: 45407798}
   - component: {fileID: 45407797}
-  - component: {fileID: 45407796}
   m_Layer: 5
   m_Name: StatsAllocationPanel
   m_TagString: Untagged
@@ -436,26 +435,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &45407796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45407794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fd6f826a494d61468485bae476b61a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StatsAllocationUI
-  statRows:
-  - {fileID: 1089435308}
-  - {fileID: 1169292131}
-  - {fileID: 377755473}
-  - {fileID: 1743607124}
-  - {fileID: 948289180}
-  availablePointText: {fileID: 1669441454}
-  confirmButton: {fileID: 461142186}
 --- !u!114 &45407797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1123,7 +1102,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 45407796}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StatsAllocationUI, Assembly-CSharp
         m_MethodName: AddLuck
         m_Mode: 1
@@ -1631,7 +1610,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 45407796}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StatsAllocationUI, Assembly-CSharp
         m_MethodName: AddLuck
         m_Mode: 1
@@ -3544,7 +3523,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 45407796}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StatsAllocationUI, Assembly-CSharp
         m_MethodName: ConfirmStats
         m_Mode: 1
@@ -3603,7 +3582,7 @@ Transform:
   m_GameObject: {fileID: 1010980110}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 443, y: -27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4095,7 +4074,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 45407796}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StatsAllocationUI, Assembly-CSharp
         m_MethodName: CloseStatsAllocationUI
         m_Mode: 1
@@ -6892,7 +6871,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1328375129}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ShiftOverviewUI, Assembly-CSharp
         m_MethodName: OnKonfirmasiButtonClicked
         m_Mode: 1
@@ -7533,7 +7512,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 45407796}
+      - m_Target: {fileID: 1646824899}
         m_TargetAssemblyTypeName: StatsAllocationUI, Assembly-CSharp
         m_MethodName: OpenStatsAllocationUI
         m_Mode: 1
@@ -9309,7 +9288,6 @@ GameObject:
   - component: {fileID: 1328375126}
   - component: {fileID: 1328375128}
   - component: {fileID: 1328375127}
-  - component: {fileID: 1328375129}
   m_Layer: 5
   m_Name: ShiftOverviewPanel
   m_TagString: Untagged
@@ -9381,30 +9359,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328375125}
   m_CullTransparentMesh: 1
---- !u!114 &1328375129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328375125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d45599d8c4175848bc27ddf000a4c4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShiftOverviewUI
-  shiftOverviewPanel: {fileID: 1328375125}
-  overviewLevelText: {fileID: 1659391834}
-  overviewExpText: {fileID: 1286380580}
-  overviewExpBarFill: {fileID: 1814430859}
-  overviewExpGainedText: {fileID: 17433751}
-  overviewMoneyText: {fileID: 658443845}
-  overviewMoneyBarFill: {fileID: 243973075}
-  overviewReachedText: {fileID: 973793201}
-  overviewSuccessText: {fileID: 431646785}
-  overviewAbandonText: {fileID: 1163595390}
-  overviewFailedText: {fileID: 894820104}
-  overviewRatingText: {fileID: 502283735}
 --- !u!1 &1329010091
 GameObject:
   m_ObjectHideFlags: 0
@@ -11521,6 +11475,8 @@ GameObject:
   - component: {fileID: 1646824897}
   - component: {fileID: 1646824896}
   - component: {fileID: 1646824895}
+  - component: {fileID: 1646824900}
+  - component: {fileID: 1646824899}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -11615,6 +11571,51 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1646824899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646824894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd6f826a494d61468485bae476b61a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StatsAllocationUI
+  statRows:
+  - {fileID: 1089435308}
+  - {fileID: 1169292131}
+  - {fileID: 377755473}
+  - {fileID: 1743607124}
+  - {fileID: 948289180}
+  availablePointText: {fileID: 1669441454}
+  confirmButton: {fileID: 461142186}
+  statsAllocationPanel: {fileID: 45407794}
+--- !u!114 &1646824900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646824894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d45599d8c4175848bc27ddf000a4c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShiftOverviewUI
+  shiftOverviewPanel: {fileID: 1328375125}
+  overviewLevelText: {fileID: 1659391834}
+  overviewExpText: {fileID: 1286380580}
+  overviewExpBarFill: {fileID: 1814430859}
+  overviewExpGainedText: {fileID: 17433751}
+  overviewMoneyText: {fileID: 658443845}
+  overviewMoneyBarFill: {fileID: 243973075}
+  overviewReachedText: {fileID: 973793201}
+  overviewSuccessText: {fileID: 431646785}
+  overviewAbandonText: {fileID: 1163595390}
+  overviewFailedText: {fileID: 894820104}
+  overviewRatingText: {fileID: 502283735}
 --- !u!1 &1649903351
 GameObject:
   m_ObjectHideFlags: 0
