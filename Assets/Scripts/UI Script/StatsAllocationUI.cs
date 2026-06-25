@@ -11,6 +11,7 @@ public class StatsAllocationUI : MonoBehaviour
     [Header("UI")]
     public TMP_Text availablePointText;
     public Button confirmButton;
+    public GameObject statsAllocationPanel;
 
     private Dictionary<PlayerStats, int> tempStats;
 
@@ -128,11 +129,11 @@ public class StatsAllocationUI : MonoBehaviour
     public void OpenStatsAllocationUI()
     {
         UpdateUI();
-        gameObject.SetActive(true);
+        statsAllocationPanel.SetActive(true);
     }
 
     public void CloseStatsAllocationUI()
     {
-        gameObject.SetActive(false);
+        statsAllocationPanel.SetActive(false);
     }
 }

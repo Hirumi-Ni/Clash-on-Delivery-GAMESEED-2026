@@ -82,7 +82,7 @@ public class AddressUIScript : MonoBehaviour
         // Menampilkan teks floating "Terima kasih" di atas paket
         ShowFloatingThx(completeDeliveryPrefab.transform);
 
-        Destroy(gameObject);
+        Destroy(gameObject, 2f);
     }
 
     private void ShowFloatingThx(Transform targetPos)

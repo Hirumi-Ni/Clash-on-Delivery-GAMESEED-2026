@@ -32,6 +32,7 @@ public class EventUIScript : MonoBehaviour
     [SerializeField] GameObject eventNormalPrefab;
     [SerializeField] GameObject eventSuccessPrefab;
     [SerializeField] GameObject eventFailedPrefab;
+    [SerializeField] GameObject eventPayOptionButton;
 
     [ContextMenu("Test Setup Event")]
     public void SetupEvent(SOGameEvents gameEvent, GameEventController eventController)
@@ -79,6 +80,24 @@ public class EventUIScript : MonoBehaviour
                 eventGameobjectOption[i].gameObject.SetActive(false);
             }
         }
+
+        SetListenerPayOption(eventData);
+    }
+
+    public void SetListenerPayOption(SOGameEvents events)
+    {
+        Button payButton = eventPayOptionButton.GetComponent<Button>();
+        EconomyManager e = EconomyManager.Instance;
+        if (e == null) return;
+
+        if (e.CurrentMoney <= events.eventNominalCashOption)
+        {
+            Debug.Log("[EventUIScript] Uang tidak mencukupi!");
+            return;
+        }
+
+        payButton.onClick.AddListener(() => e.SpendMoney(events.eventNominalCashOption));
+        payButton.onClick.AddListener(() => EventSuccessUI());
     }
 
     public void CheckOptionSuccess(int percentage, GameEventController eventController, SOGameEvents eventData)
@@ -94,7 +113,8 @@ public class EventUIScript : MonoBehaviour
         {
             EventFailedUI();
             EmotionManager.instance.ChangeEmotion(eventData.eventFailedMood);
-        };
+        }
+        ;
     }
 
     public void EventSuccessUI() //gk tau dah dobel dobel tak biarain aja, soalnya yang dibawah juga dipake buat ngeclose modalnya
