@@ -32,11 +32,12 @@ public class GameEventController : MonoBehaviour
         if (randomNum <= percentage)
         {
             EventHandler.WhenEventSuccess(eventData.eventGainXpAmount, eventData.eventGainCashAmount);
+            EmotionManager.instance.ChangeEmotion(eventData.eventSuccessMood);
             return true;
         }
         else
         {
-            // Kalau Fail nanti mungkin bisa kabarin MoodManager untuk ganti moodnya.
+            EmotionManager.instance.ChangeEmotion(eventData.eventFailedMood);
             return false;
         }
     }

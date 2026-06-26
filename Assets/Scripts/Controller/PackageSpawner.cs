@@ -19,10 +19,11 @@ public class PackageSpawner : MonoBehaviour
     private void SpawnPaket(SOAddress dataPaket)
     {
         // Spawn paket berdasarkan data yang dikirim oleh PaketManager
-        GameObject paketBaru = Instantiate(paketPrefab, new Vector3(1920 / 2, 1080 / 2, 0), Quaternion.identity);
+        GameObject paketBaru = Instantiate(paketPrefab);
        
         // Jadikan child dari titik spawn agar Hierarchy Unity tetap rapi
-        paketBaru.transform.SetParent(canvasParent.transform, true);
+        paketBaru.transform.SetParent(canvasParent.transform, false);
+        paketBaru.transform.localPosition = Vector3.zero;
 
         AddressUIScript uiScript = paketBaru.GetComponent<AddressUIScript>();
         PackageController paketController = paketBaru.GetComponent<PackageController>();

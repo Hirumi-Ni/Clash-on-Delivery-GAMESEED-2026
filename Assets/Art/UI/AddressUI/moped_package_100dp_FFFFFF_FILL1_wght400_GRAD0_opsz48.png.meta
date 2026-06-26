@@ -1,28 +1,16 @@
 fileFormatVersion: 2
-guid: 04e90d2ce6e72064c8ab54e409984068
+guid: 09d81a6b8efb9984ebb50919dd33a0f0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 137542842360294689
-    second: done_0
+      213: -3594447275708164657
+    second: moped_package_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_0
   - first:
-      213: 4896319815116482195
-    second: done_1
+      213: -4554720645255216086
+    second: moped_package_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_1
   - first:
-      213: -7214445334872377445
-    second: done_2
-  - first:
-      213: -8849818325153763018
-    second: done_3
-  - first:
-      213: 1806452276324049816
-    second: done_4
-  - first:
-      213: -3194188708492192131
-    second: done_5
-  - first:
-      213: -1159546543172045656
-    second: done_6
+      213: -2535047273505039640
+    second: moped_package_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -64,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -131,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: done_0
+      name: moped_package_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 28
-        width: 27
-        height: 353
+        x: 7
+        y: 20
+        width: 73
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12d68448c76a8e100800000000000000
-      internalID: 137542842360294689
+      spriteID: fc55b873f35fd1ec0800000000000000
+      internalID: -3594447275708164657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: done_1
+      name: moped_package_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_1
       rect:
         serializedVersion: 2
-        x: 8
-        y: 141
-        width: 122
-        height: 108
+        x: 11
+        y: 67
+        width: 31
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,84 +156,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 39669b61ee833f340800000000000000
-      internalID: 4896319815116482195
+      spriteID: a24cc6084b16ac0c0800000000000000
+      internalID: -4554720645255216086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: done_2
+      name: moped_package_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_2
       rect:
         serializedVersion: 2
-        x: 29
-        y: 28
-        width: 120
-        height: 353
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b973573113421eb90800000000000000
-      internalID: -7214445334872377445
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: done_3
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 263
-        width: 98
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 631b7722f112f2580800000000000000
-      internalID: -8849818325153763018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: done_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 19
-        width: 98
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 893adf936cec11910800000000000000
-      internalID: 1806452276324049816
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: done_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
+        x: 66
+        y: 20
         width: 27
         height: 26
       alignment: 0
@@ -256,30 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7652cc0b46fba3d0800000000000000
-      internalID: -3194188708492192131
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: done_6
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 0
-        width: 120
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8a4b2b1009678efe0800000000000000
-      internalID: -1159546543172045656
+      spriteID: 8ead8ed9fe3b1dcd0800000000000000
+      internalID: -2535047273505039640
       vertices: []
       indices: 
       edges: []
@@ -288,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -298,13 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      done_0: 137542842360294689
-      done_1: 4896319815116482195
-      done_2: -7214445334872377445
-      done_3: -8849818325153763018
-      done_4: 1806452276324049816
-      done_5: -3194188708492192131
-      done_6: -1159546543172045656
+      moped_package_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_0: -3594447275708164657
+      moped_package_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_1: -4554720645255216086
+      moped_package_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_2: -2535047273505039640
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

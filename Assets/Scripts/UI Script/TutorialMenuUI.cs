@@ -13,7 +13,7 @@ public class TutorialMenuUI : MonoBehaviour
     private int currentPage;
     Vector3 targetPos;
 
-    void Start()
+    private void Start()
     {
         currentPage = 1;
         targetPos = slideContentRect.localPosition;
@@ -42,8 +42,9 @@ public class TutorialMenuUI : MonoBehaviour
 
     public void CloseTutorialMenu()
     {
-        Time.timeScale = 1;
-        Destroy(gameObject, .1f);
+        Time.timeScale = 1; //unpause
+        Destroy(gameObject, .2f);
+        Time.timeScale = 0; //pause lagi buat di menu stat
     }
 
     private void MovePage()

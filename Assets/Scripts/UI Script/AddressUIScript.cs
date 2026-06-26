@@ -20,6 +20,12 @@ public class AddressUIScript : MonoBehaviour
     [SerializeField] GameObject pinAddressPrefab;
     [SerializeField] GameObject completeDeliveryPrefab;
 
+    [Header("Referensi UI Pinpoint Dll")]
+    [SerializeField] private Image uiTimerBar;
+    [SerializeField] private Image addressPinpointIcon;
+    [SerializeField] private Sprite packageDeliveryIcon;
+    [SerializeField] private Sprite packageOnTheSpotIcon;
+
     [Header("Floating Text Setup")]
     [SerializeField] GameObject floatingThxPrefab;
     [SerializeField] Vector3 floatingThxOffset = new Vector3(0f, 1.5f, 0f); // Offset untuk menampilkan teks floating di atas paket
@@ -27,6 +33,16 @@ public class AddressUIScript : MonoBehaviour
     private int addressTimerDuration;
     private SOAddress dataAlamat;
     public GameObject addressTrailPrefab { get; private set;}
+
+    private void OnEnable()
+    {
+        EventHandler.OnArrivedAtLocation += ChangeUIOnDropOff;
+    }
+
+    private void OnDisable()
+    {
+        EventHandler.OnArrivedAtLocation -= ChangeUIOnDropOff;
+    }
 
     public void SetupAddress(SOAddress addressData)
     {
@@ -40,6 +56,7 @@ public class AddressUIScript : MonoBehaviour
         addressGainCashAmount.text = addressData.addressGainCashAmount.ToString("C", new CultureInfo("id-ID"));
         addressTimerDuration = addressData.addressDeliveryTimer;
         addressTrailPrefab = addressData.addressTrailPrefab;
+        UpdateVisualPinpoint(addressData.addressLifespanAmount);
     }
 
     public void CloseUI()
@@ -60,8 +77,24 @@ public class AddressUIScript : MonoBehaviour
         {
             Debug.LogError("[AddressUIScript] Tidak dapat menemukan PackageController pada prefab paket!");
         }
+
+        uiTimerBar.DOKill();
+        uiTimerBar.fillAmount = 1;
+        uiTimerBar.color = Color.white;
+        addressPinpointIcon.sprite = packageDeliveryIcon;
+
         CloseUI();
         Time.timeScale = 1f; //ngeresume gamenya pas modalnya dah tutup
+    }
+    
+    private void ChangeUIOnDropOff(AddressUIScript targetAddress)
+    {
+        if (targetAddress == this)
+        {
+            addressPinpointIcon.sprite = packageOnTheSpotIcon;
+            uiTimerBar.color = Color.blue;
+            uiTimerBar.DOFillAmount(0, 2f); //jangan lupa diganti juga angkanya klo yang di deliverycontroller ikut diganti
+        }
     }
 
     public void ChangeUIOnDropOfFinished()
@@ -86,9 +119,22 @@ public class AddressUIScript : MonoBehaviour
         // Menampilkan teks floating "Terima kasih" di atas paket
         ShowFloatingThx(completeDeliveryPrefab.transform);
 
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 1f);
     }
 
+    public void UpdateVisualPinpoint(int massaAktifPaket)
+    {
+        if (uiTimerBar != null)
+        {
+            uiTimerBar.DOFillAmount(0, massaAktifPaket);
+            uiTimerBar.DOColor(Color.red, massaAktifPaket);
+
+            //if (uiTimerBar.fillAmount < 0.2f)
+            //{
+            //}
+        }
+    }
+    
     private void ShowFloatingThx(Transform targetPos)
     {
         // Cegah error kalau prefab belum dimasukkan atau target tidak ada
@@ -113,7 +159,7 @@ public class AddressUIScript : MonoBehaviour
 
     private void MoveFloatingThx(GameObject thxPopup)
     {
-        thxPopup.GetComponent<RectTransform>()?.DOBlendableMoveBy(new Vector3(0, 50, 0), 1.5f);
-        thxPopup.GetComponent<Image>()?.DOFade(0, 2).SetLink(gameObject);
+        thxPopup.GetComponent<RectTransform>()?.DOBlendableMoveBy(new Vector3(0, 50, 0), 1.5f).SetLink(gameObject);
+        thxPopup.GetComponent<Image>()?.DOFade(0, 1.5f).SetLink(gameObject);
     }
 }

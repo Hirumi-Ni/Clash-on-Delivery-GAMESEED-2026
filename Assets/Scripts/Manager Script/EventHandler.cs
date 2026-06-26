@@ -9,7 +9,7 @@ public static class EventHandler
     public static event Action<SOAddress> OnRequestSpawn;
     public static event Action<int> OnShiftStarted;
 
-    public static event Action OnArrivedAtLocation; // Ini dipakai ketika sampai dilokasi -> update state
+    public static event Action<AddressUIScript> OnArrivedAtLocation; // Ini dipakai ketika sampai dilokasi -> update state
     public static event Action<int, int> OnDeliveryRewardClaimed;
     public static event Action OnArrivedAtHub; // Ini dipakai ketika sampai dihub -> update state, reset untuk paket selanjutnya
 
@@ -26,15 +26,20 @@ public static class EventHandler
     public static event Action<int, int> OnEventSuccess;
 
     /// --- METHOD PEMICU EVENT (Broadcaster) ---
+    // -- DELIVERY --
     public static void WhenStartToDeliverPackage(int durasiPerjalanan, AddressUIScript targetAddress) => OnStartToDeliverPackage?.Invoke(durasiPerjalanan, targetAddress);
     public static void WhenStartToReturnHub(int durasiPerjalanan) => OnStartReturnToHub?.Invoke(durasiPerjalanan);
     public static void WhenRequestSpawn(SOAddress address) => OnRequestSpawn?.Invoke(address);
-    public static void WhenShiftStarted(int totalPackages) => OnShiftStarted?.Invoke(totalPackages);
-    public static void WhenArrivedAtLocation() => OnArrivedAtLocation?.Invoke();
+    public static void WhenArrivedAtLocation(AddressUIScript targetAddessss) => OnArrivedAtLocation?.Invoke(targetAddessss);
     public static void WhenArrivedAtHub() => OnArrivedAtHub?.Invoke();
+    
+    // -- PAKET + SHIFT --
+    public static void WhenShiftStarted(int totalPackages) => OnShiftStarted?.Invoke(totalPackages);
     public static void WhenPaketHangus() => OnPaketHangus?.Invoke();
     public static void WhenPaketSuccess() => OnPaketSuccess?.Invoke();
     public static void WhenShiftEnded() => OnShiftEnded?.Invoke();
+
+    // -- ECONOMY + XP + DLL --
     public static void WhenMoneyChanged(int currentMoney, int shiftTarget) => OnMoneyChanged?.Invoke(currentMoney, shiftTarget);
     public static void WhenXPChanged(int currentXP, int xpRequiredForNextLevel) => OnXPChanged?.Invoke(currentXP, xpRequiredForNextLevel);
     public static void WhenLevelUp(int newLevel) => OnLevelUp?.Invoke(newLevel);

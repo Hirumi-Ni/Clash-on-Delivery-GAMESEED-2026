@@ -25,6 +25,7 @@ public class StatsAllocationUI : MonoBehaviour
         InitializeStats();
         SetupButtons();
         UpdateUI();
+        OpenStatsAllocationUI();
     }
 
     private void InitializeStats()

@@ -91,7 +91,7 @@ public class DeliveryController : MonoBehaviour
         else
         {
             Debug.Log("[DeliveryController] Tiba di Tujuan! Memulai drop-off...");
-            EventHandler.WhenArrivedAtLocation();
+            EventHandler.WhenArrivedAtLocation(targetAddressScript);
             // Mulai proses drop-off (misal animasi menurunkan paket)
             // Optional: Nanti bisa ditambahkan logika jika coroutine dipotong sama Random Event
             StartCoroutine(ProcessDropoffRoutine());

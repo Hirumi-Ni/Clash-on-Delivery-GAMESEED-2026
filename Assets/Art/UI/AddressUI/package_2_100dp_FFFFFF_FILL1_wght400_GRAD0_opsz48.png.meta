@@ -1,28 +1,19 @@
 fileFormatVersion: 2
-guid: 04e90d2ce6e72064c8ab54e409984068
+guid: 7ab9d98621108674689e1cfd3dbaa177
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 137542842360294689
-    second: done_0
+      213: -3280590811777724648
+    second: package_2_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_0
   - first:
-      213: 4896319815116482195
-    second: done_1
+      213: -6022542069004847866
+    second: package_2_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_1
   - first:
-      213: -7214445334872377445
-    second: done_2
+      213: 5100503207866007229
+    second: package_2_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_2
   - first:
-      213: -8849818325153763018
-    second: done_3
-  - first:
-      213: 1806452276324049816
-    second: done_4
-  - first:
-      213: -3194188708492192131
-    second: done_5
-  - first:
-      213: -1159546543172045656
-    second: done_6
+      213: 9096506730218672600
+    second: package_2_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -64,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -131,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: done_0
+      name: package_2_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 28
-        width: 27
-        height: 353
+        x: 11
+        y: 8
+        width: 37
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12d68448c76a8e100800000000000000
-      internalID: 137542842360294689
+      spriteID: 81f049ab9000972d0800000000000000
+      internalID: -3280590811777724648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: done_1
+      name: package_2_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_1
       rect:
         serializedVersion: 2
-        x: 8
-        y: 141
-        width: 122
-        height: 108
+        x: 15
+        y: 53
+        width: 50
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 39669b61ee833f340800000000000000
-      internalID: 4896319815116482195
+      spriteID: 605be14a5e1ab6ca0800000000000000
+      internalID: -6022542069004847866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: done_2
+      name: package_2_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_2
       rect:
         serializedVersion: 2
-        x: 29
-        y: 28
-        width: 120
-        height: 353
+        x: 35
+        y: 64
+        width: 50
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b973573113421eb90800000000000000
-      internalID: -7214445334872377445
+      spriteID: dbef798d4a0a8c640800000000000000
+      internalID: 5100503207866007229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: done_3
+      name: package_2_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_3
       rect:
         serializedVersion: 2
-        x: 32
-        y: 263
-        width: 98
-        height: 98
+        x: 52
+        y: 8
+        width: 37
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,74 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 631b7722f112f2580800000000000000
-      internalID: -8849818325153763018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: done_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 19
-        width: 98
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 893adf936cec11910800000000000000
-      internalID: 1806452276324049816
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: done_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 27
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d7652cc0b46fba3d0800000000000000
-      internalID: -3194188708492192131
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: done_6
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 0
-        width: 120
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8a4b2b1009678efe0800000000000000
-      internalID: -1159546543172045656
+      spriteID: 8d152affca84d3e70800000000000000
+      internalID: 9096506730218672600
       vertices: []
       indices: 
       edges: []
@@ -288,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -298,13 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      done_0: 137542842360294689
-      done_1: 4896319815116482195
-      done_2: -7214445334872377445
-      done_3: -8849818325153763018
-      done_4: 1806452276324049816
-      done_5: -3194188708492192131
-      done_6: -1159546543172045656
+      package_2_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_0: -3280590811777724648
+      package_2_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_1: -6022542069004847866
+      package_2_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_2: 5100503207866007229
+      package_2_100dp_FFFFFF_FILL1_wght400_GRAD0_opsz48_3: 9096506730218672600
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

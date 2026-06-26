@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class EventUIScript : MonoBehaviour
 {
@@ -53,7 +54,7 @@ public class EventUIScript : MonoBehaviour
         //event gagal
         eventFailedSprite.sprite = gameEvent.eventFailedSprite;
         eventFailedDescription.text = gameEvent.eventFailedDescription;
-        eventLoseCashAmount.text = $"-{gameEvent.eventNominalCashOption.ToString("C", new CultureInfo("id-ID"))}";
+        eventLoseCashAmount.text = $"-Rp0 (ntar edit lagi klo udah fix nominal cashnya)";
     }
 
     public void SetupOptions(SOGameEvents eventData, GameEventController eventController)
@@ -90,30 +91,30 @@ public class EventUIScript : MonoBehaviour
         EconomyManager e = EconomyManager.Instance;
         if (e == null) return;
 
-        if (e.CurrentMoney <= events.eventNominalCashOption)
+        payButton.onClick.RemoveAllListeners();
+        payButton.onClick.AddListener(() =>
         {
-            Debug.Log("[EventUIScript] Uang tidak mencukupi!");
-            return;
-        }
-
-        payButton.onClick.AddListener(() => { e.SpendMoney(events.eventNominalCashOption); EventSuccessUI(); }); 
+            if (e.CurrentMoney <= events.eventNominalCashOption)
+            {
+                eventTextCashOption.text = "Duit Kamu Tidak Cukup!";
+                eventTextCashOption.DOKill();
+                DOVirtual.DelayedCall(1f, () => eventTextCashOption.text = $"{events.eventTextCashOption} {events.eventNominalCashOption.ToString("C", new CultureInfo("id-ID"))}");
+                Debug.Log("[EventUIScript] Uang tidak mencukupi!");
+            }
+            else
+            {
+                e.SpendMoney(events.eventNominalCashOption);
+                EventSuccessUI();
+            }
+        });
     }
 
     public void CheckOptionSuccess(int percentage, GameEventController eventController, SOGameEvents eventData)
     {
         bool isSuccess = eventController.CalculateSuccessChance(percentage, eventData);
         Debug.Log(isSuccess);
-        if (isSuccess)
-        {
-            EventSuccessUI();
-            EmotionManager.instance.ChangeEmotion(eventData.eventSuccessMood);
-        }
-        else
-        {
-            EventFailedUI();
-            EmotionManager.instance.ChangeEmotion(eventData.eventFailedMood);
-        }
-        ;
+        if (isSuccess) EventSuccessUI();
+        else EventFailedUI();
     }
 
     public void EventSuccessUI() //gk tau dah dobel dobel tak biarain aja, soalnya yang dibawah juga dipake buat ngeclose modalnya

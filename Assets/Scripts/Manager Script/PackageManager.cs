@@ -25,7 +25,7 @@ public class PackageManager : MonoBehaviour
     [Header("Status Saat Ini")]
     public CourierState currentState = CourierState.OnHub;
 
-    private void Awake()
+    private void Awake() //ngapain jir pake singleton klo methodnya dipanggil pake event semua
     {
         if (Instance != null && Instance != this)
         {
@@ -110,7 +110,7 @@ public class PackageManager : MonoBehaviour
     }
 
     // Dipanggil oleh DeliveryController saat timer estimasi perjalanan habis
-    public void CourierArrivedAtLocation()
+    public void CourierArrivedAtLocation(AddressUIScript _)
     {
         if (currentState == CourierState.OTW)
         {
