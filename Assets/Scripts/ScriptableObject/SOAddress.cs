@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Scriptable Object/Address Object")]
+[CreateAssetMenu(menuName = "Scriptable Object/New Address Object")]
 public class SOAddress : ScriptableObject
 {
     [Header("Detail Alamat dari Paket")]

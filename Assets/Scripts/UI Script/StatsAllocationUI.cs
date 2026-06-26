@@ -97,11 +97,9 @@ public class StatsAllocationUI : MonoBehaviour
             row.slider.value = value;
         }
 
-        availablePointText.text =
-            "Available Points : " + availablePoints;
+        availablePointText.text = "Available Points : " + availablePoints;
 
-        confirmButton.interactable =
-            availablePoints == 0;
+        confirmButton.interactable = availablePoints == 0;
     }
 
     public void ConfirmStats()
@@ -123,17 +121,19 @@ public class StatsAllocationUI : MonoBehaviour
 
         Debug.Log("Stats Confirmed!");
 
-        gameObject.SetActive(false);
+        CloseStatsAllocationUI();
     }
 
     public void OpenStatsAllocationUI()
     {
         UpdateUI();
         statsAllocationPanel.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void CloseStatsAllocationUI()
     {
         statsAllocationPanel.SetActive(false);
+        Time.timeScale = 1;
     }
 }

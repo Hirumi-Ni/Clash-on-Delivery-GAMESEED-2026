@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e46b03d44f18ab428cc0fa17e320a6d, type: 3}
   m_Name: Rumah Pak Yanto
   m_EditorClassIdentifier: Assembly-CSharp::SOAddress
-  addressGenderSprite: {fileID: -4288344199647211769, guid: 2fd80142737aba248893708c7b6cdd40, type: 3}
+  addressGenderSprite: {fileID: 1752956128641670933, guid: bcc1da2e170db954f96251eeaf4e2916, type: 3}
   addressPackageTitle: Minyak Sawit Asli
   addressPerson: Bahlil Lahadalia
   addressDetail: Jl. Soekarno Hatta
