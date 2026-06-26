@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Scriptable Object/Event Object")]
+[CreateAssetMenu(menuName = "Scriptable Object/New Event Object")]
 public class SOGameEvents : ScriptableObject
 {
     [Header("Detail Event")]
