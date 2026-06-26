@@ -7,7 +7,7 @@ public class ClickPopupScript : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (PackageManager.Instance.currentState == CourierState.OTW) return;
+        if (PackageManager.Instance.currentState != CourierState.OnHub && gameObject.name == "AddressPinpoint") return;
 
         if (objectYangMuncul == null)
         {

@@ -15,15 +15,7 @@ public class StatsManager : MonoBehaviour
     public static StatsManager instance;
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-        }
+        if (instance == null) instance = this;
 
         SetupStats();
         SetupEmotionsModifier();

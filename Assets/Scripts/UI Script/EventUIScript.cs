@@ -96,8 +96,7 @@ public class EventUIScript : MonoBehaviour
             return;
         }
 
-        payButton.onClick.AddListener(() => e.SpendMoney(events.eventNominalCashOption));
-        payButton.onClick.AddListener(() => EventSuccessUI());
+        payButton.onClick.AddListener(() => { e.SpendMoney(events.eventNominalCashOption); EventSuccessUI(); }); 
     }
 
     public void CheckOptionSuccess(int percentage, GameEventController eventController, SOGameEvents eventData)

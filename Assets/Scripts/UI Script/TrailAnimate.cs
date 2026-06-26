@@ -10,17 +10,15 @@ public class TrailAnimate : MonoBehaviour
 
     void OnEnable()
     {
-        EventHandler.OnStartToDeliverPackage += SetupTrail;
         EventHandler.OnStartReturnToHub += ReturnHub;
     }
 
     void OnDisable()
     {
-        EventHandler.OnStartToDeliverPackage -= SetupTrail;
         EventHandler.OnStartReturnToHub -= ReturnHub;
     }
 
-    void SetupTrail(int splineDuration, AddressUIScript _)
+    public void SetupTrail(int splineDuration)
     {
         duration = splineDuration/10;
         splineAnimate.NormalizedTime = 0f;

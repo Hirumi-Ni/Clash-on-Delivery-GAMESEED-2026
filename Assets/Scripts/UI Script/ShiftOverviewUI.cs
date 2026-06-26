@@ -73,7 +73,7 @@ public class ShiftOverviewUI : MonoBehaviour
         overviewFailedText.text = totalFailed.ToString();
 
         // 4. Suntik Rating (Format 1 angka di belakang koma)
-        overviewRatingText.text = finalRating.ToString("F1") + "/5";
+        overviewRatingText.text = $"{finalRating.ToString("F1")} /5";
 
         // 5. Munculkan Panel Hasil Akhir
         shiftOverviewPanel.SetActive(true);
@@ -83,6 +83,7 @@ public class ShiftOverviewUI : MonoBehaviour
     public void OnKonfirmasiButtonClicked()
     {
         shiftOverviewPanel.SetActive(false);
+        GameManager.instance.ChangeScene("MainMenu");
         // Tempat menaruh logika transisi scene atau reset state ronde baru, contoh:
         // EventHandler.OnResultConfirmed?.Invoke();
     }

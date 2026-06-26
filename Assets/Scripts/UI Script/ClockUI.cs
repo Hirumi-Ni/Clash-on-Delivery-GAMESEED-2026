@@ -34,6 +34,7 @@ public class ClockUI : MonoBehaviour
 
     private void UpdateClockDisplay(int minute)
     {
+        if (Time.timeScale == 0) return;
         clockText.text = TimeManager.Instance.GetFormattedTime();
     }
 

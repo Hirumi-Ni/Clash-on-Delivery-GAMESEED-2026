@@ -13,10 +13,11 @@ public class TutorialMenuUI : MonoBehaviour
     private int currentPage;
     Vector3 targetPos;
 
-    void Awake()
+    void Start()
     {
         currentPage = 1;
         targetPos = slideContentRect.localPosition;
+        Time.timeScale = 0;
     }
 
     public void Next()
@@ -41,12 +42,13 @@ public class TutorialMenuUI : MonoBehaviour
 
     public void CloseTutorialMenu()
     {
+        Time.timeScale = 1;
         Destroy(gameObject, .1f);
     }
 
     private void MovePage()
     {
-        slideContentRect.DOAnchorPos(targetPos,slideDuration,false);
+        slideContentRect.DOAnchorPos(targetPos,slideDuration,false).SetUpdate(true);
     }
 
 

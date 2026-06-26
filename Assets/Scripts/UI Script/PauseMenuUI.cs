@@ -8,7 +8,6 @@ public class PauseMenuUI : MonoBehaviour
     private void Start()
     {
         pausePanel.SetActive(false);
-        Time.timeScale = 1f;
     }
 
     private void Update()

@@ -6,7 +6,7 @@ public class DeliveryController : MonoBehaviour
 {
     [Header("Pengaturan Waktu & Perjalanan")]
     [Tooltip("Pengali kecepatan waktu (bisa diubah saat ada upgrade kendaraan/stat)")]
-    public float timeScale = 1f;
+    public float timeMultiplier = 1f;
 
     [Tooltip("Lama jeda waktu saat menurunkan paket di lokasi (dalam detik)")]
     public float dropoffDuration = 2f;
@@ -33,7 +33,7 @@ public class DeliveryController : MonoBehaviour
     {
         if (isTraveling)
         {
-            currentTravelTimer -= timeScale * Time.deltaTime;
+            currentTravelTimer -= timeMultiplier * Time.deltaTime;
 
             if (currentTravelTimer <= 0f)
             {
@@ -65,9 +65,20 @@ public class DeliveryController : MonoBehaviour
 
     public void StartTravelToLocation(int travelDistance, AddressUIScript targetAddress)
     {
+        PackageCourierTrail(travelDistance, targetAddress);
         StartTravel(travelDistance, false);
         PackageManager.Instance.CourierDepartToLocation();
         targetAddressScript = targetAddress;
+    }
+
+    public void PackageCourierTrail(int travelDistance, AddressUIScript targetAddress)
+    {
+        if (targetAddress.addressTrailPrefab != null)
+        {
+            Debug.Log("[DeliveryController] Spawn Trail");
+            GameObject paketTrail = Instantiate(targetAddress.addressTrailPrefab, Vector3.zero, Quaternion.identity);
+            paketTrail.GetComponent<TrailAnimate>()?.SetupTrail(travelDistance);
+        }
     }
 
     private void HandleArrival()

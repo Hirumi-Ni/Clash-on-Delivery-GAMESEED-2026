@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Globalization;
+using DG.Tweening;
 
 public class GameplayHUD : MonoBehaviour
 {
@@ -78,5 +79,14 @@ public class GameplayHUD : MonoBehaviour
                 popupText.color = Color.blue;
             }
         }
+        
+        MoveFloatingText(popup, popupText);
+    }
+
+    private void MoveFloatingText(GameObject popup, TMP_Text popupText)
+    {
+        popup.GetComponent<RectTransform>()?.DOBlendableMoveBy(new Vector3(0, 50, 0), 1.5f); //1.5f kecepatannya
+        popupText.DOFade(0, 2); //2 detik ilang
+        Destroy(popup, 3f);
     }
 }

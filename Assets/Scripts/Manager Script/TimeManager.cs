@@ -34,10 +34,6 @@ public class TimeManager : MonoBehaviour
     [SerializeField] private float currentTime;
     [SerializeField] private bool isRunning = false;
 
-    // Disiapkan untuk fitur pause/resume nanti.
-    // Untuk sekarang cukup toggle isRunning lewat fungsi yang akan ditambahkan kemudian.
-    private bool isPaused = false;
-
     private int lastHour = -1;
     private int lastMinute = -1;
 
@@ -93,7 +89,7 @@ public class TimeManager : MonoBehaviour
 
     private void Update()
     {
-        if (!isRunning || isPaused || IsShiftEnded) return;
+        if (!isRunning || Time.timeScale == 0 || IsShiftEnded) return;
 
         currentTime += Time.deltaTime * TimeScale;
 

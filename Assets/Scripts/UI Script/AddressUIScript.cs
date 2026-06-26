@@ -2,6 +2,7 @@ using System.Globalization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class AddressUIScript : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class AddressUIScript : MonoBehaviour
 
     private int addressTimerDuration;
     private SOAddress dataAlamat;
+    public GameObject addressTrailPrefab { get; private set;}
 
     public void SetupAddress(SOAddress addressData)
     {
@@ -37,11 +39,13 @@ public class AddressUIScript : MonoBehaviour
         addressGainXpAmount.text = addressData.addressGainXpAmount.ToString("'+'# 'Exp'");
         addressGainCashAmount.text = addressData.addressGainCashAmount.ToString("C", new CultureInfo("id-ID"));
         addressTimerDuration = addressData.addressDeliveryTimer;
+        addressTrailPrefab = addressData.addressTrailPrefab;
     }
 
     public void CloseUI()
     {
         addressModalPrefab.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void BeginExpedition()
@@ -101,8 +105,15 @@ public class AddressUIScript : MonoBehaviour
         // Jika teks ini adalah UI Canvas biasa, pastikan dia di-spawn sebagai child dari Canvas.
         // Jika teks ini TextMeshPro World Space (cocok untuk game 2D), tidak perlu Canvas.
         GameObject thxPopup = Instantiate(floatingThxPrefab, spawnPosition, Quaternion.identity);
+        MoveFloatingThx(thxPopup);
         thxPopup.transform.SetParent(gameObject.transform, true); // true agar world position tetap sama
 
         Debug.Log("[AddressUIScript] Menampilkan teks floating 'Terima kasih' di atas paket.");
+    }
+
+    private void MoveFloatingThx(GameObject thxPopup)
+    {
+        thxPopup.GetComponent<RectTransform>()?.DOBlendableMoveBy(new Vector3(0, 50, 0), 1.5f);
+        thxPopup.GetComponent<Image>()?.DOFade(0, 2).SetLink(gameObject);
     }
 }
