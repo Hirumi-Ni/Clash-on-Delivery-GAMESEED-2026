@@ -43,8 +43,9 @@ public class TutorialMenuUI : MonoBehaviour
     public void CloseTutorialMenu()
     {
         Time.timeScale = 1; //unpause
-        Destroy(gameObject, .2f);
+        gameObject.SetActive(false);
         Time.timeScale = 0; //pause lagi buat di menu stat
+        Destroy(gameObject, 2f);
     }
 
     private void MovePage()
