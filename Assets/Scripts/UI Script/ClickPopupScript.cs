@@ -19,5 +19,7 @@ public class ClickPopupScript : MonoBehaviour, IPointerClickHandler
         transform.parent.SetAsLastSibling();
         Time.timeScale = 0f; //ngepause pas modalnya muncul ntar diatur atur lagi aja klo misal gak perlu
         Debug.Log($"[ClickPopup] Tampilan {objectYangMuncul} muncul");
+
+        AudioManager.instance.PlayAudio(SoundType.Menu);
     }
 }

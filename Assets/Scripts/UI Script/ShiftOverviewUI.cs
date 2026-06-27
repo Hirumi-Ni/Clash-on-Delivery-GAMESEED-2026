@@ -77,6 +77,8 @@ public class ShiftOverviewUI : MonoBehaviour
 
         // 5. Munculkan Panel Hasil Akhir
         shiftOverviewPanel.SetActive(true);
+
+        AudioManager.instance.PlayAudio(SoundType.Shift_Overview);
     }
 
     // Dipasang pada event OnClick Button "Konfirmasi" di Inspector

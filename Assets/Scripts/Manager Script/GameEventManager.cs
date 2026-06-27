@@ -49,6 +49,8 @@ public class GameEventManager : MonoBehaviour
         if (eventUI == null) { Debug.Log("Event UI Script not found"); return; }
         if (eventController == null) { Debug.Log("Event Controller Script not found"); return; }
 
+        AudioManager.instance.PlayAudio(SoundType.Random_Event);
+
         Time.timeScale = 0f; //ngepause pas modal eventnya muncul
         eventInstantiated.transform.SetParent(eventTemplateCanvasParent.transform, false);
         eventUI.SetupEvent(eventData, eventController);

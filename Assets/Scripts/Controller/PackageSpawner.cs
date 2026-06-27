@@ -50,5 +50,7 @@ public class PackageSpawner : MonoBehaviour
         }
 
         Debug.Log($"[PaketSpawner] Sukses mencetak paket untuk: {dataPaket.addressPerson}");
+
+        AudioManager.instance.PlayAudio(SoundType.New_Delivery);
     }
 }

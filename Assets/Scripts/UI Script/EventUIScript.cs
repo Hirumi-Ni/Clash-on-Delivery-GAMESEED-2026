@@ -121,12 +121,16 @@ public class EventUIScript : MonoBehaviour
     {
         OpenUI(eventSuccessPrefab);
         CloseUI(eventNormalPrefab);
+
+        AudioManager.instance.PlayAudio(SoundType.Success);
     }
 
     public void EventFailedUI()
     {
         OpenUI(eventFailedPrefab);
         CloseUI(eventNormalPrefab);
+
+        AudioManager.instance.PlayAudio(SoundType.Fail);
     }
 
     public void OpenUI(GameObject eventModalUI)
