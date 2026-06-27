@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using Ami.BroAudio.Data;
 
 public class AddressUIScript : MonoBehaviour
 {
@@ -83,6 +84,8 @@ public class AddressUIScript : MonoBehaviour
         uiTimerBar.color = Color.white;
         addressPinpointIcon.sprite = packageDeliveryIcon;
 
+        AudioManager.instance.PlayAudio(SoundType.Berangkat);
+
         CloseUI();
         Time.timeScale = 1f; //ngeresume gamenya pas modalnya dah tutup
     }
@@ -118,6 +121,8 @@ public class AddressUIScript : MonoBehaviour
 
         // Menampilkan teks floating "Terima kasih" di atas paket
         ShowFloatingThx(completeDeliveryPrefab.transform);
+
+        AudioManager.instance.PlayAudio(SoundType.Menu); //ntar ganti aja suaranya
 
         Destroy(gameObject, 1f);
     }

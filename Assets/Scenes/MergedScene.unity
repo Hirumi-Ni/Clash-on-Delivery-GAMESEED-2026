@@ -878,7 +878,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 93770103}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 194300020}
+        m_TargetAssemblyTypeName: Ami.BroAudio.SoundSource, BroAudio
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &93770103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1668,9 +1680,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: StatsAllocationUI, Assembly-CSharp
-        m_MethodName: AddLuck
+      - m_Target: {fileID: 194300020}
+        m_TargetAssemblyTypeName: Ami.BroAudio.SoundSource, BroAudio
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1764,6 +1776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 194300018}
   - component: {fileID: 194300019}
+  - component: {fileID: 194300020}
   m_Layer: 5
   m_Name: StatsAllocationObject
   m_TagString: Untagged
@@ -1812,6 +1825,29 @@ MonoBehaviour:
   availablePointText: {fileID: 1669441454}
   confirmButton: {fileID: 461142186}
   statsAllocationPanel: {fileID: 45407794}
+--- !u!114 &194300020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194300017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BroAudio::Ami.BroAudio.SoundSource
+  _onlyPlayOnce: 0
+  _playOnEnable: 0
+  _stopOnDisable: 0
+  _overrideFadeOut: -1
+  _sound:
+    _entity: {fileID: 11400000, guid: a28bbf545eb858a449ccd4757df8dd75, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 194300017}
+  _overrideGroup: {fileID: 0}
+  _positionMode: 0
+  _delay: 0
 --- !u!1 &200156307
 GameObject:
   m_ObjectHideFlags: 0
@@ -5815,7 +5851,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 537862303}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 194300020}
+        m_TargetAssemblyTypeName: Ami.BroAudio.SoundSource, BroAudio
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &537862303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7276,6 +7324,90 @@ MonoBehaviour:
   floatingTextPrefab: {fileID: 4378087136883509715, guid: b1372486834459646bc29de0b520e7ef, type: 3}
   expSpawnPoint: {fileID: 1635696543}
   moneySpawnPoint: {fileID: 1394930112}
+--- !u!1 &727245219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 727245221}
+  - component: {fileID: 727245220}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &727245220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727245219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a58c64bdf96ef246a8b01ed35960495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  soundMenu:
+    _entity: {fileID: 11400000, guid: 04dbfdb11e1a987408a7ea07654bd5c4, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 727245219}
+  soundStart:
+    _entity: {fileID: 11400000, guid: 31ca7dd1f5d2fe0459a114a9d19cd5c2, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 727245219}
+  soundUI_Transition:
+    _entity: {fileID: 11400000, guid: 861bdd0d7d2907d459c9c10786fdda49, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 727245219}
+  soundNew_Delivery:
+    _entity: {fileID: 11400000, guid: cd00358185428d2428b9495bc61912a0, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 727245219}
+  soundUpgrade:
+    _entity: {fileID: 11400000, guid: a28bbf545eb858a449ccd4757df8dd75, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 727245219}
+  soundBerangkat:
+    _entity: {fileID: 11400000, guid: 4fa2bf51182ac1c44bdc18b6233a7640, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 727245219}
+  soundRandom_Event:
+    _entity: {fileID: 11400000, guid: 73be9719fbbd8514a8bfda14cbe42782, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 727245219}
+  soundSuccess:
+    _entity: {fileID: 11400000, guid: f37706fbaa81db143b34fb7d69b6d108, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 727245219}
+  soundFail:
+    _entity: {fileID: 11400000, guid: e079d2330d0255d43971f3035ee3e674, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 727245219}
+  soundShift_Overview:
+    _entity: {fileID: 11400000, guid: d334d74516490964c84122db0efd932a, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 727245219}
+--- !u!4 &727245221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727245219}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -132.65459, y: -0, z: 50.24921}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &734203233
 GameObject:
   m_ObjectHideFlags: 0
@@ -8128,7 +8260,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 816785915}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 194300020}
+        m_TargetAssemblyTypeName: Ami.BroAudio.SoundSource, BroAudio
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &816785915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13477,7 +13621,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1348426711}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 194300020}
+        m_TargetAssemblyTypeName: Ami.BroAudio.SoundSource, BroAudio
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1348426711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21064,3 +21220,4 @@ SceneRoots:
   - {fileID: 1181313138}
   - {fileID: 1624264338}
   - {fileID: 1626165209}
+  - {fileID: 727245221}
