@@ -17,9 +17,17 @@ MonoBehaviour:
   eventDescription: Pas mau nganter paket tiba tiba ada cfd jadinya gitu deh
   eventOptions:
   - eventTextOption: 'Ikut CFD [Charisma]'
+    optionType: 0
     eventStatsNeeded: 2
-  eventTextCashOption: Beli Takoyaki seporsi
-  eventNominalCashOption: 5000
+    eventNominalCashOption: 0
+  - eventTextOption: Beli Takoyaki
+    optionType: 1
+    eventStatsNeeded: 0
+    eventNominalCashOption: 5000
+  - eventTextOption: 'Lari-Lari [Auto Success]'
+    optionType: 2
+    eventStatsNeeded: 0
+    eventNominalCashOption: 0
   eventSuccessSprite: {fileID: -4288344199647211769, guid: 2fd80142737aba248893708c7b6cdd40, type: 3}
   eventSuccessDescription: gacor habis cfd
   eventGainXpAmount: 5

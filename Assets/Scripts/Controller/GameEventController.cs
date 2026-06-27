@@ -3,20 +3,6 @@ using System.Collections.Generic;
 
 public class GameEventController : MonoBehaviour
 {
-    private Dictionary<SOGameEvents.EventOption, int> optionPercentagesDictionary = new(); //jenis enum stat, persentase setelah dihitungnya
-
-    [ContextMenu("Set Event")]
-    public void SetStatEventOption(SOGameEvents eventData)
-    {
-        optionPercentagesDictionary.Clear();
-        foreach (SOGameEvents.EventOption option in eventData.eventOptions)
-        {
-            int percentage = CalculateStatsPercentage(option.eventStatsNeeded);
-            optionPercentagesDictionary.Add(option, percentage);
-            Debug.Log(option + " " + percentage);
-        }
-    }
-
     public int CalculateStatsPercentage(PlayerStats playerStat)
     {
         int otherStatPercentage = StatsManager.instance.GetStats(playerStat) * 8;

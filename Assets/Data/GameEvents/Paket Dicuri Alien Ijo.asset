@@ -18,13 +18,17 @@ MonoBehaviour:
     paketnya
   eventOptions:
   - eventTextOption: 'Kejar UFO [Strength]'
+    optionType: 0
     eventStatsNeeded: 0
+    eventNominalCashOption: 0
   - eventTextOption: 'Adu Kecerdasan [Intelligent]'
+    optionType: 0
     eventStatsNeeded: 3
-  - eventTextOption: 'Ajak Date Apalah [Charisma]'
+    eventNominalCashOption: 0
+  - eventTextOption: Pasrah
+    optionType: 3
     eventStatsNeeded: 2
-  eventTextCashOption: Traktir Alien
-  eventNominalCashOption: 67000
+    eventNominalCashOption: 0
   eventSuccessSprite: {fileID: -4288344199647211769, guid: 2fd80142737aba248893708c7b6cdd40, type: 3}
   eventSuccessDescription: Kamu berhasil merebut paketnya dari si Alien
   eventGainXpAmount: 142

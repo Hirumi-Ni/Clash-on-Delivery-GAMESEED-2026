@@ -156,6 +156,7 @@ public class TimeManager : MonoBehaviour
     /// <summary>Format string jam, contoh: "08:00", "13:45".</summary>
     public string GetFormattedTime()
     {
-        return $"{Hour:00}:{Minute:00}";
+        int displayedMinute = (Minute / 10) * 10;
+        return $"{Hour:00}:{displayedMinute:00}";
     }
 }

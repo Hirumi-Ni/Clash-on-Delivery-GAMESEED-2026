@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Rumah Pak Nanik
   m_EditorClassIdentifier: Assembly-CSharp::SOAddress
   addressGenderSprite: {fileID: 1752956128641670933, guid: bcc1da2e170db954f96251eeaf4e2916, type: 3}
-  addressPackageTitle: Whiskas Premium Khas Bojonegoro
   addressPerson: Nanik Rachmaudin
+  addressPackageTitle: Whiskas Premium Khas Bojonegoro
   addressDetail: Jl. Martabak Manis
   addressDistance: 200 KM
   addressLocation: 3
   addressLocationTransform: {x: -645, y: 320, z: 0}
   addressDeliveryTimer: 70
+  addressTrailPrefab: {fileID: 3542605075166082638, guid: ae4b3f0c26e05b74bb83f4a96f64b887, type: 3}
   addressGainXpAmount: 300
   addressGainCashAmount: 67420
-  addressLifespanAmount: 12
+  addressLifespanAmount: 4
   addressFixedEvent: {fileID: 0}
-  addressTrailPrefab: {fileID: 3542605075166082638, guid: ae4b3f0c26e05b74bb83f4a96f64b887, type: 3}

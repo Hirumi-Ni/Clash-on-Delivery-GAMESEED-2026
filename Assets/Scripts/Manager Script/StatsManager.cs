@@ -29,7 +29,7 @@ public class StatsManager : MonoBehaviour
     /// pemain ke stat manapun. StatsAllocationUI membaca nilai ini saat dibuka,
     /// bukan menyimpan angka poinnya sendiri.
     /// </summary>
-    public int PendingPoints { get; private set; }
+    [field: SerializeField] public int PendingPoints { get; private set; }
 
     [Header("Poin Alokasi Awal")]
     [Tooltip("Poin yang didapat pemain saat game/shift baru dimulai, sebelum naik level apapun.")]
@@ -92,6 +92,10 @@ public class StatsManager : MonoBehaviour
         playerStatsEmotionDictionary[playerStat] = Mathf.Clamp(playerStatsEmotionDictionary[playerStat], 0, 10);
     }
 
+    public int GetStatsModifier(PlayerStats playerStat)
+    {
+        return playerStatsEmotionDictionary[playerStat];
+    }
     public void ClearAllEmotionModifiers()
     {
         foreach (PlayerStats stat in System.Enum.GetValues(typeof(PlayerStats)))

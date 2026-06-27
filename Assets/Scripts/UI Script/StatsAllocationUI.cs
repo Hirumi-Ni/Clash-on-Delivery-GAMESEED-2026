@@ -23,8 +23,8 @@ public class StatsAllocationUI : MonoBehaviour
     private void Start()
     {
         InitializeStats();
-        SetupButtons();
         UpdateUI();
+        SetupButtons();
         OpenStatsAllocationUI();
     }
 
@@ -39,7 +39,7 @@ public class StatsAllocationUI : MonoBehaviour
 
         // Ambil poin yang belum dialokasikan dari StatsManager, baik itu dari
         // alokasi awal game maupun dari naik level (lewat LevelManager).
-        availablePoints = StatsManager.instance.PendingPoints;
+
     }
 
     private void SetupButtons()
@@ -60,7 +60,7 @@ public class StatsAllocationUI : MonoBehaviour
         }
     }
 
-    private void AddStat(PlayerStats stat)
+    public void AddStat(PlayerStats stat)
     {
         if (availablePoints <= 0)
             return;
@@ -74,7 +74,7 @@ public class StatsAllocationUI : MonoBehaviour
         UpdateUI();
     }
 
-    private void RemoveStat(PlayerStats stat)
+    public void RemoveStat(PlayerStats stat)
     {
         if (tempStats[stat] <= MIN_STAT)
             return;
@@ -127,6 +127,7 @@ public class StatsAllocationUI : MonoBehaviour
 
     public void OpenStatsAllocationUI()
     {
+        availablePoints = StatsManager.instance.PendingPoints;
         UpdateUI();
         statsAllocationPanel.SetActive(true);
         Time.timeScale = 0;
