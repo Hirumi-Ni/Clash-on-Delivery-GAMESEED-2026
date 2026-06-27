@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: BroAudio::Ami.BroAudio.Data.AudioEntity
   <ID>k__BackingField: 0
   MulticlipsPlayMode: 0
-  _group: {fileID: 11400000, guid: 8867c8c1ecaeee4419a263c0f21faa25, type: 2}
+  _group: {fileID: 0}
   Clips:
   - AudioClip: {fileID: 8300000, guid: 5c91430e70dc57840b577ecc0f6b2a1a, type: 3}
     Volume: 0.45

@@ -17,11 +17,11 @@ MonoBehaviour:
   _group: {fileID: 0}
   Clips:
   - AudioClip: {fileID: 8300000, guid: 4cd7ba3bf03e2d640b704b025e7e3669, type: 3}
-    Volume: 0.6
+    Volume: 0.7
     Delay: 0
     StartPosition: 0
-    EndPosition: 0
-    FadeIn: 0.05
+    EndPosition: 0.246
+    FadeIn: 0
     FadeOut: 0
     Weight: 0
   <AudioAsset>k__BackingField: {fileID: 11400000, guid: b14aba152e217a2438b9a580c2a8bb5a, type: 2}

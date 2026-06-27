@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: BroAudio::Ami.BroAudio.Data.AudioAsset
   Entities: []
   ConvertedEntities: []
-  _group: {fileID: 11400000, guid: 8867c8c1ecaeee4419a263c0f21faa25, type: 2}
+  _group: {fileID: 0}
   <AssetName>k__BackingField: GameseedAudio
   _assetGUID: b14aba152e217a2438b9a580c2a8bb5a
