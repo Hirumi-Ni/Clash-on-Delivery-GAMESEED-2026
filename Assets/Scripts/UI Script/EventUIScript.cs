@@ -103,7 +103,7 @@ public class EventUIScript : MonoBehaviour
     public void CheckOptionSuccess(SOGameEvents.EventOption currentOption, GameEventController eventController, SOGameEvents eventData)
     {
         int percentage = eventController.CalculateStatsPercentage(currentOption.eventStatsNeeded);
-        bool success = eventController.CalculateSuccessChance(percentage, eventData);
+        bool success = eventController.CalculateSuccessChance(percentage);
         Debug.Log(success);
         if (success) EventSuccessUI();
         else EventFailedUI();
@@ -122,7 +122,6 @@ public class EventUIScript : MonoBehaviour
             return;
         }
         e.SpendMoney(option.eventNominalCashOption);
-        EmotionManager.instance.ChangeEmotion(eventData.eventSuccessMood);
         EventSuccessUI();
     }
 
@@ -131,6 +130,7 @@ public class EventUIScript : MonoBehaviour
         OpenUI(eventSuccessPrefab);
         CloseUI(eventNormalPrefab);
         EventHandler.WhenEventSuccess(eventData.eventGainXpAmount, eventData.eventGainCashAmount);
+        EmotionManager.instance.ChangeEmotion(eventData.eventSuccessMood);
 
         AudioManager.instance.PlayAudio(SoundType.Success);
     }
@@ -139,6 +139,7 @@ public class EventUIScript : MonoBehaviour
     {
         OpenUI(eventFailedPrefab);
         CloseUI(eventNormalPrefab);
+        EmotionManager.instance.ChangeEmotion(eventData.eventFailedMood);
 
         AudioManager.instance.PlayAudio(SoundType.Fail);
     }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.Serialization;
 public enum PlayerStats
 {
     Strength,
@@ -22,6 +23,7 @@ public class StatsManager : MonoBehaviour
     }
 
     private Dictionary<PlayerStats, int> playerStatsDictionary;
+
     private Dictionary<PlayerStats, int> playerStatsEmotionDictionary;
 
     /// <summary>
@@ -89,7 +91,6 @@ public class StatsManager : MonoBehaviour
     public void SetStatsModifier(PlayerStats playerStat, int amount) 
     {
         playerStatsEmotionDictionary[playerStat] += amount;
-        playerStatsEmotionDictionary[playerStat] = Mathf.Clamp(playerStatsEmotionDictionary[playerStat], 0, 10);
     }
 
     public int GetStatsModifier(PlayerStats playerStat)

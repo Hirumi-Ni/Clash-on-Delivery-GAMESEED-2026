@@ -12,18 +12,15 @@ public class GameEventController : MonoBehaviour
         return Mathf.Clamp(otherStatPercentage + luckStatPercentage, 0, 100);
     }
 
-    public bool CalculateSuccessChance(int percentage, SOGameEvents eventData)
+    public bool CalculateSuccessChance(int percentage)
     {
         int randomNum = Random.Range(0, 101);
         if (randomNum <= percentage)
         {
-            EventHandler.WhenEventSuccess(eventData.eventGainXpAmount, eventData.eventGainCashAmount);
-            EmotionManager.instance.ChangeEmotion(eventData.eventSuccessMood);
             return true;
         }
         else
         {
-            EmotionManager.instance.ChangeEmotion(eventData.eventFailedMood);
             return false;
         }
     }

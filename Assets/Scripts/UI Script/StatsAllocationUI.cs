@@ -5,6 +5,17 @@ using UnityEngine.UI;
 
 public class StatsAllocationUI : MonoBehaviour
 {
+    [System.Serializable]
+    public class StatRowUI
+    {
+        public PlayerStats statType;
+        public TMP_Text valueText;
+        public TMP_Text modifierText;
+        public Slider slider;
+        public Button plusButton;
+        public Button minusButton;
+    }
+
     [Header("Rows")]
     public StatRowUI[] statRows;
 
@@ -35,6 +46,12 @@ public class StatsAllocationUI : MonoBehaviour
         foreach (PlayerStats stat in System.Enum.GetValues(typeof(PlayerStats)))
         {
             tempStats[stat] = StatsManager.instance.GetStats(stat);
+        }
+
+        foreach (StatRowUI row in statRows)
+        {
+            row.slider.minValue = MIN_STAT;
+            row.slider.maxValue = MAX_STAT;
         }
 
         // Ambil poin yang belum dialokasikan dari StatsManager, baik itu dari
@@ -93,10 +110,11 @@ public class StatsAllocationUI : MonoBehaviour
 
             row.valueText.text = value.ToString();
 
-            row.slider.minValue = MIN_STAT;
-            row.slider.maxValue = MAX_STAT;
+            row.modifierText.text = StatsManager.instance.GetStatsModifier(row.statType).ToString();
+
             row.slider.value = value;
         }
+
 
         availablePointText.text = "Available Points : " + availablePoints;
 

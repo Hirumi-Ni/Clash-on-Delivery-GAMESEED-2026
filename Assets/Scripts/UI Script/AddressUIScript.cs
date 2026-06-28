@@ -122,7 +122,7 @@ public class AddressUIScript : MonoBehaviour
         // Menampilkan teks floating "Terima kasih" di atas paket
         ShowFloatingThx(completeDeliveryPrefab.transform);
 
-        AudioManager.instance.PlayAudio(SoundType.Menu); //ntar ganti aja suaranya
+        //AudioManager.instance.PlayAudio(SoundType.Menu); //ntar ganti aja suaranya
 
         Destroy(gameObject, 1f);
     }
