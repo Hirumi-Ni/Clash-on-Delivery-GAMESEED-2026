@@ -114,7 +114,7 @@ public class AddressUIScript : MonoBehaviour
         EventHandler.TriggerReward(dataAlamat.addressGainXpAmount, dataAlamat.addressGainCashAmount);
 
         // Memberitahu gameManager dan scoreManager kalau paket sudah diambil
-        EventHandler.WhenPaketSuccess();
+        EventHandler.WhenPaketSuccess(dataAlamat);
 
         // Memberitahu DeliveryController kalau paket sudah diambil, sehingga bisa mulai perjalanan pulang ke hub
         EventHandler.WhenStartToReturnHub(addressTimerDuration);

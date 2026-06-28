@@ -37,7 +37,7 @@ public class PackageController : MonoBehaviour
     private void WaktuHabis()
     {
         Debug.Log($"[PaketController] Waktu habis! Paket milik {dataAlamat.addressPerson} hangus.");
-        EventHandler.WhenPaketHangus();
+        EventHandler.WhenPaketHangus(dataAlamat);
         Destroy(gameObject);
     }
 

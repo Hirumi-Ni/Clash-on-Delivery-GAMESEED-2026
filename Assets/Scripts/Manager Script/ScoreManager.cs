@@ -40,13 +40,13 @@ public class ScoreManager : MonoBehaviour
         Debug.Log($"[ScoreManager] Shift dimulai. Target paket hari ini: {totalTargetPaket}");
     }
 
-    private void TambahSukses()
+    private void TambahSukses(SOAddress _)
     {
         paketSuccess++;
         Debug.Log($"[ScoreManager] Paket Sukses! Total: {paketSuccess}");
     }
 
-    private void TambahGagal()
+    private void TambahGagal(SOAddress _)
     {
         paketFailed++;
         Debug.Log($"[ScoreManager] Paket Gagal! Total: {paketFailed}");

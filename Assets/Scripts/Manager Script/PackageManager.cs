@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.ReloadAttribute;
 
 public enum CourierState
 {
@@ -21,6 +22,8 @@ public class PackageManager : MonoBehaviour
     // Queue untuk memproses antrean paket secara berurutan
     private Queue<SOAddress> packageQueue = new Queue<SOAddress>();
     private int currentActivePackages = 0;
+
+    private List<AddressLocation> activeLocations = new(); //buat nyimpen lokasi kalo sebelumnya udah di pake apa blom lokasinya
 
     [Header("Status Saat Ini")]
     public CourierState currentState = CourierState.OnHub;
@@ -82,11 +85,21 @@ public class PackageManager : MonoBehaviour
         // Pengecekan krusial: Hanya spawn jika Player berada di Hub
         if (currentState != CourierState.OnHub) return;
 
+        int attempts = packageQueue.Count;
+
         // Selama paket aktif di map kurang dari limit (6) DAN antrean masih ada
-        while (currentActivePackages < maxActivePackages && packageQueue.Count > 0)
+        while (currentActivePackages < maxActivePackages && packageQueue.Count > 0 && attempts-- > 0)
         {
             // Ambil data paket paling depan dari antrean
             SOAddress nextPackage = packageQueue.Dequeue();
+
+            if (activeLocations.Contains(nextPackage.addressLocation))
+            {
+                packageQueue.Enqueue(nextPackage);
+                continue;
+            }
+
+            activeLocations.Add(nextPackage.addressLocation);
 
             // Trigger Event ke PaketSpawner dan kirimkan datanya
             EventHandler.WhenRequestSpawn(nextPackage);
@@ -120,8 +133,9 @@ public class PackageManager : MonoBehaviour
     }
 
     // Dipanggil saat player mengambil result dari paket di lokasi tujuan
-    public void CourierFinishedDropoff()
+    public void CourierFinishedDropoff(SOAddress address)
     {
+        activeLocations.Remove(address.addressLocation);
         currentState = CourierState.OTW;
         currentActivePackages--;
         Debug.Log("[PaketManager] Paket terkirim. Kurir jalan pulang.");
@@ -136,8 +150,9 @@ public class PackageManager : MonoBehaviour
     }
 
     // Dipanggil oleh PaketController kalau Timer Lifespan-nya habis
-    public void PackageExpired()
+    public void PackageExpired(SOAddress address)
     {
+        activeLocations.Remove(address.addressLocation);
         currentActivePackages--;
         Debug.Log("[PaketManager] Satu paket hangus!");
 
@@ -145,5 +160,6 @@ public class PackageManager : MonoBehaviour
         {
             CheckAndSpawnPackages();
         }
+
     }
 }

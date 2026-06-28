@@ -13,8 +13,8 @@ public static class EventHandler
     public static event Action<int, int> OnDeliveryRewardClaimed;
     public static event Action OnArrivedAtHub; // Ini dipakai ketika sampai dihub -> update state, reset untuk paket selanjutnya
 
-    public static event Action OnPaketHangus;
-    public static event Action OnPaketSuccess;
+    public static event Action<SOAddress> OnPaketHangus;
+    public static event Action<SOAddress> OnPaketSuccess;
 
     public static event Action OnShiftEnded; // pas shiftnya selesai, semua paket udah dianter/waktu habis (17:00)
     public static event Action<int, int, int, float> OnScoreCalculated; // ini dipakai untuk ngasih tahu score manager untuk ngitung skor akhir shift
@@ -35,8 +35,8 @@ public static class EventHandler
     
     // -- PAKET + SHIFT --
     public static void WhenShiftStarted(int totalPackages) => OnShiftStarted?.Invoke(totalPackages);
-    public static void WhenPaketHangus() => OnPaketHangus?.Invoke();
-    public static void WhenPaketSuccess() => OnPaketSuccess?.Invoke();
+    public static void WhenPaketHangus(SOAddress address) => OnPaketHangus?.Invoke(address);
+    public static void WhenPaketSuccess(SOAddress address) => OnPaketSuccess?.Invoke(address);
     public static void WhenShiftEnded() => OnShiftEnded?.Invoke();
 
     // -- ECONOMY + XP + DLL --

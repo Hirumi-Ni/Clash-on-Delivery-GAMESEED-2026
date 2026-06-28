@@ -17,11 +17,11 @@ MonoBehaviour:
   addressPackageTitle: Makanan Khas Tionghoa China
   addressDetail: Jl. Bundaran Pesawat
   addressDistance: 10 KM
-  addressLocation: 5
-  addressLocationTransform: {x: -194, y: 146, z: 0}
-  addressDeliveryTimer: 30
+  addressLocation: 3
+  addressLocationTransform: {x: -645, y: 320, z: 0}
+  addressDeliveryTimer: 70
   addressTrailPrefab: {fileID: 6050217866834636105, guid: d44fd6513a7f9fa49b27f3362fca9ecd, type: 3}
   addressGainXpAmount: 24
   addressGainCashAmount: 3000
-  addressLifespanAmount: 5
+  addressLifespanAmount: 10
   addressFixedEvent: {fileID: 0}

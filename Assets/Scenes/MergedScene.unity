@@ -3061,11 +3061,11 @@ Transform:
   m_GameObject: {fileID: 254477663}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -456.662, y: 27.510437, z: 0}
+  m_LocalPosition: {x: 1029.8679, y: 526.55597, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1188149691}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &267025440
 GameObject:
@@ -3722,11 +3722,11 @@ Transform:
   m_GameObject: {fileID: 317931545}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -526.5299, y: 119.39752, z: 0}
+  m_LocalPosition: {x: 960, y: 618.44305, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1188149691}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &344738368
 GameObject:
@@ -4395,11 +4395,11 @@ Transform:
   m_GameObject: {fileID: 424565397}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1125.6587, y: -350.34155, z: 0}
+  m_LocalPosition: {x: 360.87122, y: 148.70398, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1188149691}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &429253264
 GameObject:
@@ -7701,11 +7701,11 @@ Transform:
   m_GameObject: {fileID: 727245219}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1619.1844, y: -499.04553, z: 50.24921}
+  m_LocalPosition: {x: -132.65454, y: 0, z: 50.24921}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1188149691}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &734203233
 GameObject:
@@ -11819,7 +11819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1188149691}
   m_Layer: 0
-  m_Name: Managers (Banyak Banget Jir)
+  m_Name: "\u2B07==MANAGERS==\u2B07"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11837,18 +11837,7 @@ Transform:
   m_LocalPosition: {x: 1486.5299, y: 499.04553, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 317931547}
-  - {fileID: 1394449357}
-  - {fileID: 2031258343}
-  - {fileID: 1646015022}
-  - {fileID: 254477665}
-  - {fileID: 424565399}
-  - {fileID: 1686426061}
-  - {fileID: 1195421315}
-  - {fileID: 1624264338}
-  - {fileID: 1626165209}
-  - {fileID: 727245221}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1193761243
@@ -12026,11 +12015,11 @@ Transform:
   m_GameObject: {fileID: 1195421313}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -816.07196, y: 377.18103, z: 0}
+  m_LocalPosition: {x: 670.45795, y: 876.22656, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1188149691}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1197042967
 GameObject:
@@ -14555,11 +14544,11 @@ Transform:
   m_GameObject: {fileID: 1394449355}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -413.97083, y: -42.45465, z: 0}
+  m_LocalPosition: {x: 1072.5591, y: 456.59088, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1188149691}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1394930111
 GameObject:
@@ -16781,11 +16770,11 @@ Transform:
   m_GameObject: {fileID: 1624264336}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1483.6471, y: -501.40997, z: 0}
+  m_LocalPosition: {x: 2.8828125, y: -2.364441, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1188149691}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1625022769
 GameObject:
@@ -16962,11 +16951,11 @@ Transform:
   m_GameObject: {fileID: 1626165207}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1241.5205, y: 304.75012, z: 0}
+  m_LocalPosition: {x: 245.0094, y: 803.79565, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1188149691}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1635696542
 GameObject:
@@ -17118,11 +17107,11 @@ Transform:
   m_GameObject: {fileID: 1646015020}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1415.794, y: -463.38303, z: 0}
+  m_LocalPosition: {x: 70.73596, y: 35.662506, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1188149691}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1646824894
 GameObject:
@@ -18227,11 +18216,11 @@ Transform:
   m_GameObject: {fileID: 1686426059}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -451.30713, y: 4.6734924, z: 0}
+  m_LocalPosition: {x: 1035.2228, y: 503.71902, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1188149691}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1689499335
 GameObject:
@@ -21054,11 +21043,11 @@ Transform:
   m_GameObject: {fileID: 2031258341}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -413.97083, y: -42.45465, z: 0}
+  m_LocalPosition: {x: 1072.5591, y: 456.59088, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1188149691}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2031258344
 MonoBehaviour:
@@ -21076,7 +21065,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 00c415a0de0bf50479d3ef4b81df2a10, type: 2}
   - {fileID: 11400000, guid: 29a3103865e5eb440a99dce5d0ae9dd7, type: 2}
   - {fileID: 11400000, guid: b9b716d91a6ae9e4c9794b3038846242, type: 2}
-  maxActivePackages: 2
+  maxActivePackages: 3
   currentState: 0
 --- !u!114 &2031258345
 MonoBehaviour:
@@ -22027,3 +22016,14 @@ SceneRoots:
   - {fileID: 1646824898}
   - {fileID: 1181313138}
   - {fileID: 1188149691}
+  - {fileID: 317931547}
+  - {fileID: 1394449357}
+  - {fileID: 2031258343}
+  - {fileID: 1646015022}
+  - {fileID: 254477665}
+  - {fileID: 424565399}
+  - {fileID: 1686426061}
+  - {fileID: 1195421315}
+  - {fileID: 1624264338}
+  - {fileID: 1626165209}
+  - {fileID: 727245221}
