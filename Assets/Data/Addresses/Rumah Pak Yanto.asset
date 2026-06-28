@@ -17,9 +17,9 @@ MonoBehaviour:
   addressPackageTitle: Minyak Sawit Asli
   addressDetail: Jl. Soekarno Hatta
   addressDistance: 500 KM
-  addressLocation: 3
-  addressLocationTransform: {x: -645, y: 320, z: 0}
-  addressDeliveryTimer: 70
+  addressLocation: 10
+  addressLocationTransform: {x: 378, y: -321, z: 0}
+  addressDeliveryTimer: 90
   addressTrailPrefab: {fileID: 7541654376230037802, guid: 4a2f251d3224d15449a0b59a08c89882, type: 3}
   addressGainXpAmount: 80
   addressGainCashAmount: 19000
