@@ -56,38 +56,38 @@ public class EmotionManager : MonoBehaviour
     private void SadEmotion()
     {
         Debug.Log($"Current Emotion: {currentEmotion}, Charisma -2"); 
-        StatsManager.instance.ChangeStats(PlayerStats.Charisma, -2); //Charisma -2
+        StatsManager.instance.SetStatsModifier(PlayerStats.Charisma, -2); //Charisma -2
     }
 
     private void AngryEmotion()
     {
         Debug.Log($"Current Emotion: {currentEmotion}, Strength +2, Intelligent -2, Charisma -1"); 
-        StatsManager.instance.ChangeStats(PlayerStats.Strength, 2); //Strength +2 
-        StatsManager.instance.ChangeStats(PlayerStats.Intelligent, -2); //Intelligent -2
-        StatsManager.instance.ChangeStats(PlayerStats.Charisma, -1); //Charisma -1
+        StatsManager.instance.SetStatsModifier(PlayerStats.Strength, 2); //Strength +2 
+        StatsManager.instance.SetStatsModifier(PlayerStats.Intelligent, -2); //Intelligent -2
+        StatsManager.instance.SetStatsModifier(PlayerStats.Charisma, -1); //Charisma -1
     }
 
     private void HappyEmotion()
     {
         Debug.Log($"Current Emotion: {currentEmotion}, Intelligent +1, Survival +1"); 
-        StatsManager.instance.ChangeStats(PlayerStats.Intelligent, 1); //Intelligent +1
-        StatsManager.instance.ChangeStats(PlayerStats.Survival, 1); //Survival +1
+        StatsManager.instance.SetStatsModifier(PlayerStats.Intelligent, 1); //Intelligent +1
+        StatsManager.instance.SetStatsModifier(PlayerStats.Survival, 1); //Survival +1
     }
 
     private void ConfidentEmotion()
     {
         Debug.Log($"Current Emotion: {currentEmotion}, Luck +1, Charisma +1"); 
-        StatsManager.instance.ChangeStats(PlayerStats.Luck, 1); //Luck +1
-        StatsManager.instance.ChangeStats(PlayerStats.Charisma, 1); //Charisma +1
+        StatsManager.instance.SetStatsModifier(PlayerStats.Luck, 1); //Luck +1
+        StatsManager.instance.SetStatsModifier(PlayerStats.Charisma, 1); //Charisma +1
     }
 
     private void DizzyEmotion()
     {
         Debug.Log($"Current Emotion: {currentEmotion}, All Stat -1"); //All -1
-        StatsManager.instance.ChangeStats(PlayerStats.Strength, -1); 
-        StatsManager.instance.ChangeStats(PlayerStats.Survival, -1); 
-        StatsManager.instance.ChangeStats(PlayerStats.Charisma, -1); 
-        StatsManager.instance.ChangeStats(PlayerStats.Intelligent, -1); 
-        StatsManager.instance.ChangeStats(PlayerStats.Luck, -1); 
+        StatsManager.instance.SetStatsModifier(PlayerStats.Strength, -1); 
+        StatsManager.instance.SetStatsModifier(PlayerStats.Survival, -1); 
+        StatsManager.instance.SetStatsModifier(PlayerStats.Charisma, -1); 
+        StatsManager.instance.SetStatsModifier(PlayerStats.Intelligent, -1); 
+        StatsManager.instance.SetStatsModifier(PlayerStats.Luck, -1); 
     }
 }

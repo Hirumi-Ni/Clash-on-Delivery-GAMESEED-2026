@@ -16,12 +16,14 @@ MonoBehaviour:
   eventTitle: Ketemu Bahlil
   eventDescription: Mas-mas boleh dong minta mbg sama nyanyiin lagunya plisssssssss
   eventOptions:
-  - eventTextOption: 'Ajak Tawuran [Strength]'
+  - eventTextOption: 'Ajak Tawuran [Auto Success]'
+    optionType: 2
     eventStatsNeeded: 0
+    eventNominalCashOption: 0
   - eventTextOption: 'Adu Kecerdasan [Intelligent]'
+    optionType: 0
     eventStatsNeeded: 3
-  eventTextCashOption: Bayar Bahlil
-  eventNominalCashOption: 30000
+    eventNominalCashOption: 0
   eventSuccessSprite: {fileID: -4288344199647211769, guid: 2fd80142737aba248893708c7b6cdd40, type: 3}
   eventSuccessDescription: Selain dapet mbg kamu dapet duit jajan juga dari bahlil
     yeyyy

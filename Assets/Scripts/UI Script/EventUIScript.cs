@@ -1,9 +1,11 @@
+using DG.Tweening;
 using System.Globalization;
 using TMPro;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.XR;
 using UnityEngine.UI;
-using DG.Tweening;
 
 public class EventUIScript : MonoBehaviour
 {
@@ -14,8 +16,6 @@ public class EventUIScript : MonoBehaviour
     [SerializeField] TMP_Text eventDescription;
     [SerializeField] TMP_Text[] eventTextOption;
     [SerializeField] GameObject[] eventGameobjectOption;
-    [SerializeField] TMP_Text eventTextCashOption;
-    [SerializeField] GameObject eventGameobjectCashOption;
 
     [Header("Success Event")]
     [SerializeField] Image eventSuccessSprite;
@@ -33,17 +33,19 @@ public class EventUIScript : MonoBehaviour
     [SerializeField] GameObject eventNormalPrefab;
     [SerializeField] GameObject eventSuccessPrefab;
     [SerializeField] GameObject eventFailedPrefab;
-    [SerializeField] GameObject eventPayOptionButton;
+
+    private SOGameEvents eventData;
 
     [ContextMenu("Test Setup Event")]
     public void SetupEvent(SOGameEvents gameEvent, GameEventController eventController)
     {
+        eventData = gameEvent;
+
         //event normal
         eventSprite.sprite = gameEvent.eventImage;
         eventTitle.text = gameEvent.eventTitle;
         eventDescription.text = gameEvent.eventDescription;
         SetupOptions(gameEvent, eventController); //ngeset opsinya
-        eventTextCashOption.text = $"{gameEvent.eventTextCashOption} {gameEvent.eventNominalCashOption.ToString("C", new CultureInfo("id-ID"))}";
 
         //event berhasil
         eventSuccessSprite.sprite = gameEvent.eventSuccessSprite;
@@ -63,17 +65,32 @@ public class EventUIScript : MonoBehaviour
         {
             if (i < eventData.eventOptions.Length)
             {
-                eventController.SetStatEventOption(eventData);
                 SOGameEvents.EventOption currentOption = eventData.eventOptions[i];
-                int percentage = eventController.CalculateStatsPercentage(currentOption.eventStatsNeeded); //tes munculin persentase ntar buat di uinya
-
-                eventTextOption[i].text = $"{currentOption.eventTextOption} {percentage}%";
-                eventTextOption[i].gameObject.SetActive(true);
-                eventGameobjectOption[i].gameObject.SetActive(true);
-
                 Button btn = eventGameobjectOption[i].GetComponent<Button>();
                 btn.onClick.RemoveAllListeners();
-                btn.onClick.AddListener(() => CheckOptionSuccess(percentage, eventController, eventData));
+
+                TMP_Text currentText = eventTextOption[i];
+
+                switch (currentOption.optionType)
+                {
+                    case OptionType.StatCheck:
+                        int percentage = eventController.CalculateStatsPercentage(currentOption.eventStatsNeeded);
+                        eventTextOption[i].text = $"{currentOption.eventTextOption} ({percentage}%)";
+                        btn.onClick.AddListener(() => CheckOptionSuccess(currentOption, eventController, eventData));
+                        break;
+                    case OptionType.BayarDuit:
+                        eventTextOption[i].text = $"{currentOption.eventTextOption} (-{currentOption.eventNominalCashOption.ToString("C", new CultureInfo("id-ID"))})";
+                        btn.onClick.AddListener(() => PayMoneyOption(currentText, currentOption, eventData));
+                        break;
+                    case OptionType.AutoSuccess:
+                        eventTextOption[i].text = currentOption.eventTextOption;
+                        btn.onClick.AddListener(EventSuccessUI);
+                        break;
+                    case OptionType.AutoFail:
+                        eventTextOption[i].text = currentOption.eventTextOption;
+                        btn.onClick.AddListener(EventFailedUI);
+                        break;
+                }
             }
             else
             {
@@ -81,46 +98,39 @@ public class EventUIScript : MonoBehaviour
                 eventGameobjectOption[i].gameObject.SetActive(false);
             }
         }
-
-        SetListenerPayOption(eventData);
     }
 
-    public void SetListenerPayOption(SOGameEvents events)
+    public void CheckOptionSuccess(SOGameEvents.EventOption currentOption, GameEventController eventController, SOGameEvents eventData)
     {
-        Button payButton = eventPayOptionButton.GetComponent<Button>();
-        EconomyManager e = EconomyManager.Instance;
-        if (e == null) return;
-
-        payButton.onClick.RemoveAllListeners();
-        payButton.onClick.AddListener(() =>
-        {
-            if (e.CurrentMoney <= events.eventNominalCashOption)
-            {
-                eventTextCashOption.text = "Duit Kamu Tidak Cukup!";
-                eventTextCashOption.DOKill();
-                DOVirtual.DelayedCall(1f, () => eventTextCashOption.text = $"{events.eventTextCashOption} {events.eventNominalCashOption.ToString("C", new CultureInfo("id-ID"))}");
-                Debug.Log("[EventUIScript] Uang tidak mencukupi!");
-            }
-            else
-            {
-                e.SpendMoney(events.eventNominalCashOption);
-                EventSuccessUI();
-            }
-        });
-    }
-
-    public void CheckOptionSuccess(int percentage, GameEventController eventController, SOGameEvents eventData)
-    {
-        bool isSuccess = eventController.CalculateSuccessChance(percentage, eventData);
-        Debug.Log(isSuccess);
-        if (isSuccess) EventSuccessUI();
+        int percentage = eventController.CalculateStatsPercentage(currentOption.eventStatsNeeded);
+        bool success = eventController.CalculateSuccessChance(percentage);
+        Debug.Log(success);
+        if (success) EventSuccessUI();
         else EventFailedUI();
+    }
+
+    public void PayMoneyOption(TMP_Text optionText, SOGameEvents.EventOption option, SOGameEvents eventData)
+    {
+        EconomyManager e = EconomyManager.Instance;
+        if (e.CurrentMoney < option.eventNominalCashOption)
+        {
+            string originalText = optionText.text;
+            optionText.text = "Duit Kamu Tidak Cukup!";
+            optionText.DOKill();
+            DOVirtual.DelayedCall(1f, () => optionText.text = originalText);
+            Debug.Log("[EventUIScript] Uang tidak mencukupi!");
+            return;
+        }
+        e.SpendMoney(option.eventNominalCashOption);
+        EventSuccessUI();
     }
 
     public void EventSuccessUI() //gk tau dah dobel dobel tak biarain aja, soalnya yang dibawah juga dipake buat ngeclose modalnya
     {
         OpenUI(eventSuccessPrefab);
         CloseUI(eventNormalPrefab);
+        EventHandler.WhenEventSuccess(eventData.eventGainXpAmount, eventData.eventGainCashAmount);
+        EmotionManager.instance.ChangeEmotion(eventData.eventSuccessMood);
 
         AudioManager.instance.PlayAudio(SoundType.Success);
     }
@@ -129,6 +139,7 @@ public class EventUIScript : MonoBehaviour
     {
         OpenUI(eventFailedPrefab);
         CloseUI(eventNormalPrefab);
+        EmotionManager.instance.ChangeEmotion(eventData.eventFailedMood);
 
         AudioManager.instance.PlayAudio(SoundType.Fail);
     }

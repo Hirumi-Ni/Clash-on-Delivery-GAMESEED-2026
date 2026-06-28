@@ -81,31 +81,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 9221055097017848963}
-        m_TargetAssemblyTypeName: EventUIScript, Assembly-CSharp
-        m_MethodName: CloseUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2042697477156744062}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 9221055097017848963}
-        m_TargetAssemblyTypeName: EventUIScript, Assembly-CSharp
-        m_MethodName: OpenUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 6156692276849603778}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &690681770374770895
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,31 +336,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 9221055097017848963}
-        m_TargetAssemblyTypeName: EventUIScript, Assembly-CSharp
-        m_MethodName: CloseUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2042697477156744062}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 9221055097017848963}
-        m_TargetAssemblyTypeName: EventUIScript, Assembly-CSharp
-        m_MethodName: OpenUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7118342809892359441}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &908080416232316750
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,7 +478,7 @@ GameObject:
   - component: {fileID: 4896037637124012128}
   - component: {fileID: 2283691081414724323}
   m_Layer: 5
-  m_Name: OptionCash
+  m_Name: Option5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1304,31 +1256,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 9221055097017848963}
-        m_TargetAssemblyTypeName: EventUIScript, Assembly-CSharp
-        m_MethodName: CloseUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2042697477156744062}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 9221055097017848963}
-        m_TargetAssemblyTypeName: EventUIScript, Assembly-CSharp
-        m_MethodName: OpenUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7118342809892359441}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &2793015404459976625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,7 +1806,7 @@ GameObject:
   - component: {fileID: 4974436017205171892}
   - component: {fileID: 5190120921277121967}
   m_Layer: 5
-  m_Name: OptionCashBg
+  m_Name: Option5Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2057,7 +1985,7 @@ GameObject:
   - component: {fileID: 1292519986686097226}
   - component: {fileID: 506496030252071723}
   m_Layer: 5
-  m_Name: OptionCashText
+  m_Name: Option5Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2400,31 +2328,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 9221055097017848963}
-        m_TargetAssemblyTypeName: EventUIScript, Assembly-CSharp
-        m_MethodName: CloseUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2042697477156744062}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 9221055097017848963}
-        m_TargetAssemblyTypeName: EventUIScript, Assembly-CSharp
-        m_MethodName: OpenUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 6156692276849603778}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &4962649593388746927
 GameObject:
   m_ObjectHideFlags: 0
@@ -3724,13 +3628,13 @@ MonoBehaviour:
   - {fileID: 3076420005681827299}
   - {fileID: 2914029081420219014}
   - {fileID: 2357888215414732338}
+  - {fileID: 506496030252071723}
   eventGameobjectOption:
   - {fileID: 6479306161371285}
   - {fileID: 4944313581468753163}
   - {fileID: 2432352460924098836}
   - {fileID: 867473012053607942}
-  eventTextCashOption: {fileID: 506496030252071723}
-  eventGameobjectCashOption: {fileID: 3932098012084227013}
+  - {fileID: 1098590160328320073}
   eventSuccessSprite: {fileID: 6916392725418558360}
   eventSuccessDescription: {fileID: 3552625870354968489}
   eventGainXpAmount: {fileID: 8602394587376468330}
@@ -3742,7 +3646,6 @@ MonoBehaviour:
   eventNormalPrefab: {fileID: 2042697477156744062}
   eventSuccessPrefab: {fileID: 6156692276849603778}
   eventFailedPrefab: {fileID: 7118342809892359441}
-  eventPayOptionButton: {fileID: 1098590160328320073}
 --- !u!114 &-8090116036244539175
 MonoBehaviour:
   m_ObjectHideFlags: 0

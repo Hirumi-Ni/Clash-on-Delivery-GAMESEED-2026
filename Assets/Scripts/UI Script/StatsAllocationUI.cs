@@ -5,6 +5,17 @@ using UnityEngine.UI;
 
 public class StatsAllocationUI : MonoBehaviour
 {
+    [System.Serializable]
+    public class StatRowUI
+    {
+        public PlayerStats statType;
+        public TMP_Text valueText;
+        public TMP_Text modifierText;
+        public Slider slider;
+        public Button plusButton;
+        public Button minusButton;
+    }
+
     [Header("Rows")]
     public StatRowUI[] statRows;
 
@@ -23,8 +34,8 @@ public class StatsAllocationUI : MonoBehaviour
     private void Start()
     {
         InitializeStats();
-        SetupButtons();
         UpdateUI();
+        SetupButtons();
         OpenStatsAllocationUI();
     }
 
@@ -37,9 +48,15 @@ public class StatsAllocationUI : MonoBehaviour
             tempStats[stat] = StatsManager.instance.GetStats(stat);
         }
 
+        foreach (StatRowUI row in statRows)
+        {
+            row.slider.minValue = MIN_STAT;
+            row.slider.maxValue = MAX_STAT;
+        }
+
         // Ambil poin yang belum dialokasikan dari StatsManager, baik itu dari
         // alokasi awal game maupun dari naik level (lewat LevelManager).
-        availablePoints = StatsManager.instance.PendingPoints;
+
     }
 
     private void SetupButtons()
@@ -60,7 +77,7 @@ public class StatsAllocationUI : MonoBehaviour
         }
     }
 
-    private void AddStat(PlayerStats stat)
+    public void AddStat(PlayerStats stat)
     {
         if (availablePoints <= 0)
             return;
@@ -74,7 +91,7 @@ public class StatsAllocationUI : MonoBehaviour
         UpdateUI();
     }
 
-    private void RemoveStat(PlayerStats stat)
+    public void RemoveStat(PlayerStats stat)
     {
         if (tempStats[stat] <= MIN_STAT)
             return;
@@ -93,10 +110,11 @@ public class StatsAllocationUI : MonoBehaviour
 
             row.valueText.text = value.ToString();
 
-            row.slider.minValue = MIN_STAT;
-            row.slider.maxValue = MAX_STAT;
+            row.modifierText.text = StatsManager.instance.GetStatsModifier(row.statType).ToString();
+
             row.slider.value = value;
         }
+
 
         availablePointText.text = "Available Points : " + availablePoints;
 
@@ -127,6 +145,7 @@ public class StatsAllocationUI : MonoBehaviour
 
     public void OpenStatsAllocationUI()
     {
+        availablePoints = StatsManager.instance.PendingPoints;
         UpdateUI();
         statsAllocationPanel.SetActive(true);
         Time.timeScale = 0;
