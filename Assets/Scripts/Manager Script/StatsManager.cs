@@ -14,16 +14,8 @@ public class StatsManager : MonoBehaviour
 {
 
     public static StatsManager instance;
-    private void Awake()
-    {
-        if (instance == null) instance = this;
-
-        SetupStats();
-        SetupEmotionsModifier();
-    }
 
     private Dictionary<PlayerStats, int> playerStatsDictionary;
-
     private Dictionary<PlayerStats, int> playerStatsEmotionDictionary;
 
     /// <summary>
@@ -33,6 +25,14 @@ public class StatsManager : MonoBehaviour
     /// </summary>
     [field: SerializeField] public int PendingPoints { get; private set; }
 
+    private void Awake()
+    {
+        if (instance == null) instance = this;
+
+        SetupStats();
+        SetupEmotionsModifier();
+    }
+    
     [Header("Poin Alokasi Awal")]
     [Tooltip("Poin yang didapat pemain saat game/shift baru dimulai, sebelum naik level apapun.")]
     [SerializeField] private int startingPendingPoints = 5;    
@@ -78,7 +78,12 @@ public class StatsManager : MonoBehaviour
         playerStatsDictionary[playerStat] = Mathf.Clamp(playerStatsDictionary[playerStat], 0, 10);
     }
 
-    public int GetStats(PlayerStats playerStat) 
+    public int GetBaseStats(PlayerStats playerStats)
+    {
+        return playerStatsDictionary[playerStats];
+    }
+
+    public int GetTotalStats(PlayerStats playerStat) 
     {
         return playerStatsDictionary[playerStat] + playerStatsEmotionDictionary[playerStat];
     }

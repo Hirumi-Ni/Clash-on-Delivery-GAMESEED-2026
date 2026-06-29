@@ -123,7 +123,6 @@ public class AddressUIScript : MonoBehaviour
         ShowFloatingThx(completeDeliveryPrefab.transform);
 
         //AudioManager.instance.PlayAudio(SoundType.Menu); //ntar ganti aja suaranya
-
         Destroy(gameObject, 1f);
     }
 

@@ -5,8 +5,8 @@ public class GameEventController : MonoBehaviour
 {
     public int CalculateStatsPercentage(PlayerStats playerStat)
     {
-        int otherStatPercentage = StatsManager.instance.GetStats(playerStat) * 8;
-        int luckStatPercentage = StatsManager.instance.GetStats(PlayerStats.Luck) * 5;
+        int otherStatPercentage = StatsManager.instance.GetTotalStats(playerStat) * 8;
+        int luckStatPercentage = StatsManager.instance.GetTotalStats(PlayerStats.Luck) * 5;
 
         Debug.Log($"[GameEventController] Kemungkinan sukses dari stat {playerStat} adalah {otherStatPercentage + luckStatPercentage}%");
         return Mathf.Clamp(otherStatPercentage + luckStatPercentage, 0, 100);

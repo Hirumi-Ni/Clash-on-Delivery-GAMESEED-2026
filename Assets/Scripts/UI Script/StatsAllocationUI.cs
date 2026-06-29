@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -25,6 +26,7 @@ public class StatsAllocationUI : MonoBehaviour
     public GameObject statsAllocationPanel;
 
     private Dictionary<PlayerStats, int> tempStats;
+    private Dictionary<PlayerStats, int> confirmedStats;
 
     private int availablePoints;
 
@@ -42,10 +44,12 @@ public class StatsAllocationUI : MonoBehaviour
     private void InitializeStats()
     {
         tempStats = new Dictionary<PlayerStats, int>();
+        confirmedStats = new();
 
         foreach (PlayerStats stat in System.Enum.GetValues(typeof(PlayerStats)))
         {
-            tempStats[stat] = StatsManager.instance.GetStats(stat);
+            tempStats[stat] = StatsManager.instance.GetBaseStats(stat);
+            confirmedStats[stat] = StatsManager.instance.GetBaseStats(stat);
         }
 
         foreach (StatRowUI row in statRows)
@@ -93,7 +97,7 @@ public class StatsAllocationUI : MonoBehaviour
 
     public void RemoveStat(PlayerStats stat)
     {
-        if (tempStats[stat] <= MIN_STAT)
+        if (tempStats[stat] <= confirmedStats[stat])
             return;
 
         tempStats[stat]--;
@@ -104,6 +108,8 @@ public class StatsAllocationUI : MonoBehaviour
 
     private void UpdateUI()
     {
+        bool showConfirmed = false;
+
         foreach (StatRowUI row in statRows)
         {
             int value = tempStats[row.statType];
@@ -113,39 +119,52 @@ public class StatsAllocationUI : MonoBehaviour
             row.modifierText.text = StatsManager.instance.GetStatsModifier(row.statType).ToString();
 
             row.slider.value = value;
+
+            //tombol
+            row.plusButton.interactable = availablePoints > 0 && value < MAX_STAT;
+            row.minusButton.interactable = value > confirmedStats[row.statType] && value > MIN_STAT;
+
+            if (value > confirmedStats[row.statType])
+            {
+                showConfirmed = true;
+            }
         }
 
 
         availablePointText.text = "Available Points : " + availablePoints;
 
-        confirmButton.interactable = availablePoints == 0;
+        confirmButton.interactable = showConfirmed;
     }
 
     public void ConfirmStats()
     {
-        if (availablePoints > 0)
-            return;
-
-        int pointsUsed = StatsManager.instance.PendingPoints;
+        int totalPointsSpent = 0;
 
         foreach (PlayerStats stat in tempStats.Keys)
         {
-            StatsManager.instance.SetStat(
-                stat,
-                tempStats[stat]
-            );
+            StatsManager.instance.SetStat(stat, tempStats[stat]);
+
+            int pointAllocated = tempStats[stat] - confirmedStats[stat];
+            totalPointsSpent += pointAllocated;
+
+            confirmedStats[stat] = tempStats[stat];
         }
 
-        StatsManager.instance.ConsumePendingPoints(pointsUsed);
+        StatsManager.instance.ConsumePendingPoints(totalPointsSpent);
 
         Debug.Log("Stats Confirmed!");
-
-        CloseStatsAllocationUI();
     }
 
     public void OpenStatsAllocationUI()
     {
         availablePoints = StatsManager.instance.PendingPoints;
+
+        foreach (PlayerStats stat in Enum.GetValues(typeof(PlayerStats)))
+        {
+            tempStats[stat] = StatsManager.instance.GetBaseStats(stat);
+            confirmedStats[stat] = StatsManager.instance.GetBaseStats(stat);
+        }
+
         UpdateUI();
         statsAllocationPanel.SetActive(true);
         Time.timeScale = 0;
