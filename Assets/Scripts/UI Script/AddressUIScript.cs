@@ -85,6 +85,7 @@ public class AddressUIScript : MonoBehaviour
         addressPinpointIcon.sprite = packageDeliveryIcon;
 
         AudioManager.instance.PlayAudio(SoundType.Berangkat);
+        AudioManager.instance.PlayAudio(SoundType.Motor_Revving);
 
         CloseUI();
         Time.timeScale = 1f; //ngeresume gamenya pas modalnya dah tutup

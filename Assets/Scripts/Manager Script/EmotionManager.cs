@@ -35,6 +35,7 @@ public class EmotionManager : MonoBehaviour
     {
         currentEmotion = emotion;
         StatsManager.instance.ClearAllEmotionModifiers();
+        EventHandler.WhenEmotionChanged(currentEmotion);
         switch (currentEmotion)
         {
             case PlayerEmotions.Sad: SadEmotion(); break;

@@ -52,7 +52,8 @@ public class DeliveryController : MonoBehaviour
         isReturningToHub = returning;
         isTraveling = true;
 
-        GameEventManager.instance.RandomEventTrigger(60); //60% ngetrigger random event pas state otw mau itu ke lokasi/ke hub
+        AudioManager.instance.PlayAudio(SoundType.Motor_Moving);
+        GameEventManager.instance.RandomEventTrigger(90, travelTime); //60% ngetrigger random event pas state otw mau itu ke lokasi/ke hub
 
         string arah = returning ? "Pulang ke Hub" : "Menuju Lokasi";
         Debug.Log($"[DeliveryController] Kurir berangkat ({arah}). Estimasi waktu: {travelTime} detik.");

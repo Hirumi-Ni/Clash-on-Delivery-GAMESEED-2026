@@ -114,7 +114,7 @@ public class StatsAllocationUI : MonoBehaviour
         {
             int value = tempStats[row.statType];
 
-            row.valueText.text = value.ToString();
+            row.valueText.text = $"{value.ToString()}/10";
 
             row.modifierText.text = StatsManager.instance.GetStatsModifier(row.statType).ToString();
 
@@ -165,9 +165,9 @@ public class StatsAllocationUI : MonoBehaviour
             confirmedStats[stat] = StatsManager.instance.GetBaseStats(stat);
         }
 
-        UpdateUI();
         statsAllocationPanel.SetActive(true);
         Time.timeScale = 0;
+        UpdateUI();
     }
 
     public void CloseStatsAllocationUI()

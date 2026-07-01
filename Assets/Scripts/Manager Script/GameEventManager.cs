@@ -15,15 +15,16 @@ public class GameEventManager : MonoBehaviour
         if (instance == null) instance = this;
     }
     
-    public void RandomEventTrigger(int percentage)
+    public void RandomEventTrigger(int percentage, float travelTime)
     {
         if (eventData.Count <= 0) return;
-        StartCoroutine(DelayEventPopup(percentage));
+        float eventEncounterTime = travelTime /= 2;
+        StartCoroutine(DelayEventPopup(percentage, eventEncounterTime));
     }
 
-    private IEnumerator DelayEventPopup(int percentage)
+    private IEnumerator DelayEventPopup(int percentage, float eventEncounterTime)
     {
-        yield return new WaitForSeconds(2); //ntar ku atur atur lagi
+        yield return new WaitForSeconds(eventEncounterTime); //ntar ku atur atur lagi
         
         percentage = Mathf.Clamp(percentage, 0, 100);
         int chance = Random.Range(0, 100);
