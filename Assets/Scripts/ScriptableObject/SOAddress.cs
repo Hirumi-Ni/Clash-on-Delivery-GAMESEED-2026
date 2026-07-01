@@ -56,8 +56,8 @@ public class SOAddress : ScriptableObject
     public int addressGainCashAmount;
 
     [TabGroup("TabGroup", "Rewards & Lifespan")]
-    [PropertyRange(2, 10)]
-    public int addressLifespanAmount = 5;
+    [PropertyRange(10, 20)]
+    public int addressLifespanAmount = 15;
 
     [TabGroup("TabGroup", "Event Trigger", Icon = SdfIconType.LightningCharge)]
     [HideLabel, AssetSelector(Paths = "Assets/Data/GameEvents")]
@@ -74,21 +74,24 @@ public class SOAddress : ScriptableObject
     {
         (addressLocationTransform, addressDeliveryTimer) = addressLocation switch
         {
-            AddressLocation.Location_1 => (new Vector3(-452, -369, 0), 100),
-            AddressLocation.Location_2 => (new Vector3(-575, -163, 0), 90),
-            AddressLocation.Location_3 => (new Vector3(-467, 89, 0), 80),
-            AddressLocation.Location_4 => (new Vector3(-645, 320, 0), 70),
+            AddressLocation.Location_1 => (new Vector3(-205, 29, 0), 30),
+            AddressLocation.Location_2 => (new Vector3(-453, -140, 0), 40),
+            AddressLocation.Location_3 => (new Vector3(286, -50, 0), 40),
+            AddressLocation.Location_4 => (new Vector3(-654, 306, 0), 80),
 
-            AddressLocation.Location_5 => (new Vector3(-249, 381, 0), 40),
-            AddressLocation.Location_6 => (new Vector3(-194, 146, 0), 30),
-            AddressLocation.Location_7 => (new Vector3(252, 330, 0), 50),
-            AddressLocation.Location_8 => (new Vector3(45, -129, 0), 60),
+            AddressLocation.Location_5 => (new Vector3(-755, 391, 0), 90),
+            AddressLocation.Location_6 => (new Vector3(-174, 408, 0), 70),
+            AddressLocation.Location_7 => (new Vector3(-30, 256, 0), 60),
+            AddressLocation.Location_8 => (new Vector3(673, 40, 0), 100),
 
-            AddressLocation.Location_9 => (new Vector3(387, 63, 0), 70),
-            AddressLocation.Location_10 => (new Vector3(456, 290, 0), 80),
-            AddressLocation.Location_11 => (new Vector3(378, -321, 0), 90),
-            AddressLocation.Location_12 => (new Vector3(688, -16, 0), 100),
+            AddressLocation.Location_9 => (new Vector3(180, 174, 0), 70),
+            AddressLocation.Location_10 => (new Vector3(128, -298, 0), 30),
+            AddressLocation.Location_11 => (new Vector3(525, 410, 0), 110),
+            AddressLocation.Location_12 => (new Vector3(-380, 324, 0), 70),
 
+            AddressLocation.Location_13 => (new Vector3(740, 354, 0), 120),
+            AddressLocation.Location_14 => (new Vector3(385, -345, 0), 60),
+            AddressLocation.Location_15 => (new Vector3(700, -180, 0), 90),
             _ => (Vector3.zero, 0)
         };
     }
@@ -103,5 +106,6 @@ public enum AddressLocation
 {
     Location_1, Location_2, Location_3, Location_4,
     Location_5, Location_6, Location_7, Location_8,
-    Location_9, Location_10, Location_11, Location_12
+    Location_9, Location_10, Location_11, Location_12,
+    Location_13, Location_14, Location_15
 }

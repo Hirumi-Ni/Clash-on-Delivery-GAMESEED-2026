@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3997984021512848108
+--- !u!1 &3904531075448405186
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1906141963332832347}
-  - component: {fileID: 6732954109037169206}
-  - component: {fileID: 7137272117533916803}
-  - component: {fileID: 5861203718570784476}
+  - component: {fileID: 8061020228551397049}
+  - component: {fileID: 1845683775594636544}
+  - component: {fileID: 7547737549918705255}
+  - component: {fileID: 1178021314106570250}
   m_Layer: 0
   m_Name: Spline
   m_TagString: Untagged
@@ -19,28 +19,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1906141963332832347
+--- !u!4 &8061020228551397049
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3997984021512848108}
+  m_GameObject: {fileID: 3904531075448405186}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0000005770051, y: -0.0000001553404, z: 0.0000033527608, w: 1}
   m_LocalPosition: {x: 0, y: 1.8, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1150434370769085662}
+  m_Father: {fileID: 7832066421767788780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6732954109037169206
+--- !u!114 &1845683775594636544
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3997984021512848108}
+  m_GameObject: {fileID: 3904531075448405186}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dab5c7d4c32e743048dfca98e2d5914f, type: 3}
@@ -63,99 +63,139 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: -0.8100234
-        y: -3.4999945
-        z: -0.0000037873774
+        x: -0.8300234
+        y: -3.4999943
+        z: -0.0000037811637
       TangentIn:
         x: -0
         y: -0
-        z: -0.5748184
+        z: -0.28890043
       TangentOut:
         x: 0
         y: 0
-        z: 0.5748184
+        z: 0.28890043
       Rotation:
         value:
-          x: -0.7071007
-          y: -0.0028270513
-          z: 0.0028268993
-          w: 0.7071015
+          x: -0.70710605
+          y: 0.0006142275
+          z: -0.0006143029
+          w: 0.7071069
     - Position:
-        x: -0.8559849
-        y: 2.2480056
-        z: 0.0000028601587
+        x: -0.82500404
+        y: -0.61099446
+        z: -0.00000044878482
       TangentIn:
         x: 0
         y: 0
-        z: -0.061204515
+        z: -0.05322791
       TangentOut:
         x: 0
         y: 0
-        z: 0.061204515
+        z: 0.05322791
       Rotation:
         value:
-          x: -0.5200244
-          y: -0.4791392
-          z: 0.4791396
-          w: 0.5200244
+          x: -0.52193713
+          y: -0.4770548
+          z: 0.4770554
+          w: 0.5219372
     - Position:
-        x: -1.863985
-        y: 2.2300127
-        z: 0.0000031525567
+        x: -6.4740043
+        y: -0.6679566
+        z: 0.0000012404944
       TangentIn:
         x: 0
         y: 0
-        z: -0.054332513
+        z: -0.07006444
       TangentOut:
         x: 0
         y: 0
-        z: 0.10339233
+        z: 0.07006444
       Rotation:
         value:
-          x: -0.4715849
-          y: -0.52688485
-          z: 0.5268866
-          w: 0.47158307
+          x: 0.5105939
+          y: 0.48917657
+          z: -0.4891768
+          w: -0.51059395
     - Position:
-        x: -1.9140434
-        y: 1.991441
-        z: 0.0000028927946
+        x: -6.5059896
+        y: 1.5200436
+        z: 0.0000037754082
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.0715053
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.16141959
+      Rotation:
+        value:
+          x: 0.62401175
+          y: 0.33257926
+          z: -0.33258146
+          w: -0.6240112
+    - Position:
+        x: -7.2139897
+        y: 1.5760484
+        z: 0.000004059997
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.06789168
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.07398892
+      Rotation:
+        value:
+          x: -0.6215862
+          y: -0.33709073
+          z: 0.33709124
+          w: 0.6215866
+    - Position:
+        x: -7.234988
+        y: 1.7240484
+        z: 0.000004237315
       TangentIn:
         x: -0
         y: -0
-        z: -0.055554498
+        z: -0.045199383
       TangentOut:
         x: 0
         y: 0
-        z: 0.056604564
+        z: 0.054545462
       Rotation:
         value:
-          x: -0.21564363
-          y: 0.6734229
-          z: -0.67342216
-          w: 0.21564315
+          x: -0.6891398
+          y: 0.15838534
+          z: -0.15838559
+          w: 0.6891404
     - Position:
-        x: -1.6629287
-        y: 1.9600501
-        z: 0.0000027785534
+        x: -7.046748
+        y: 1.8333888
+        z: 0.000004305013
       TangentIn:
         x: -0
         y: -0
-        z: -0.025306914
+        z: -0.021769164
       TangentOut:
         x: 0
         y: 0
-        z: 0.025306914
+        z: 0.021769164
       Rotation:
         value:
-          x: -0.46796358
-          y: 0.53010404
-          z: -0.53010386
-          w: 0.4679633
+          x: -0.61283594
+          y: 0.3527491
+          z: -0.35274926
+          w: 0.6128361
     m_MetaData:
     - Mode: 0
       Tension: 0.5
     - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 3
       Tension: 0.5
     - Mode: 3
       Tension: 0.5
@@ -174,21 +214,21 @@ MonoBehaviour:
       m_Data: []
   m_Knots:
     m_KnotsLink: []
---- !u!33 &7137272117533916803
+--- !u!33 &7547737549918705255
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3997984021512848108}
+  m_GameObject: {fileID: 3904531075448405186}
   m_Mesh: {fileID: 0}
---- !u!23 &5861203718570784476
+--- !u!23 &1178021314106570250
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3997984021512848108}
+  m_GameObject: {fileID: 3904531075448405186}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 1
@@ -231,7 +271,7 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &5625205879604115402
+--- !u!1 &5913930459666567008
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -239,56 +279,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1150434370769085662}
-  - component: {fileID: 5493184262330222609}
-  m_Layer: 0
-  m_Name: Loc6_Trail
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1150434370769085662
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5625205879604115402}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1906141963332832347}
-  - {fileID: 4966058675186698394}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5493184262330222609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5625205879604115402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8859f89d05906034a899ee5a365593d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrailAnimate
-  splineAnimate: {fileID: 2399860676103167226}
---- !u!1 &7489354261146910429
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4966058675186698394}
-  - component: {fileID: 6914186199604632642}
-  - component: {fileID: 2399860676103167226}
+  - component: {fileID: 3146033796029419272}
+  - component: {fileID: 7629893049965655006}
+  - component: {fileID: 4107516092971893112}
   m_Layer: 0
   m_Name: TrailAnimate
   m_TagString: Untagged
@@ -296,29 +289,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4966058675186698394
+--- !u!4 &3146033796029419272
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7489354261146910429}
+  m_GameObject: {fileID: 5913930459666567008}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0008653743, y: -0.9999997, z: -0.0000000842937, w: -0.0000002090879}
-  m_LocalPosition: {x: -0.8299999, y: -1.6999998, z: 0}
+  m_LocalRotation: {x: -0.4988625, y: -0.8666813, z: 0.00000029502797, w: -0.0000005689825}
+  m_LocalPosition: {x: -7.0467606, y: 3.6333416, z: -2.2737368e-13}
   m_LocalScale: {x: 0.50000006, y: 0.50000024, z: 0.5000003}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1150434370769085662}
+  m_Father: {fileID: 7832066421767788780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!96 &6914186199604632642
+--- !u!96 &7629893049965655006
 TrailRenderer:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7489354261146910429}
+  m_GameObject: {fileID: 5913930459666567008}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -421,26 +414,73 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
---- !u!114 &2399860676103167226
+--- !u!114 &4107516092971893112
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7489354261146910429}
+  m_GameObject: {fileID: 5913930459666567008}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
-  m_Target: {fileID: 6732954109037169206}
+  m_Target: {fileID: 1845683775594636544}
   m_PlayOnAwake: 0
   m_LoopMode: 0
   m_Method: 0
   m_Duration: 5
-  m_MaxSpeed: 1.4590805
+  m_MaxSpeed: 2.3674107
   m_EasingMode: 0
   m_AlignmentMode: 1
   m_ObjectForwardAxis: 1
   m_ObjectUpAxis: 2
   m_StartOffset: 0
+--- !u!1 &6986047945305001128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7832066421767788780}
+  - component: {fileID: 7340745867903493286}
+  m_Layer: 0
+  m_Name: Loc5_Trail
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7832066421767788780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6986047945305001128}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8061020228551397049}
+  - {fileID: 3146033796029419272}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7340745867903493286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6986047945305001128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8859f89d05906034a899ee5a365593d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrailAnimate
+  splineAnimate: {fileID: 4107516092971893112}

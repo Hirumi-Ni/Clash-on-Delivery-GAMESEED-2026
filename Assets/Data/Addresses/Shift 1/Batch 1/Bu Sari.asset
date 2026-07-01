@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e46b03d44f18ab428cc0fa17e320a6d, type: 3}
+  m_Name: Bu Sari
+  m_EditorClassIdentifier: Assembly-CSharp::SOAddress
+  addressGenderSprite: {fileID: -4288344199647211769, guid: 9909fe6f5fc6996479caba1e414ff44d, type: 3}
+  addressPerson: Bu Sari
+  addressPackageTitle: Baju
+  addressDetail: Jl. Melati no. 5
+  addressDistance: 1,2 KM
+  addressLocation: 0
+  addressLocationTransform: {x: -222, y: 29, z: 0}
+  addressDeliveryTimer: 30
+  addressTrailPrefab: {fileID: 0}
+  addressGainXpAmount: 0
+  addressGainCashAmount: 0
+  addressLifespanAmount: 15
+  addressFixedEvent: {fileID: 0}
