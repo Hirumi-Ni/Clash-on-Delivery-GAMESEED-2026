@@ -153,6 +153,7 @@ public class StatsAllocationUI : MonoBehaviour
         StatsManager.instance.ConsumePendingPoints(totalPointsSpent);
 
         Debug.Log("Stats Confirmed!");
+        UpdateUI();
     }
 
     public void OpenStatsAllocationUI()
