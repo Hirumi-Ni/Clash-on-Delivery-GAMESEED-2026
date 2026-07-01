@@ -33,23 +33,23 @@ public class GameplayHUD : MonoBehaviour
         EventHandler.OnMoneyChanged -= UpdateMoneyUI;
     }
 
-    public void UpdateMoneyUI(int currentMoney, int targetMoney)
+    public void UpdateMoneyUI(int currentMoney, int amount, int targetMoney)
     {
         moneyText.text = currentMoney.ToString("C0", new CultureInfo("id-ID"));
         moneyBarFill.fillAmount = (float)currentMoney / targetMoney;
 
         // Memunculkan floating text untuk perubahan uang
-        SpawnFloatingText(floatingTextPrefab, moneySpawnPoint, currentMoney);
+        SpawnFloatingText(floatingTextPrefab, moneySpawnPoint, amount);
     }
 
-    public void UpdateExpUI(int currentExp, int maxExp)
+    public void UpdateExpUI(int currentExp, int amount, int maxExp)
     {
         int expShow = Mathf.RoundToInt(currentExp);
         expText.text = $"{expShow}/{maxExp}";
         expBarFill.fillAmount = (float)currentExp / maxExp;
 
         // Memunculkan floating text untuk perubahan exp
-        SpawnFloatingText(floatingTextPrefab, expSpawnPoint, currentExp);
+        SpawnFloatingText(floatingTextPrefab, expSpawnPoint, amount);
     }
 
     public void UpdateLevelUI(int currentLevel)
@@ -79,7 +79,7 @@ public class GameplayHUD : MonoBehaviour
                 popupText.color = Color.blue;
             }
         }
-        
+
         MoveFloatingText(popup, popupText);
     }
 

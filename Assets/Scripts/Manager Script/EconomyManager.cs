@@ -35,7 +35,17 @@ public class EconomyManager : MonoBehaviour
     private void Start()
     {
         // Trigger event awal supaya UI langsung dapat nilai yang benar tanpa nunggu transaksi pertama.
-        EventHandler.WhenMoneyChanged(currentMoney, shiftTarget);
+        EventHandler.WhenMoneyChanged(currentMoney, 0, shiftTarget);
+    }
+
+    [ContextMenu("Tambah Money")]
+    public void TestAddMoney()
+    {
+        int amount = 1000; // Contoh jumlah uang yang ditambahkan
+        if (amount <= 0) return;
+
+        currentMoney += amount;
+        EventHandler.WhenMoneyChanged(currentMoney, amount, shiftTarget);
     }
 
     public void AddMoney(int amount)
@@ -43,7 +53,7 @@ public class EconomyManager : MonoBehaviour
         if (amount <= 0) return;
 
         currentMoney += amount;
-        EventHandler.WhenMoneyChanged(currentMoney, shiftTarget);
+        EventHandler.WhenMoneyChanged(currentMoney, amount, shiftTarget);
     }
 
     public void SpendMoney(int amount)
@@ -51,14 +61,14 @@ public class EconomyManager : MonoBehaviour
         if (amount <= 0) return;
 
         currentMoney = Mathf.Max(0, currentMoney - amount);
-        EventHandler.WhenMoneyChanged(currentMoney, shiftTarget);
+        EventHandler.WhenMoneyChanged(currentMoney, -amount, shiftTarget);
     }
 
     // Mengubah target shift secara manual, misal dari sistem lain yang menentukan kesulitan.
     public void SetShiftTarget(int newTarget)
     {
         shiftTarget = Mathf.Max(0, newTarget);
-        EventHandler.WhenMoneyChanged(currentMoney, shiftTarget);
+        EventHandler.WhenMoneyChanged(currentMoney, 0, shiftTarget);
     }
 
     public int ConvertMoneyToExp()

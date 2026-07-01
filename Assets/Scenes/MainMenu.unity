@@ -1926,6 +1926,14 @@ MonoBehaviour:
     _entity: {fileID: 11400000, guid: d334d74516490964c84122db0efd932a, type: 2}
     ID: 0
     <DebugObject>k__BackingField: {fileID: 578984960}
+  soundMotor_Revving:
+    _entity: {fileID: 11400000, guid: d8a38329eeb3a614ab019ebf89ea4b43, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 578984960}
+  soundMotor_Moving:
+    _entity: {fileID: 11400000, guid: 0b1aeb4662cfcc349aab9428497cee8d, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 578984960}
 --- !u!4 &578984962
 Transform:
   m_ObjectHideFlags: 0

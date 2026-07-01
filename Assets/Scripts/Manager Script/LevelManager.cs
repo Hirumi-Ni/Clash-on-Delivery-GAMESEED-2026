@@ -37,7 +37,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        EventHandler.WhenXPChanged(currentXP, XPRequiredForNextLevel);
+        EventHandler.WhenXPChanged(currentXP, 0, XPRequiredForNextLevel);
         EventHandler.WhenLevelUp(currentLevel);
     }
 
@@ -53,7 +53,7 @@ public class LevelManager : MonoBehaviour
             LevelUp();
         }
 
-        EventHandler.WhenXPChanged(currentXP, XPRequiredForNextLevel);
+        EventHandler.WhenXPChanged(currentXP, amount, XPRequiredForNextLevel);
     }
 
     private void LevelUp()

@@ -2165,7 +2165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TimeManager
   startHour: 8
   endHour: 17
-  realMinutesPerShift: 5
+  realMinutesPerShift: 3
   currentTime: 0
   isRunning: 1
 --- !u!4 &254477665
@@ -7333,7 +7333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &725041216
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11835,7 +11835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1169447055
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11987,7 +11987,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 507, y: -876}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1181313136
@@ -13903,7 +13903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80, y: 0}
+  m_AnchoredPosition: {x: -57, y: -881}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1354815357
@@ -14473,7 +14473,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 540, y: 350}
+  m_AnchoredPosition: {x: 408, y: -411}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1397131848
@@ -17353,7 +17353,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -440, y: 350}
+  m_AnchoredPosition: {x: -195, y: -405}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1644934209
@@ -22089,8 +22089,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25adff883ef738641a72a1388acf1ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PackageManager
-  shiftPackagesList: []
-  maxActivePackages: 6
+  shiftPackagesList:
+  - {fileID: 11400000, guid: cf0b029a533ad16449793f38aefe5704, type: 2}
+  - {fileID: 11400000, guid: 05ecbbea6072fe64c9da55a9cbd66847, type: 2}
+  - {fileID: 11400000, guid: 0af921128a16b104eba02b39ebcac7ad, type: 2}
+  - {fileID: 11400000, guid: 5a67a9bb5d53f0a4fa31f3d16bb27d61, type: 2}
+  - {fileID: 11400000, guid: 6b748bd12b51d514d80fbb26e89829d7, type: 2}
+  - {fileID: 11400000, guid: 0b2c87a255db0b74299f3e8bdbfe1206, type: 2}
+  maxActivePackages: 3
   currentState: 0
 --- !u!114 &2031258345
 MonoBehaviour:

@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e46b03d44f18ab428cc0fa17e320a6d, type: 3}
-  m_Name: Bu Sari
+  m_Name: Pak Budi Mansaleh
   m_EditorClassIdentifier: Assembly-CSharp::SOAddress
   addressGenderSprite: {fileID: -4288344199647211769, guid: 9909fe6f5fc6996479caba1e414ff44d, type: 3}
-  addressPerson: Bu Sari
-  addressPackageTitle: Baju
-  addressDetail: Jl. Melati no. 5
-  addressDistance: 1,2 KM
-  addressLocation: 0
-  addressLocationTransform: {x: -205, y: 29, z: 0}
-  addressDeliveryTimer: 30
-  addressTrailPrefab: {fileID: 7141157921166597878, guid: e4629d6cb5980d34b818724322093728, type: 3}
-  addressGainXpAmount: 15
-  addressGainCashAmount: 20000
-  addressLifespanAmount: 15
+  addressPerson: Pak Budi Mansaleh
+  addressPackageTitle: Makanan Kucing
+  addressDetail: Jl. Sukarno Hatta no. 67
+  addressDistance: 4 KM
+  addressLocation: 5
+  addressLocationTransform: {x: -174, y: 408, z: 0}
+  addressDeliveryTimer: 70
+  addressTrailPrefab: {fileID: 5625205879604115402, guid: d44fd6513a7f9fa49b27f3362fca9ecd, type: 3}
+  addressGainXpAmount: 25
+  addressGainCashAmount: 75000
+  addressLifespanAmount: 12
   addressFixedEvent: {fileID: 0}

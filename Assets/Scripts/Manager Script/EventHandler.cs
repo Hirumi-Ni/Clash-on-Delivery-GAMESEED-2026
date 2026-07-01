@@ -19,8 +19,8 @@ public static class EventHandler
     public static event Action OnShiftEnded; // pas shiftnya selesai, semua paket udah dianter/waktu habis (17:00)
     public static event Action<int, int, int, float> OnScoreCalculated; // ini dipakai untuk ngasih tahu score manager untuk ngitung skor akhir shift
 
-    public static event Action<int, int> OnMoneyChanged;
-    public static event Action<int, int> OnXPChanged;
+    public static event Action<int, int, int> OnMoneyChanged;
+    public static event Action<int, int, int> OnXPChanged;
     public static event Action<int> OnLevelUp;
 
     public static event Action<int, int> OnEventSuccess;
@@ -34,7 +34,7 @@ public static class EventHandler
     public static void WhenRequestSpawn(SOAddress address) => OnRequestSpawn?.Invoke(address);
     public static void WhenArrivedAtLocation(AddressUIScript targetAddessss) => OnArrivedAtLocation?.Invoke(targetAddessss);
     public static void WhenArrivedAtHub() => OnArrivedAtHub?.Invoke();
-    
+
     // -- PAKET + SHIFT --
     public static void WhenShiftStarted(int totalPackages) => OnShiftStarted?.Invoke(totalPackages);
     public static void WhenPaketHangus(SOAddress address) => OnPaketHangus?.Invoke(address);
@@ -42,8 +42,8 @@ public static class EventHandler
     public static void WhenShiftEnded() => OnShiftEnded?.Invoke();
 
     // -- ECONOMY + XP + DLL --
-    public static void WhenMoneyChanged(int currentMoney, int shiftTarget) => OnMoneyChanged?.Invoke(currentMoney, shiftTarget);
-    public static void WhenXPChanged(int currentXP, int xpRequiredForNextLevel) => OnXPChanged?.Invoke(currentXP, xpRequiredForNextLevel);
+    public static void WhenMoneyChanged(int currentMoney, int amount, int shiftTarget) => OnMoneyChanged?.Invoke(currentMoney, amount, shiftTarget);
+    public static void WhenXPChanged(int currentXP, int amount, int xpRequiredForNextLevel) => OnXPChanged?.Invoke(currentXP, amount, xpRequiredForNextLevel);
     public static void WhenLevelUp(int newLevel) => OnLevelUp?.Invoke(newLevel);
     public static void WhenEventSuccess(int expReward, int moneyReward) => OnEventSuccess?.Invoke(expReward, moneyReward);
     public static void TriggerReward(int expAmount, int cashAmount) => OnDeliveryRewardClaimed?.Invoke(expAmount, cashAmount);

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6980dbc9d60024e8efcb2fb501c190, type: 3}
+  m_Name: Kegocek Warteg
+  m_EditorClassIdentifier: Assembly-CSharp::SOGameEvents
+  eventImage: {fileID: -4288344199647211769, guid: 9909fe6f5fc6996479caba1e414ff44d, type: 3}
+  eventTitle: Kegocek Warteg
+  eventDescription: Di tengah perjalanan menuju lokasi Bu Indah. Driver mampir ke
+    warteg buat makan
+  eventOptions:
+  - eventTextOption: Makan buru-buru (Survival)
+    optionType: 0
+    eventStatsNeeded: 1
+    eventNominalCashOption: 0
+  - eventTextOption: Beli makanan dibungkus, makan sambil jalan (auto berhasil)
+    optionType: 2
+    eventStatsNeeded: 0
+    eventNominalCashOption: 0
+  - eventTextOption: Mampir liat-liat aja, trus langsung pergi (Intelligent)
+    optionType: 0
+    eventStatsNeeded: 3
+    eventNominalCashOption: 0
+  - eventTextOption: Kasih uang tambahan ke bapak warteg biar ga ngantri  (-Rp15000)
+    optionType: 1
+    eventStatsNeeded: 0
+    eventNominalCashOption: 15000
+  eventSuccessSprite: {fileID: -4288344199647211769, guid: 9909fe6f5fc6996479caba1e414ff44d, type: 3}
+  eventSuccessDescription: Driver makan dan semangat lagi
+  eventGainXpAmount: 15
+  eventGainCashAmount: 0
+  eventSuccessMood: 3
+  eventFailedSprite: {fileID: -4288344199647211769, guid: 9909fe6f5fc6996479caba1e414ff44d, type: 3}
+  eventFailedDescription: 'Keasikan makan sampai lupa waktu dan jadinya kekenyangan
+    dan waktu kebuang banyak '
+  eventFailedMood: 5

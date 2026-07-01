@@ -54,13 +54,17 @@ public class PackageController : MonoBehaviour
 
     public void PackageIsOnTheWay()
     {
-        Debug.Log($"[PaketController] Paket milik {dataAlamat.addressPerson} sedang diantar. Estimasi waktu perjalanan: {dataAlamat.addressDeliveryTimer/10} detik.");
+        Debug.Log($"[PaketController] Paket milik {dataAlamat.addressPerson} sedang diantar. Estimasi waktu perjalanan: {dataAlamat.addressDeliveryTimer / 10} detik.");
         isTimerRunning = false;
     }
 
-    public void SpawnFixedEvent(AddressUIScript _)
+    public void SpawnFixedEvent(AddressUIScript addressUI)
     {
-        if (dataAlamat.addressFixedEvent == null) return;
-        GameEventManager.instance.SpawnEvent(dataAlamat.addressFixedEvent);
+        if (addressUI == null) return;
+        if (addressUI == gameObject.GetComponent<AddressUIScript>())
+        {
+            if (dataAlamat.addressFixedEvent == null) return;
+            GameEventManager.instance.SpawnEvent(dataAlamat.addressFixedEvent);
+        }
     }
 }
