@@ -15,7 +15,9 @@ public enum SoundType
     Random_Event,
     Success,
     Fail,
-    Shift_Overview
+    Shift_Overview,
+    Motor_Revving,
+    Motor_Moving
 }
 
 public class AudioManager : MonoBehaviour
@@ -32,6 +34,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private SoundID soundSuccess;
     [SerializeField] private SoundID soundFail;
     [SerializeField] private SoundID soundShift_Overview;
+    [SerializeField] private SoundID soundMotor_Revving;
+    [SerializeField] private SoundID soundMotor_Moving;
 
     private Dictionary<SoundType, SoundID> soundMappingDictionary;
 
@@ -52,8 +56,10 @@ public class AudioManager : MonoBehaviour
             { SoundType.Random_Event, soundRandom_Event },
             { SoundType.Success, soundSuccess },
             { SoundType.Fail, soundFail },
-            { SoundType.Shift_Overview, soundShift_Overview }, //kurang sound 04, sama 06, ntar nunggu GDnya aja
-            //sama yang sound effect motor masi agak bingung aku maksudnya apa itu
+            { SoundType.Shift_Overview, soundShift_Overview }, 
+            { SoundType.Motor_Revving, soundMotor_Revving }, 
+            { SoundType.Motor_Moving, soundMotor_Moving }, //kurang sound 04, sama 06, ntar nunggu GDnya aja
+            
         };
     }
 

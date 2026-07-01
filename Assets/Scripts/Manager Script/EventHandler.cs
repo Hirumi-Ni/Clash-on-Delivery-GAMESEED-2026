@@ -25,6 +25,8 @@ public static class EventHandler
 
     public static event Action<int, int> OnEventSuccess;
 
+    public static event Action<PlayerEmotions> OnEmotionChanged;
+
     /// --- METHOD PEMICU EVENT (Broadcaster) ---
     // -- DELIVERY --
     public static void WhenStartToDeliverPackage(int durasiPerjalanan, AddressUIScript targetAddress) => OnStartToDeliverPackage?.Invoke(durasiPerjalanan, targetAddress);
@@ -46,4 +48,5 @@ public static class EventHandler
     public static void WhenEventSuccess(int expReward, int moneyReward) => OnEventSuccess?.Invoke(expReward, moneyReward);
     public static void TriggerReward(int expAmount, int cashAmount) => OnDeliveryRewardClaimed?.Invoke(expAmount, cashAmount);
     public static void TriggerScoreCalculated(int totalSuccess, int totalAbandon, int totalFailed, float finalRating) => OnScoreCalculated?.Invoke(totalSuccess, totalAbandon, totalFailed, finalRating);
+    public static void WhenEmotionChanged(PlayerEmotions currentEmotion) => OnEmotionChanged.Invoke(currentEmotion);
 }

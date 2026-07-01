@@ -32,7 +32,7 @@ MonoBehaviour:
   eventSuccessDescription: gacor habis cfd
   eventGainXpAmount: 5
   eventGainCashAmount: 0
-  eventSuccessMood: 3
+  eventSuccessMood: 2
   eventFailedSprite: {fileID: -4288344199647211769, guid: 2fd80142737aba248893708c7b6cdd40, type: 3}
   eventFailedDescription: kecapean
   eventFailedMood: 5

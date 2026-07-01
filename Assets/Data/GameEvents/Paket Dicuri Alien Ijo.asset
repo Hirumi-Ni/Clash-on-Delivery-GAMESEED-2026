@@ -33,8 +33,8 @@ MonoBehaviour:
   eventSuccessDescription: Kamu berhasil merebut paketnya dari si Alien
   eventGainXpAmount: 142
   eventGainCashAmount: 22000
-  eventSuccessMood: 4
+  eventSuccessMood: 2
   eventFailedSprite: {fileID: -4288344199647211769, guid: 2fd80142737aba248893708c7b6cdd40, type: 3}
   eventFailedDescription: Yah paket kamu dicuri selamanya, kamu kembali ke hub buat
     ambil paket lagi
-  eventFailedMood: 0
+  eventFailedMood: 5
