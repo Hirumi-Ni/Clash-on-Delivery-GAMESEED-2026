@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using Sirenix.OdinInspector.Editor;
 
 public class PackageController : MonoBehaviour
 {
@@ -11,12 +12,14 @@ public class PackageController : MonoBehaviour
     private float currentTimer;
     private bool isTimerRunning = false;
 
-    public void SetupData(SOAddress data)
+    private void OnEnable()
     {
-        dataAlamat = data;
-        maxLifetime = data.addressLifespanAmount;
-        currentTimer = maxLifetime;
-        isTimerRunning = true;
+        EventHandler.OnArrivedAtLocation += SpawnFixedEvent;
+    }
+
+    private void OnDisable()
+    {
+        EventHandler.OnArrivedAtLocation -= SpawnFixedEvent;
     }
 
     private void Update()
@@ -34,6 +37,14 @@ public class PackageController : MonoBehaviour
         }
     }
 
+    public void SetupData(SOAddress data)
+    {
+        dataAlamat = data;
+        maxLifetime = data.addressLifespanAmount;
+        currentTimer = maxLifetime;
+        isTimerRunning = true;
+    }
+
     private void WaktuHabis()
     {
         Debug.Log($"[PaketController] Waktu habis! Paket milik {dataAlamat.addressPerson} hangus.");
@@ -45,5 +56,11 @@ public class PackageController : MonoBehaviour
     {
         Debug.Log($"[PaketController] Paket milik {dataAlamat.addressPerson} sedang diantar. Estimasi waktu perjalanan: {dataAlamat.addressDeliveryTimer/10} detik.");
         isTimerRunning = false;
+    }
+
+    public void SpawnFixedEvent(AddressUIScript _)
+    {
+        if (dataAlamat.addressFixedEvent == null) return;
+        GameEventManager.instance.SpawnEvent(dataAlamat.addressFixedEvent);
     }
 }
