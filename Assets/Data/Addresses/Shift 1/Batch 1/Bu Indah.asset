@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e46b03d44f18ab428cc0fa17e320a6d, type: 3}
   m_Name: Bu Indah
   m_EditorClassIdentifier: Assembly-CSharp::SOAddress
-  addressGenderSprite: {fileID: -4288344199647211769, guid: 9909fe6f5fc6996479caba1e414ff44d, type: 3}
+  addressGenderSprite: {fileID: 21300000, guid: 6a386c69cf271b74a8739c097477e39d, type: 3}
   addressPerson: Bu Indah
   addressPackageTitle: Baju
   addressDetail: Jl. Kusumasari no. 19

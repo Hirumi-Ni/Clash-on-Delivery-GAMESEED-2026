@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e46b03d44f18ab428cc0fa17e320a6d, type: 3}
   m_Name: Doni
   m_EditorClassIdentifier: Assembly-CSharp::SOAddress
-  addressGenderSprite: {fileID: -4288344199647211769, guid: 9909fe6f5fc6996479caba1e414ff44d, type: 3}
+  addressGenderSprite: {fileID: 21300000, guid: 07fe1d522fe11b44597d5a805bd16859, type: 3}
   addressPerson: Doni
   addressPackageTitle: Obat Herbal
   addressDetail: Jl. Veteran no. 21
@@ -23,5 +23,5 @@ MonoBehaviour:
   addressTrailPrefab: {fileID: 4358335247960040737, guid: b7a819a51dcc80d47ade6d3efc0bc2c0, type: 3}
   addressGainXpAmount: 15
   addressGainCashAmount: 15000
-  addressLifespanAmount: 16
+  addressLifespanAmount: 15
   addressFixedEvent: {fileID: 0}

@@ -11,6 +11,9 @@ public class DeliveryController : MonoBehaviour
     [Tooltip("Lama jeda waktu saat menurunkan paket di lokasi (dalam detik)")]
     public float dropoffDuration = 2f;
 
+    [Header("Kemungkinan Mentrigger Random Event (Ex: 10 berarti 10% Terpicu)")]
+    public int randomEventPercentage = 40;
+
     // --- VARIABEL INTERNAL ---
     private float currentTravelTimer = 0f;
     private bool isTraveling = false;
@@ -53,7 +56,7 @@ public class DeliveryController : MonoBehaviour
         isTraveling = true;
 
         AudioManager.instance.PlayAudio(SoundType.Motor_Moving);
-        GameEventManager.instance.RandomEventTrigger(60, travelTime); //60% ngetrigger random event pas state otw mau itu ke lokasi/ke hub
+        GameEventManager.instance.RandomEventTrigger(randomEventPercentage, travelTime);
 
         string arah = returning ? "Pulang ke Hub" : "Menuju Lokasi";
         Debug.Log($"[DeliveryController] Kurir berangkat ({arah}). Estimasi waktu: {travelTime} detik.");

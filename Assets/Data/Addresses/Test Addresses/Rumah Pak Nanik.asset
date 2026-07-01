@@ -18,9 +18,9 @@ MonoBehaviour:
   addressDetail: Jl. Martabak Manis
   addressDistance: 200 KM
   addressLocation: 3
-  addressLocationTransform: {x: -645, y: 320, z: 0}
-  addressDeliveryTimer: 70
-  addressTrailPrefab: {fileID: 3542605075166082638, guid: ae4b3f0c26e05b74bb83f4a96f64b887, type: 3}
+  addressLocationTransform: {x: -654, y: 306, z: 0}
+  addressDeliveryTimer: 80
+  addressTrailPrefab: {fileID: 8003860079241672215, guid: ae4b3f0c26e05b74bb83f4a96f64b887, type: 3}
   addressGainXpAmount: 300
   addressGainCashAmount: 67420
   addressLifespanAmount: 10

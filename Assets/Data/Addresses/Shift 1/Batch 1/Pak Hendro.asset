@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e46b03d44f18ab428cc0fa17e320a6d, type: 3}
   m_Name: Pak Hendro
   m_EditorClassIdentifier: Assembly-CSharp::SOAddress
-  addressGenderSprite: {fileID: -4288344199647211769, guid: 9909fe6f5fc6996479caba1e414ff44d, type: 3}
+  addressGenderSprite: {fileID: 21300000, guid: 07fe1d522fe11b44597d5a805bd16859, type: 3}
   addressPerson: Pak Hendro
   addressPackageTitle: Sepatu
   addressDetail: Jl. Kusumasari no. 19
@@ -23,5 +23,5 @@ MonoBehaviour:
   addressTrailPrefab: {fileID: 8003860079241672215, guid: ae4b3f0c26e05b74bb83f4a96f64b887, type: 3}
   addressGainXpAmount: 25
   addressGainCashAmount: 55000
-  addressLifespanAmount: 15
+  addressLifespanAmount: 20
   addressFixedEvent: {fileID: 0}

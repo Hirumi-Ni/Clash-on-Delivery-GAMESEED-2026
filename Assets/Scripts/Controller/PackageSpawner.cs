@@ -41,7 +41,7 @@ public class PackageSpawner : MonoBehaviour
         Transform completeButton = paketBaru.transform.GetChild(1);
         if (pinPoint != null && completeButton != null)
         {
-            pinPoint.localPosition = dataPaket.addressLocationTransform; // Set posisi child sesuai data dari SOAddress
+            pinPoint.localPosition = dataPaket.addressLocationTransform + new Vector3(0, 50f, 0); // Set posisi child sesuai data dari SOAddress
             completeButton.localPosition = dataPaket.addressLocationTransform; // Set posisi child sesuai data dari SOAddress
         }
         else
